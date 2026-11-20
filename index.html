@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="41 features built in OctaBiz for a natural foods grocer: what was asked, the problem it solves, and where it lives in the app, with screenshots.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rainbow Blossom in OctaBiz">
+<meta property="og:description" content="41 features built in OctaBiz for a natural foods grocer: what was asked, the problem it solves, and where it lives in the app, with screenshots.">
+<meta name="color-scheme" content="light dark">
+<title>Rainbow Blossom in OctaBiz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+:root{
+  --bg:#F3F6F1; --surface:#FCFDFB; --surface-2:#EAF0E7; --chrome:#E1E9DE;
+  --ink:#142019; --ink-2:#3B4A41; --ink-3:#55655B;
+  --line:#D3DDD2; --line-2:#AEBDB0; --on-hue:#FFFFFF; --focus:#142019;
+  --shadow:0 1px 2px rgb(20 32 25 / .06), 0 14px 32px -18px rgb(20 32 25 / .35);
+  --backdrop:rgb(9 16 12 / .74);
+  --h1:#C0282E; --h2:#B2470C; --h3:#8C6100; --h4:#2A7A3B; --h5:#0C7471; --h6:#1F5EC4; --h7:#4C45C4; --h8:#8A3BB5;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B130F; --surface:#111C16; --surface-2:#172720; --chrome:#1A2B22;
+    --ink:#E4ECE6; --ink-2:#B6C4BB; --ink-3:#97A99E;
+    --line:#26382D; --line-2:#3E5547; --on-hue:#0B130F; --focus:#E4ECE6;
+    --shadow:0 1px 2px rgb(0 0 0 / .45), 0 16px 36px -18px rgb(0 0 0 / .8);
+    --backdrop:rgb(2 6 4 / .84);
+    --h1:#F48A82; --h2:#F5A15F; --h3:#E6C04F; --h4:#72CF86; --h5:#55CBC2; --h6:#82AEF7; --h7:#A6A1F7; --h8:#CE94EE;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B130F; --surface:#111C16; --surface-2:#172720; --chrome:#1A2B22;
+  --ink:#E4ECE6; --ink-2:#B6C4BB; --ink-3:#97A99E;
+  --line:#26382D; --line-2:#3E5547; --on-hue:#0B130F; --focus:#E4ECE6;
+  --shadow:0 1px 2px rgb(0 0 0 / .45), 0 16px 36px -18px rgb(0 0 0 / .8);
+  --backdrop:rgb(2 6 4 / .84);
+  --h1:#F48A82; --h2:#F5A15F; --h3:#E6C04F; --h4:#72CF86; --h5:#55CBC2; --h6:#82AEF7; --h7:#A6A1F7; --h8:#CE94EE;
+  color-scheme:dark;
+}
+@media (prefers-reduced-motion: no-preference){ :root{ scroll-behavior:smooth; } }
+body{ background:var(--bg); color:var(--ink); margin:0; }
+
+.page{
+  --font-head:'Bricolage Grotesque', 'Avenir Next', 'Segoe UI', system-ui, sans-serif; --font-body:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0 56px;
+  background:var(--bg); color:var(--ink);
+  font:400 16px/1.65 var(--font-body);
+  -webkit-text-size-adjust:100%; text-size-adjust:100%;
+  overflow-wrap:break-word;
+}
+.page *, .page *::before, .page *::after{ box-sizing:border-box; }
+.wrap{ max-width:1240px; margin-inline:auto; padding-inline:clamp(0px, 3vw - 10px, 28px); }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.page :focus-visible{ outline:3px solid var(--focus); outline-offset:3px; border-radius:6px; }
+
+/* Sticky area bar: the 8 hues as jump links, so any area is one tap away from deep in the page. */
+.bar{ position:sticky; top:0; z-index:20; background:var(--bg);
+  box-shadow:0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line);
+  clip-path:inset(0 -100vmax -1px -100vmax); }
+.bar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:56px; }
+.bar-name{ font:600 14px/1.2 var(--font-head); text-decoration:none; color:var(--ink-2); padding-block:10px; }
+.bar-name:hover{ color:var(--ink); }
+.bar ol{ list-style:none; margin:0; padding:0; display:flex; }
+.bar li a{ display:grid; place-items:center; width:44px; height:44px; text-decoration:none; border-radius:10px; }
+.bar li a span{ display:grid; place-items:center; width:28px; height:28px; border-radius:7px; background:var(--hue);
+  color:var(--on-hue); font:700 13px/1 var(--font-head); }
+.bar li a:hover span{ box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--hue); }
+@media (max-width: 600px){ .bar-name{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); } .bar .wrap{ justify-content:center; } }
+
+/* Hero: sized to its content. */
+.hero{ padding-block:clamp(36px, 6vw, 72px) 8px; }
+.kicker{ margin:0 0 18px; font:500 14px/1.4 var(--font-body); color:var(--ink-3); }
+.hero h1{ margin:0; font:800 clamp(40px, 7.2vw, 92px)/.98 var(--font-head); letter-spacing:-.025em; font-variation-settings:'opsz' 96; }
+.hero h1 .b{ display:block; color:var(--ink-3); font-weight:600; }
+.lead{ margin:22px 0 0; max-width:40ch; font:500 clamp(18px, 2vw, 22px)/1.5 var(--font-body); color:var(--ink-2); }
+.lead a{ color:var(--ink); text-decoration-thickness:1px; text-underline-offset:3px; }
+.facts div{ padding-inline:0 28px; margin-inline-end:28px; border-inline-end:1px solid var(--line); }
+.facts div:last-child{ border:0; margin:0; padding:0; }
+.facts dd{ margin:0; font:800 clamp(36px, 5vw, 52px)/1 var(--font-head); letter-spacing:-.02em; }
+.facts dt{ margin-top:6px; font:500 14px/1.3 var(--font-body); color:var(--ink-3); }
+.facts{ display:grid; grid-template-columns:repeat(3, auto); justify-content:start; margin:32px 0 0; padding:0; }
+.facts div{ display:flex; flex-direction:column-reverse; }
+.hero-grid{ display:grid; gap:0 48px; }
+@media (min-width: 1024px){
+  .hero-grid{ grid-template-columns:minmax(0, 1fr) auto; align-items:end; }
+  .hero-grid .facts{ grid-template-columns:1fr; margin:0 0 6px; min-width:250px; }
+  .hero-grid .facts div{ flex-direction:row-reverse; justify-content:flex-end; align-items:baseline; gap:14px; padding:14px 0; margin:0; border:0; border-top:1px solid var(--line); }
+  .hero-grid .facts div:first-child{ border-top:0; padding-top:0; }
+  .hero-grid .facts dd{ min-width:2.2ch; }
+  .hero-grid .facts dt{ margin:0; font-size:15px; }
+}
+
+.toc{ margin-top:clamp(36px, 5vw, 56px); padding:22px; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
+.toc-h{ margin:0 0 14px; font:600 14px/1.3 var(--font-body); color:var(--ink-2); }
+.cells{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(41, minmax(0, 1fr)); gap:3px; }
+.cells a{ display:grid; place-items:center; aspect-ratio:2/3; border-radius:5px; background:var(--hue); color:var(--on-hue);
+  font:600 11px/1 var(--font-mono); text-decoration:none; }
+.cells a:hover{ box-shadow:0 0 0 2px var(--surface), 0 0 0 4px var(--ink); }
+.legend{ list-style:none; margin:18px 0 0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:6px 16px; }
+.legend a{ color:var(--ink); display:flex; align-items:center; gap:10px; min-height:44px; text-decoration:none; border-radius:10px; padding-inline:4px; }
+.legend a:hover .nm{ text-decoration:underline; text-underline-offset:3px; }
+.legend .sw{ flex:none; display:grid; place-items:center; width:26px; height:26px; border-radius:7px; background:var(--hue); color:var(--on-hue); font:700 13px/1 var(--font-head); }
+.legend .nm{ flex:1; min-width:0; font:500 14.5px/1.3 var(--font-body); }
+.legend .ct{ font:500 13px/1 var(--font-mono); color:var(--ink-3); }
+@media (max-width: 1060px){
+  .cells{ grid-template-columns:repeat(auto-fill, minmax(44px, 1fr)); gap:4px; }
+  .cells a{ aspect-ratio:auto; min-height:44px; font-size:13px; }
+  .legend{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .toc{ padding:16px; }
+  .legend{ grid-template-columns:1fr; gap:0; }
+  .facts div{ padding-inline:0 18px; margin-inline-end:18px; }
+}
+
+/* Areas */
+.area{ margin-top:clamp(56px, 8vw, 96px); scroll-margin-top:72px; }
+.area-head{ display:grid; grid-template-columns:auto 1fr auto; align-items:end; gap:6px 18px; padding-bottom:20px; margin-bottom:28px; border-bottom:2px solid var(--line); }
+.area-sw{ display:grid; place-items:center; width:60px; height:60px; border-radius:15px; background:var(--hue); color:var(--on-hue); font:800 30px/1 var(--font-head); }
+.area-k{ margin:0 0 4px; font:600 14px/1.2 var(--font-body); color:var(--hue); }
+.area h2{ margin:0; font:700 clamp(26px, 3.4vw, 38px)/1.1 var(--font-head); letter-spacing:-.015em; }
+.area-ct{ margin:0; font:500 14px/1.2 var(--font-body); color:var(--ink-3); padding-bottom:6px; white-space:nowrap; }
+.area-top{ margin-top:18px; display:inline-flex; align-items:center; min-height:44px; font:500 14px/1.2 var(--font-body); color:var(--ink-3); text-underline-offset:3px; }
+.area-top:hover{ color:var(--ink); }
+@media (max-width: 560px){
+  .area-head{ grid-template-columns:auto 1fr; }
+  .area-ct{ grid-column:2; padding:0; }
+  .area-sw{ width:48px; height:48px; font-size:24px; border-radius:12px; grid-row:span 2; align-self:center; }
+}
+.cards{ display:flex; flex-direction:column; gap:28px; }
+
+/* Feature card */
+.card{ position:relative; background:var(--surface); border:1px solid var(--line); border-radius:18px;
+  box-shadow:inset 0 4px 0 var(--hue); padding:30px clamp(18px, 3vw, 34px) 22px; scroll-margin-top:72px; }
+.card:target{ border-color:var(--hue); box-shadow:inset 0 4px 0 var(--hue), 0 0 0 1px var(--hue); }
+.card-head{ display:grid; grid-template-columns:auto 1fr auto; gap:6px 18px; align-items:start; }
+.num{ display:grid; place-items:center; width:56px; height:56px; border-radius:14px; background:var(--hue); color:var(--on-hue);
+  font:800 24px/1 var(--font-head); letter-spacing:-.02em; }
+.head-main{ min-width:0; padding-top:2px; }
+.card h3{ margin:0; font:700 clamp(22px, 2.4vw, 28px)/1.2 var(--font-head); letter-spacing:-.01em; }
+.live{ margin:8px 0 0; font:400 14px/1.5 var(--font-body); color:var(--ink-2); }
+.live-k{ display:inline-block; margin-inline-end:6px; padding:1px 8px; border:1px solid var(--line-2); border-radius:6px;
+  font:600 12px/1.5 var(--font-body); color:var(--ink); }
+.code{ margin-top:4px; padding:4px 9px; border:1px solid var(--line-2); border-radius:7px; font:500 13px/1.2 var(--font-mono); color:var(--ink-2); white-space:nowrap; }
+@media (max-width: 560px){
+  .card-head{ grid-template-columns:auto 1fr; }
+  .num{ width:46px; height:46px; font-size:20px; border-radius:12px; }
+  .code{ grid-column:2; justify-self:start; margin-top:2px; }
+}
+
+.card-body{ display:grid; grid-template-columns:minmax(0, 1fr); gap:28px; margin-top:26px; }
+@media (min-width: 1024px){
+  .card-body{ grid-template-columns:minmax(0, 1fr) minmax(0, 1.12fr); gap:44px; align-items:start; }
+  .shot{ position:sticky; top:76px; }
+}
+
+.blk h4{ display:flex; align-items:center; gap:10px; margin:0 0 10px; font:600 14px/1.3 var(--font-body); color:var(--ink-2); }
+.blk h4 .k{ flex:none; display:grid; place-items:center; width:24px; height:24px; border-radius:7px; border:1.5px solid var(--line-2);
+  font:600 12px/1 var(--font-mono); color:var(--ink); }
+.blk p{ margin:0; }
+.blk-req p{ font:500 18px/1.5 var(--font-head); color:var(--ink); }
+.blk-prob{ margin-top:24px; padding-top:22px; border-top:1px solid var(--line); }
+.blk-prob p{ color:var(--ink-2); }
+.blk-sol{ margin-top:24px; padding:20px clamp(16px, 2vw, 22px) 22px; border-radius:14px; background:var(--surface-2); }
+.blk-sol h4 .k{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+.paths{ display:flex; flex-direction:column; gap:8px; margin:2px 0 14px; }
+.crumbs{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; row-gap:6px; }
+.crumbs li{ display:inline-flex; align-items:center; }
+.crumbs li + li::before{ content:""; flex:none; width:7px; height:7px; margin-inline:7px 9px;
+  border-top:1.6px solid var(--ink-3); border-inline-end:1.6px solid var(--ink-3); transform:rotate(45deg); }
+[dir="rtl"] .crumbs li + li::before{ transform:rotate(-45deg); }
+.crumbs bdi{ display:inline-block; padding:4px 9px; border:1px solid var(--line-2); border-radius:7px; background:var(--surface);
+  font:500 13.5px/1.35 var(--font-body); color:var(--ink); }
+.crumbs li:last-child bdi{ font-weight:700; }
+.blk .store{ margin-top:14px; padding:10px 12px; border:1px dashed var(--line-2); border-radius:10px; font-size:15px; color:var(--ink); }
+.open{ display:inline-flex; align-items:center; justify-content:center; min-height:46px; margin-top:18px; padding:0 20px; border-radius:11px;
+  background:var(--ink); color:var(--bg); font:600 15px/1.2 var(--font-body); text-decoration:none; }
+.open:hover{ background:var(--ink-2); }
+
+/* Screenshot in a browser frame */
+.shot{ margin:0; min-width:0; }
+.frame{ display:block; width:100%; margin:0; padding:0; border:1px solid var(--line-2); border-radius:12px; overflow:hidden;
+  background:var(--surface); color:inherit; font:inherit; text-align:start; cursor:zoom-in; box-shadow:var(--shadow); }
+.frame.is-tall{ max-width:300px; margin-inline:auto; border-radius:18px; }
+.frame:hover{ border-color:var(--ink-3); }
+.frame:hover .zoom{ color:var(--ink); border-color:var(--ink-3); }
+.chrome{ display:flex; width:100%; align-items:center; gap:10px; min-height:38px; padding:7px 10px; background:var(--chrome); border-bottom:1px solid var(--line); }
+.dots{ display:flex; gap:6px; flex:none; }
+.dots i{ width:9px; height:9px; border-radius:50%; background:var(--line-2); }
+.addr{ flex:1; min-width:0; padding:3px 10px; border-radius:6px; background:var(--surface); font:400 12px/1.4 var(--font-mono); color:var(--ink-2);
+  overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left; }
+.zoom{ flex:none; padding:2px 8px; border:1px solid var(--line-2); border-radius:6px; font:600 12px/1.4 var(--font-body); color:var(--ink-2); }
+.is-tall .zoom{ display:none; }
+.frame img{ display:block; width:100%; height:auto; object-fit:cover; object-position:top; background:var(--surface-2); }
+.is-missing{ cursor:default; box-shadow:none; }
+.frame.is-broken{ cursor:default; }
+.frame.is-broken img, .frame.is-broken .zoom{ display:none; }
+.frame.is-broken .missing{ display:grid; }
+.missing[hidden]{ display:none; }
+.missing{ display:grid; place-items:center; aspect-ratio:16/10; margin:12px; border:1.5px dashed var(--line-2); border-radius:8px;
+  font:500 15px/1.4 var(--font-body); color:var(--ink-2); }
+.shot figcaption{ margin-top:10px; font:400 13.5px/1.5 var(--font-body); color:var(--ink-3); text-align:start; }
+.is-tall + figcaption{ text-align:center; }
+
+.prs{ display:flex; flex-wrap:wrap; align-items:center; gap:0 14px; margin:22px 0 0; padding-top:12px; border-top:1px dashed var(--line);
+  font:400 12.5px/1.4 var(--font-mono); color:var(--ink-3); }
+.prs span{ font-family:var(--font-body); }
+.prs a{ display:inline-block; padding-block:6px; color:var(--ink-3); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:3px; }
+.prs a:hover{ color:var(--ink); }
+
+.foot{ margin-top:72px; padding-top:22px; border-top:2px solid var(--line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px;
+  font:400 14px/1.6 var(--font-body); color:var(--ink-2); }
+.foot p{ margin:0; max-width:80ch; }
+.foot .stripe{ display:flex; gap:3px; align-self:center; }
+.foot .stripe i{ width:18px; height:6px; border-radius:2px; background:var(--hue); }
+
+/* Viewer */
+dialog.lb{ width:min(1320px, calc(100vw - 24px)); max-width:none; max-height:calc(100dvh - 24px); margin:auto; padding:0;
+  border:1px solid var(--line-2); border-radius:16px; background:var(--surface); color:var(--ink); overflow:hidden; }
+dialog.lb::backdrop{ background:rgb(9 16 12 / .78); background:var(--backdrop, rgb(9 16 12 / .78)); }
+.lb-in{ display:flex; flex-direction:column; max-height:calc(100dvh - 26px); }
+.lb-top{ display:flex; align-items:center; gap:8px; padding-block:8px; padding-inline:16px 8px; border-bottom:1px solid var(--line); }
+.lb-title{ flex:1; min-width:0; margin:0; font:600 15px/1.3 var(--font-head); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.lb-num{ display:inline-grid; place-items:center; min-width:30px; height:26px; margin-inline-end:10px; padding-inline:6px; border-radius:7px;
+  background:var(--ink); color:var(--bg); font:700 13px/1 var(--font-head); }
+.lb-count{ font:500 13px/1 var(--font-mono); color:var(--ink-3); padding-inline:6px; white-space:nowrap; }
+.lb-btn{ display:inline-flex; align-items:center; justify-content:center; gap:6px; min-width:44px; height:44px; padding:0 12px; border-radius:10px;
+  border:1px solid var(--line-2); background:var(--surface); color:var(--ink); font:600 14px/1 var(--font-body); cursor:pointer; }
+.lb-btn:hover{ border-color:var(--ink-3); background:var(--surface-2); }
+.lb-btn svg{ width:16px; height:16px; }
+[dir="rtl"] .lb-btn .chev{ transform:scaleX(-1); }
+.lb-stage{ flex:1; min-height:0; overflow:auto; display:grid; place-items:center; padding:12px; background:var(--surface-2); }
+.lb-stage img{ display:block; max-width:100%; max-height:calc(100dvh - 160px); width:auto; height:auto; border-radius:6px; }
+.lb-cap:empty{ display:none; }
+.lb-cap{ margin:0; padding:10px 16px 12px; font:400 13.5px/1.5 var(--font-body); color:var(--ink-2); }
+@media (max-width: 640px){
+  .lb-btn .t{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+  .lb-count{ display:none; }
+  dialog.lb{ width:calc(100vw - 12px); }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .cells a, .bar li a span, .frame, .open, .lb-btn{ transition:box-shadow .15s ease, background-color .15s ease, border-color .15s ease; }
+}
+</style>
+</head>
+<body>
+<div class="page" dir="ltr" lang="en" data-of=" / ">
+<div class="bar">
+  <div class="wrap">
+    <a class="bar-name" href="#top">Rainbow Blossom in OctaBiz</a>
+    <nav aria-label="Areas"><ol><li style="--hue:var(--h1)"><a href="#area-1" title="Area 1: Till and payments, 10 features" aria-label="Area 1: Till and payments, 10 features"><span>1</span></a></li><li style="--hue:var(--h2)"><a href="#area-2" title="Area 2: Prices, labels and promotions, 2 features" aria-label="Area 2: Prices, labels and promotions, 2 features"><span>2</span></a></li><li style="--hue:var(--h3)"><a href="#area-3" title="Area 3: Purchase orders and suppliers, 9 features" aria-label="Area 3: Purchase orders and suppliers, 9 features"><span>3</span></a></li><li style="--hue:var(--h4)"><a href="#area-4" title="Area 4: Stock across six stores, 4 features" aria-label="Area 4: Stock across six stores, 4 features"><span>4</span></a></li><li style="--hue:var(--h5)"><a href="#area-5" title="Area 5: Customers and Rainbow Rewards, 5 features" aria-label="Area 5: Customers and Rainbow Rewards, 5 features"><span>5</span></a></li><li style="--hue:var(--h6)"><a href="#area-6" title="Area 6: Running the stores, 6 features" aria-label="Area 6: Running the stores, 6 features"><span>6</span></a></li><li style="--hue:var(--h7)"><a href="#area-7" title="Area 7: Team and shifts, 4 features" aria-label="Area 7: Team and shifts, 4 features"><span>7</span></a></li><li style="--hue:var(--h8)"><a href="#area-8" title="Area 8: Moving from the old system, 1 feature" aria-label="Area 8: Moving from the old system, 1 feature"><span>8</span></a></li></ol></nav>
+  </div>
+</div>
+<main class="wrap">
+  <header class="hero" id="top">
+    <div class="hero-grid">
+    <div>
+    <p class="kicker">Delivery report for Rainbow Blossom, 20 Nov 2026</p>
+    <h1><bdi>Rainbow Blossom</bdi> <span class="b">in OctaBiz</span></h1>
+    <p class="lead">41 of 41 features from the 24 Oct 2026 proposal are live on <a href="https://octabiz.ai" target="_blank" rel="noopener" dir="ltr">octabiz.ai</a>.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>features</dt><dd>41</dd></div>
+      <div><dt>areas</dt><dd>8</dd></div>
+      <div><dt>screenshots from octabiz.ai</dt><dd>33</dd></div>
+    </dl>
+    </div>
+    <nav class="toc" id="contents" aria-labelledby="toc-h">
+      <h2 class="toc-h" id="toc-h">All 41 features, in the order of the proposal</h2>
+      <ol class="cells" aria-label="All 41 features"><li style="--hue:var(--h1)"><a href="#f-01" title="Feature 1: Fast barcode checkout" aria-label="Feature 1: Fast barcode checkout">01</a></li><li style="--hue:var(--h1)"><a href="#f-02" title="Feature 2: Till count and shift report" aria-label="Feature 2: Till count and shift report">02</a></li><li style="--hue:var(--h1)"><a href="#f-03" title="Feature 3: Special orders and holding items" aria-label="Feature 3: Special orders and holding items">03</a></li><li style="--hue:var(--h1)"><a href="#f-04" title="Feature 4: Tax per item" aria-label="Feature 4: Tax per item">04</a></li><li style="--hue:var(--h1)"><a href="#f-05" title="Feature 5: Gift cards" aria-label="Feature 5: Gift cards">05</a></li><li style="--hue:var(--h1)"><a href="#f-06" title="Feature 6: Scales and weighed items" aria-label="Feature 6: Scales and weighed items">06</a></li><li style="--hue:var(--h1)"><a href="#f-07" title="Feature 7: EBT/SNAP payments" aria-label="Feature 7: EBT/SNAP payments">07</a></li><li style="--hue:var(--h1)"><a href="#f-08" title="Feature 8: Card processing for a grocery store" aria-label="Feature 8: Card processing for a grocery store">08</a></li><li style="--hue:var(--h1)"><a href="#f-09" title="Feature 9: Selling when the internet is down" aria-label="Feature 9: Selling when the internet is down">09</a></li><li style="--hue:var(--h1)"><a href="#f-10" title="Feature 10: Till hardware and setup" aria-label="Feature 10: Till hardware and setup">10</a></li><li style="--hue:var(--h2)"><a href="#f-11" title="Feature 11: Shelf labels" aria-label="Feature 11: Shelf labels">11</a></li><li style="--hue:var(--h2)"><a href="#f-12" title="Feature 12: Discounts and promotions" aria-label="Feature 12: Discounts and promotions">12</a></li><li style="--hue:var(--h3)"><a href="#f-13" title="Feature 13: Low-stock alerts and suggested orders" aria-label="Feature 13: Low-stock alerts and suggested orders">13</a></li><li style="--hue:var(--h3)"><a href="#f-14" title="Feature 14: Purchase orders to any supplier" aria-label="Feature 14: Purchase orders to any supplier">14</a></li><li style="--hue:var(--h3)"><a href="#f-15" title="Feature 15: Late-order alerts" aria-label="Feature 15: Late-order alerts">15</a></li><li style="--hue:var(--h3)"><a href="#f-16" title="Feature 16: Monthly buying budget per store" aria-label="Feature 16: Monthly buying budget per store">16</a></li><li style="--hue:var(--h3)"><a href="#f-17" title="Feature 17: EDI ordering with UNFI and KeHE" aria-label="Feature 17: EDI ordering with UNFI and KeHE">17</a></li><li style="--hue:var(--h3)"><a href="#f-18" title="Feature 18: Distributor catalogs and price files" aria-label="Feature 18: Distributor catalogs and price files">18</a></li><li style="--hue:var(--h3)"><a href="#f-19" title="Feature 19: AI order forecasting" aria-label="Feature 19: AI order forecasting">19</a></li><li style="--hue:var(--h3)"><a href="#f-20" title="Feature 20: Phone app for the shop floor" aria-label="Feature 20: Phone app for the shop floor">20</a></li><li style="--hue:var(--h3)"><a href="#f-21" title="Feature 21: Returns and credits from suppliers" aria-label="Feature 21: Returns and credits from suppliers">21</a></li><li style="--hue:var(--h4)"><a href="#f-22" title="Feature 22: Live stock and transfers between stores" aria-label="Feature 22: Live stock and transfers between stores">22</a></li><li style="--hue:var(--h4)"><a href="#f-23" title="Feature 23: Expiry date alerts" aria-label="Feature 23: Expiry date alerts">23</a></li><li style="--hue:var(--h4)"><a href="#f-24" title="Feature 24: Stock counts and their history" aria-label="Feature 24: Stock counts and their history">24</a></li><li style="--hue:var(--h4)"><a href="#f-25" title="Feature 25: Shrink tracking" aria-label="Feature 25: Shrink tracking">25</a></li><li style="--hue:var(--h5)"><a href="#f-26" title="Feature 26: One customer record for every store" aria-label="Feature 26: One customer record for every store">26</a></li><li style="--hue:var(--h5)"><a href="#f-27" title="Feature 27: Email campaigns" aria-label="Feature 27: Email campaigns">27</a></li><li style="--hue:var(--h5)"><a href="#f-28" title="Feature 28: Rainbow Rewards points" aria-label="Feature 28: Rainbow Rewards points">28</a></li><li style="--hue:var(--h5)"><a href="#f-29" title="Feature 29: Automatic thank-yous and check-ins" aria-label="Feature 29: Automatic thank-yous and check-ins">29</a></li><li style="--hue:var(--h5)"><a href="#f-30" title="Feature 30: Online store on the same stock" aria-label="Feature 30: Online store on the same stock">30</a></li><li style="--hue:var(--h6)"><a href="#f-31" title="Feature 31: Morning brief and today&#x27;s tasks" aria-label="Feature 31: Morning brief and today&#x27;s tasks">31</a></li><li style="--hue:var(--h6)"><a href="#f-32" title="Feature 32: Email summaries turned into tasks" aria-label="Feature 32: Email summaries turned into tasks">32</a></li><li style="--hue:var(--h6)"><a href="#f-33" title="Feature 33: Books for each store, without Excel" aria-label="Feature 33: Books for each store, without Excel">33</a></li><li style="--hue:var(--h6)"><a href="#f-34" title="Feature 34: Store reports and dashboard" aria-label="Feature 34: Store reports and dashboard">34</a></li><li style="--hue:var(--h6)"><a href="#f-35" title="Feature 35: Meetings with suppliers and managers" aria-label="Feature 35: Meetings with suppliers and managers">35</a></li><li style="--hue:var(--h6)"><a href="#f-36" title="Feature 36: Room rental to therapists" aria-label="Feature 36: Room rental to therapists">36</a></li><li style="--hue:var(--h7)"><a href="#f-37" title="Feature 37: Clock in and out, timesheets and leave" aria-label="Feature 37: Clock in and out, timesheets and leave">37</a></li><li style="--hue:var(--h7)"><a href="#f-38" title="Feature 38: Weekly shift schedule" aria-label="Feature 38: Weekly shift schedule">38</a></li><li style="--hue:var(--h7)"><a href="#f-39" title="Feature 39: Scheduling against sales and labor cost" aria-label="Feature 39: Scheduling against sales and labor cost">39</a></li><li style="--hue:var(--h7)"><a href="#f-40" title="Feature 40: Timesheet export to isolved" aria-label="Feature 40: Timesheet export to isolved">40</a></li><li style="--hue:var(--h8)"><a href="#f-41" title="Feature 41: Moving data from Catapult" aria-label="Feature 41: Moving data from Catapult">41</a></li></ol>
+      <ol class="legend" aria-label="Areas"><li style="--hue:var(--h1)"><a href="#area-1"><span class="sw" aria-hidden="true">1</span><span class="nm">Till and payments</span><span class="ct" aria-label="10 features">10</span></a></li><li style="--hue:var(--h2)"><a href="#area-2"><span class="sw" aria-hidden="true">2</span><span class="nm">Prices, labels and promotions</span><span class="ct" aria-label="2 features">2</span></a></li><li style="--hue:var(--h3)"><a href="#area-3"><span class="sw" aria-hidden="true">3</span><span class="nm">Purchase orders and suppliers</span><span class="ct" aria-label="9 features">9</span></a></li><li style="--hue:var(--h4)"><a href="#area-4"><span class="sw" aria-hidden="true">4</span><span class="nm">Stock across six stores</span><span class="ct" aria-label="4 features">4</span></a></li><li style="--hue:var(--h5)"><a href="#area-5"><span class="sw" aria-hidden="true">5</span><span class="nm">Customers and Rainbow Rewards</span><span class="ct" aria-label="5 features">5</span></a></li><li style="--hue:var(--h6)"><a href="#area-6"><span class="sw" aria-hidden="true">6</span><span class="nm">Running the stores</span><span class="ct" aria-label="6 features">6</span></a></li><li style="--hue:var(--h7)"><a href="#area-7"><span class="sw" aria-hidden="true">7</span><span class="nm">Team and shifts</span><span class="ct" aria-label="4 features">4</span></a></li><li style="--hue:var(--h8)"><a href="#area-8"><span class="sw" aria-hidden="true">8</span><span class="nm">Moving from the old system</span><span class="ct" aria-label="1 feature">1</span></a></li></ol>
+    </nav>
+  </header>
+
+<section class="area" id="area-1" style="--hue:var(--h1)" aria-labelledby="area-1-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">1</span>
+    <div><p class="area-k">Area 1 of 8</p><h2 id="area-1-t">Till and payments</h2></div>
+    <p class="area-ct">10 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-01" aria-labelledby="f-01-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">01</span>
+    <div class="head-main">
+      <h3 id="f-01-t"><span class="sr">Feature 1: </span>Fast barcode checkout</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; UPC-A labels from 1 Nov, Enter adds the item from 14 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-01-a">
+        <h4 id="f-01-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Ring up a grocery basket by scanning: every product barcode, the US 12-digit UPC-A price and weight labels that scales print, and a code the cashier types when a label won&#x27;t scan.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-01-b">
+        <h4 id="f-01-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>At a busy register, every item that fails to scan sends the cashier to search by name and pick from a list while the line waits. Price and weight labels from the produce or deli scale use a different barcode layout from packaged goods, so the till has to read both.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-01-c">
+        <h4 id="f-01-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol></div>
+        <p>In POS › Cashier Terminal the cashier scans into the search and scan bar. A product barcode puts the item in the cart, and a UPC-A price or weight label rings up the weighed amount in the product&#x27;s own unit. When a label is torn, the cashier types the SKU or barcode and presses Enter: the item goes in the cart and the box clears for the next one. Typing a PLU and pressing Enter opens Weigh &amp; Sell.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Fast barcode checkout (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f01.webp" data-num="01" data-title="Fast barcode checkout" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Fast barcode checkout"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f01.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Fast barcode checkout at octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-02" aria-labelledby="f-02-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">02</span>
+    <div class="head-main">
+      <h3 id="f-02-t"><span class="sr">Feature 2: </span>Till count and shift report</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; EBT lines from 2 Nov, every sale in Session details from 14 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-02-a">
+        <h4 id="f-02-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Each cashier opens and closes their own till, counts the drawer at the end of the shift, and gets an X report during the day and a Z report at close, with every tender on its own line.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-02-b">
+        <h4 id="f-02-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Six stores with several tills each: when nobody compares the drawer count with what the till expected, a shortage turns up days later in the bank deposit and nobody can say which shift it came from. EBT and card money never sits in the drawer, so it must not be counted as cash.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-02-c">
+        <h4 id="f-02-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Sessions</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Close till</bdi></li></ol></div>
+        <p>The till asks the cashier to count the drawer before signing out (Close till). The close shows Expected cash, Counted cash and Over / short, and the X and Z reports give each tender its own line. EBT Food and EBT Cash show as owed by the EBT processor and stay out of the drawer count. Any over or short is booked under that store. POS › Sessions lists every shift by store and till, and Session details shows every sale in it and can reprint or resend a receipt.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/sessions" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Till count and shift report (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f02.webp" data-num="02" data-title="Till count and shift report" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Till count and shift report"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/sessions</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f02.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Till count and shift report at octabiz.ai/pos/sessions" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-03" aria-labelledby="f-03-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">03</span>
+    <div class="head-main">
+      <h3 id="f-03-t"><span class="sr">Feature 3: </span>Special orders and holding items</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-03-a">
+        <h4 id="f-03-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Take a special order for a product the store doesn&#x27;t stock, tied to the customer&#x27;s record, with a deposit, the right tax and a message when it arrives; and park a sale at one till so another till in the same store can finish it.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-03-b">
+        <h4 id="f-03-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A customer asks for a case of a supplement the store doesn&#x27;t carry. On paper the phone number gets lost, nobody remembers to call when the box arrives, and the deposit is hard to find at pickup. A sale parked at one till could only be finished on that same till.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-03-c">
+        <h4 id="f-03-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Layaways</bdi></li><li><bdi>New</bdi></li><li><bdi>Special order</bdi></li></ol></div>
+        <p>POS › Layaways (also found by searching Special orders) has New with Type set to Special order. The cashier picks or creates the customer, adds catalog products, each taxed by its own tax code, and takes a deposit. When the goods come in, Mark arrived and tell the customer sends a ready-to-collect message by email, or WhatsApp when it is connected. A parked sale stays on the server for 7 days with the name of whoever parked it, and any till in that store can open it; two tills can&#x27;t ring the same sale twice.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/layaways" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Special orders and holding items (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f03.webp" data-num="03" data-title="Special orders and holding items" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Special orders and holding items"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/layaways</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f03.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Special orders and holding items at octabiz.ai/pos/layaways" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-04" aria-labelledby="f-04-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">04</span>
+    <div class="head-main">
+      <h3 id="f-04-t"><span class="sr">Feature 4: </span>Tax per item</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026 (tax on each line from 1 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-04-a">
+        <h4 id="f-04-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Each item carries its own tax code and rate at the till, so groceries, supplements and other goods are taxed differently, and the sales tax report files sales and refunds by rate and by tax agency.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-04-b">
+        <h4 id="f-04-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A grocery with several tax rates can&#x27;t file from a report that puts every till sale under one default rate. Each filing period someone rebuilds the split from receipts in a spreadsheet, and a product added without a tax code is easy to miss.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-04-c">
+        <h4 id="f-04-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Sales tax</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Books check</bdi></li></ol></div>
+        <p>Every till line keeps its product&#x27;s tax code and rate, and refunds follow the same split. Reports › Sales tax has a row for each rate and agency, a row for exempt or zero-rated sales, and SNAP purchases on their own exempt row. A product with no tax code sells under the business default tax, and POS › Books check lists those products under Products with no tax code, each with a Set tax code button.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/sales-tax" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Tax per item (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f04.webp" data-num="04" data-title="Tax per item" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Tax per item"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/sales-tax</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f04.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Tax per item at octabiz.ai/reports/sales-tax" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-05" aria-labelledby="f-05-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">05</span>
+    <div class="head-main">
+      <h3 id="f-05-t"><span class="sr">Feature 5: </span>Gift cards</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-05-a">
+        <h4 id="f-05-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Sell new gift cards and top up existing ones at the till, keep them as a liability in the books, and print the remaining balance on the receipt.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-05-b">
+        <h4 id="f-05-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Gift cards sold at the register but tracked somewhere else drift away from the books: a sold card isn&#x27;t revenue until it is spent, and a voided sale has to take the card&#x27;s value back. Customers also ask at every visit how much is left on their card.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-05-c">
+        <h4 id="f-05-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Gift card</bdi></li></ol><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Gift cards</bdi></li></ol></div>
+        <p>In POS › Cashier Terminal, the Gift card button in the cart sells a new card or adds money to a customer&#x27;s card. The cashier scans or types the card number, and a blank new card gets one. The card line is never taxed or discounted. The sale debits cash or card and credits Gift card liability, the receipt prints the card&#x27;s balance, and voiding the sale takes the value back. Money on a gift card is never refunded as cash. Cards need the internet, so the button is off while the till is offline. Every card is listed under Accounting › Sales › Gift cards. In a live test a card was sold, topped up and voided, and every account went back to zero.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Gift cards (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f05.webp" data-num="05" data-title="Gift cards" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Gift cards"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f05.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Gift cards at octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-06" aria-labelledby="f-06-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">06</span>
+    <div class="head-main">
+      <h3 id="f-06-t"><span class="sr">Feature 6: </span>Scales and weighed items</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-06-a">
+        <h4 id="f-06-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Sell produce, bulk and deli items by weight: read the weight from the scale built into the checkout scanner, read the price and weight labels that label scales print, and send each product&#x27;s real price to those scales.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-06-b">
+        <h4 id="f-06-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Bulk bins and produce are a large share of a natural grocery&#x27;s sales. Typing weights by hand is slow and every mistake costs money, and a label scale still holding last month&#x27;s price prints labels that disagree with the till.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-06-c">
+        <h4 id="f-06-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Weigh &amp; Sell</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>PLU Catalog</bdi></li></ol></div>
+        <p>The till reads a steady weight from the checkout scanner-scale (USB or RS-232, for example Datalogic Magellan models) and converts it to the product&#x27;s own unit; a weight that is still moving never reaches the cart. Price and weight labels in the US UPC-A layout ring up at the till, pound labels included. POS › PLU Catalog makes the PLU file for Hobart, Mettler Toledo, DIGI and Bizerba label scales with each product&#x27;s real price, PLU, tare and shelf life. The receipt prints the weight with its unit and the price per kilo or pound.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Scales and weighed items (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f06.webp" data-num="06" data-title="Scales and weighed items" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Scales and weighed items"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f06.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Scales and weighed items at octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-07" aria-labelledby="f-07-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">07</span>
+    <div class="head-main">
+      <h3 id="f-07-t"><span class="sr">Feature 7: </span>EBT/SNAP payments</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-07-a">
+        <h4 id="f-07-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Take EBT Food (SNAP) and EBT Cash at the till: flag SNAP-eligible products, charge no sales tax on the share SNAP pays, send refunds back to the same tender, and keep SNAP sales on their own row in the tax report.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-07-b">
+        <h4 id="f-07-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>In a US grocery, SNAP pays only for eligible items, and the part it pays carries no sales tax. Working that out by hand on a mixed basket is slow and error-prone, and a SNAP refund handed back as cash breaks the program&#x27;s rules.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-07-c">
+        <h4 id="f-07-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Pay</bdi></li><li><bdi>EBT</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Settings</bdi></li></ol></div>
+        <p>Products have a SNAP eligible switch in the product editor and in bulk edit. At Pay › EBT the till shows SNAP can pay up to, counting only eligible items after discounts. The cashier runs the card on the store&#x27;s standalone EBT terminal, types the approved amount and the approval number, and the tax on the SNAP share drops off. Refunds split by tender, so a SNAP purchase never comes back as cash. The X and Z reports give EBT Food and EBT Cash their own lines, and the sales tax report has a SNAP purchases (exempt) row. It works offline too. In a live test sale, EBT Food paid the whole basket, the tax came to zero, and the books recorded the amount as owed by the EBT processor.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="Open in OctaBiz: EBT/SNAP payments (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f07.webp" data-num="07" data-title="EBT/SNAP payments" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: EBT/SNAP payments"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f07.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of EBT/SNAP payments at octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-08" aria-labelledby="f-08-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">08</span>
+    <div class="head-main">
+      <h3 id="f-08-t"><span class="sr">Feature 8: </span>Card processing for a grocery store</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-08-a">
+        <h4 id="f-08-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Take cards through a processor account the business owns, with card readers that belong to that business only and pay into its own account.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-08-b">
+        <h4 id="f-08-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>With six stores, card money landing in one shared account has to be split by hand before the bank deposits match each store&#x27;s books. The owner also needs to know that a reader on the counter can only charge into the business&#x27;s own account.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-08-c">
+        <h4 id="f-08-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Devices</bdi></li><li><bdi>Card readers (Stripe)</bdi></li></ol></div>
+        <p>Cards run through Stripe on the business&#x27;s own connected account. In POS › Devices, the Card readers (Stripe) section, shown to owners and admins only, has Connect Stripe. Once connected, each store is set up with its address, and a reader is added with the pairing code from its screen and a name such as Front counter. The list shows each store&#x27;s readers as online or offline, with Remove. EBT runs on its own standalone terminal and is recorded at the till.</p>
+        <p class="store"><b>Store step:</b> connect the Stripe account.</p>
+        <a class="open" href="https://octabiz.ai/pos/devices" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Card processing for a grocery store (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f08.webp" data-num="08" data-title="Card processing for a grocery store" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Card processing for a grocery store"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/devices</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f08.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Card processing for a grocery store at octabiz.ai/pos/devices" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-09" aria-labelledby="f-09-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">09</span>
+    <div class="head-main">
+      <h3 id="f-09-t"><span class="sr">Feature 9: </span>Selling when the internet is down</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026 (tested offline on the live site); more safeguards from 16 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-09-a">
+        <h4 id="f-09-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Keep selling when the store&#x27;s internet drops, and send every sale to the books when the connection returns, with nothing lost.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-09-b">
+        <h4 id="f-09-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A dropped connection on a busy morning can&#x27;t stop the registers. Cashiers need to keep ringing up cash sales, open a till without internet, and trust that every sale is stored on the device until it reaches the books.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-09-c">
+        <h4 id="f-09-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Download apps</bdi></li></ol></div>
+        <p>The Cashier Terminal keeps selling offline. Cash and EBT sales are saved on the device before the sale shows as paid, and they post to the books when the connection returns. A till can be opened offline from the header. If the device can&#x27;t store sales, a red strip reading Sales aren&#x27;t being saved on this till tells the cashier to keep the page open. Gift cards and Rewards points need the internet and say so while offline. For a register that must start with no connection at all, POS › Download apps has the desktop till app for Mac and Windows. On the live site, a cash sale rung up offline posted to the books once the connection came back.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Selling when the internet is down (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f09.webp" data-num="09" data-title="Selling when the internet is down" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Selling when the internet is down"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f09.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Selling when the internet is down at octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-10" aria-labelledby="f-10-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">10</span>
+    <div class="head-main">
+      <h3 id="f-10-t"><span class="sr">Feature 10: </span>Till hardware and setup</h3>
+      <p class="live"><span class="live-k">Live</span> 2 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-10-a">
+        <h4 id="f-10-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Set up each store&#x27;s registers with the hardware a US grocery uses (scanner-scale, receipt printer, cash drawer, card reader and label scales) and manage them per store from one place.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-10-b">
+        <h4 id="f-10-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Six stores means dozens of devices. When each printer or scale is set up by hand on its own computer, nobody can see which till has what, and every new register needs a technician&#x27;s visit.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-10-c">
+        <h4 id="f-10-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Devices</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Device Bridge</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Download apps</bdi></li></ol></div>
+        <p>POS › Devices lists each store&#x27;s devices with Add a device, and has Location settings (scale labels and the receipt template) and Card readers (Stripe). POS › PLU Catalog holds the checkout scanner-scale settings (model, unit, how it connects and a live reading) and the PLU file for label scales. POS › Device Bridge shows the status of the OctaBiz Connector, which links printers, drawers and scales to the till, and POS › Download apps has the desktop app and the Connector for Mac and Windows.</p>
+        <p class="store"><b>Store step:</b> try the scanner-scale once on the store&#x27;s own device before switching it on for daily use.</p>
+        <a class="open" href="https://octabiz.ai/pos/devices" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Till hardware and setup (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f10.webp" data-num="10" data-title="Till hardware and setup" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Till hardware and setup"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/devices</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f10.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Till hardware and setup at octabiz.ai/pos/devices" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-2" style="--hue:var(--h2)" aria-labelledby="area-2-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">2</span>
+    <div><p class="area-k">Area 2 of 8</p><h2 id="area-2-t">Prices, labels and promotions</h2></div>
+    <p class="area-ct">2 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-11" aria-labelledby="f-11-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">11</span>
+    <div class="head-main">
+      <h3 id="f-11-t"><span class="sr">Feature 11: </span>Shelf labels</h3>
+      <p class="live"><span class="live-k">Live</span> 3 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-11-a">
+        <h4 id="f-11-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>When a price changes or a sale starts or ends, put the product on a reprint list for every store that stocks it, at that store&#x27;s own price, and let staff check a price and print a label from a phone in the aisle.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-11-b">
+        <h4 id="f-11-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>With prices set per store, every price change at head office leaves six stores to find and reprint the right labels by hand. A shelf label that disagrees with the till means an unhappy customer at the register.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-11-c">
+        <h4 id="f-11-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Labels to print</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Price check</bdi></li></ol></div>
+        <p>POS › Labels to print lists, for the store picked in the header, every product whose price changed or whose sale started or ended, at that store&#x27;s price. Printing, Dismiss, or the price going back closes each request. POS › Price check works on a phone: scan a product or a scale label, see what this store charges, then print the label on the spot or add it to Labels to print. Bulk printing gives each label its own product and current price, and sale labels show the sale price with was and until where the label size has room. In a live test, a price change on one product went only to the store that carries it, and the print dialog showed that store&#x27;s price.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/labels-to-print" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Shelf labels (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f11.webp" data-num="11" data-title="Shelf labels" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Shelf labels"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/labels-to-print</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f11.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Shelf labels at octabiz.ai/pos/labels-to-print" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-12" aria-labelledby="f-12-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">12</span>
+    <div class="head-main">
+      <h3 id="f-12-t"><span class="sr">Feature 12: </span>Discounts and promotions</h3>
+      <p class="live"><span class="live-k">Live</span> 4 Nov 2026 (codes and deals 3 Nov; department sales and member prices 4 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-12-a">
+        <h4 id="f-12-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Run grocery promotions at the till: &quot;3 for $5&quot;, mix and match across products or a category, buy X get Y, a limit per sale, dated department sales and member prices, plus discount codes that respect their dates and limits.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-12-b">
+        <h4 id="f-12-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Without deals at the till, cashiers key discounts by hand and each one is a chance to give away too much, while a cashier without discount rights can&#x27;t sell the store&#x27;s own promotions. A code that has ended or been used up must not get through, even when two people use it at the same moment.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-12-c">
+        <h4 id="f-12-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Sales</bdi></li><li><bdi>Promotions</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol></div>
+        <p>Sales › Promotions has the offer types Buy N for a price, Any N of these for a price (by product or category), Buy X get Y and Department sale, each with dates, stores and an optional limit per sale. A What the customer pays table shows the price for 1 to 7 units. At the till the deal comes off by itself, the line names it, Why this price? explains it and the receipt prints the saving. A member pays the price from their price list, and the till always charges the lowest price per item without stacking. A department sale never charges more than the shelf label. Codes that have ended, haven&#x27;t started, are used up or need a bigger order show greyed out with the reason, such as Ended Nov 2.</p>
+        
+        <a class="open" href="https://octabiz.ai/sales/promotions" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Discounts and promotions (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f12.webp" data-num="12" data-title="Discounts and promotions" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Discounts and promotions"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/sales/promotions</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f12.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Discounts and promotions at octabiz.ai/sales/promotions" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-3" style="--hue:var(--h3)" aria-labelledby="area-3-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">3</span>
+    <div><p class="area-k">Area 3 of 8</p><h2 id="area-3-t">Purchase orders and suppliers</h2></div>
+    <p class="area-ct">9 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-13" aria-labelledby="f-13-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">13</span>
+    <div class="head-main">
+      <h3 id="f-13-t"><span class="sr">Feature 13: </span>Low-stock alerts and suggested orders</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; reorder levels per store from 4 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-13-a">
+        <h4 id="f-13-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Set a reorder point and a maximum stock for each product at each store, warn when stock runs low, and suggest an order big enough to bring that store back to its maximum.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-13-b">
+        <h4 id="f-13-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>One reorder point for the whole business doesn&#x27;t fit six stores that sell at different speeds. The busy store runs out while the quiet one sits on extra stock, and managers walk the aisles with a clipboard to decide what to order.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-13-c">
+        <h4 id="f-13-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Reorder</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Low stock</bdi></li></ol><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Master Products</bdi></li><li><bdi>a product</bdi></li><li><bdi>Stock</bdi></li></ol></div>
+        <p>On a product&#x27;s page, the Stock tab has Reorder levels by branch, with a reorder point and a max stock for every store, and the products list sets them for many products at once with Reorder levels. Inventory › Low stock shows what is under its alert at each store. Each night the reorder check suggests, on Inventory › Reorder, an order that brings the store up to its max stock after counting what is already on order, and the suggestions become draft purchase orders that are ready to send.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/reorder" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Low-stock alerts and suggested orders (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f13.webp" data-num="13" data-title="Low-stock alerts and suggested orders" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Low-stock alerts and suggested orders"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/reorder</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f13.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Low-stock alerts and suggested orders at octabiz.ai/inventory/reorder" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-14" aria-labelledby="f-14-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">14</span>
+    <div class="head-main">
+      <h3 id="f-14-t"><span class="sr">Feature 14: </span>Purchase orders to any supplier</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; cases and promo costs on 12 and 14 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-14-a">
+        <h4 id="f-14-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Order from any supplier, a large distributor or a local farm, with a purchase order that names the store it ships to, works out the unit cost from the case size, and goes out by email, PDF or EDI.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-14-b">
+        <h4 id="f-14-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Rainbow Blossom buys from UNFI, KeHE and many small local vendors. When orders live in emails and phone calls, the store can&#x27;t see what is on order, the unit cost inside a case is worked out by hand, and receiving has nothing to check against.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-14-c">
+        <h4 id="f-14-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Purchase Orders</bdi></li></ol></div>
+        <p>Procurement › Purchase Orders, with Quick PO for a fast order, builds an order for any vendor shipping to a chosen store. Lines can be ordered in whole cases, and the unit cost comes from the case size and the supplier&#x27;s price, including a distributor&#x27;s promo cost while it runs. The order page lists what still stops it from being sent (delivery date, payment terms, bill-to) until it reads No blockers. The Send PO dialog emails the order, downloads the PDF and marks it sent, or sends it by EDI to a supplier set up for it.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/po" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Purchase orders to any supplier (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f14.webp" data-num="14" data-title="Purchase orders to any supplier" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Purchase orders to any supplier"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/po</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f14.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Purchase orders to any supplier at octabiz.ai/procurement/po" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-15" aria-labelledby="f-15-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">15</span>
+    <div class="head-main">
+      <h3 id="f-15-t"><span class="sr">Feature 15: </span>Late-order alerts</h3>
+      <p class="live"><span class="live-k">Live</span> 5 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-15-a">
+        <h4 id="f-15-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Tell the store manager about orders that are late or still unconfirmed, with a follow-up email to the distributor ready to send.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-15-b">
+        <h4 id="f-15-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A late delivery is usually noticed when the shelf is already empty. Chasing it means looking up the order, the vendor&#x27;s contact and the promised date, then writing the email from scratch.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-15-c">
+        <h4 id="f-15-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Deliveries to come</bdi></li></ol></div>
+        <p>Procurement › Deliveries to come puts late orders first, with the number of days late. Each morning Reminders tells the manager of that store which orders are late or unconfirmed, and the order carries a follow-up email to the distributor, written and ready to send.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/deliveries" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Late-order alerts (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f15.webp" data-num="15" data-title="Late-order alerts" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Late-order alerts"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/deliveries</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f15.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Late-order alerts at octabiz.ai/procurement/deliveries" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-16" aria-labelledby="f-16-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">16</span>
+    <div class="head-main">
+      <h3 id="f-16-t"><span class="sr">Feature 16: </span>Monthly buying budget per store</h3>
+      <p class="live"><span class="live-k">Live</span> 5 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-16-a">
+        <h4 id="f-16-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Set a buying budget for each store and month, show what is left while ordering, and warn about or stop an order that goes over.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-16-b">
+        <h4 id="f-16-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Each store manager orders on their own, and overspending shows up only at month-end when the bills arrive. By then the cash is already committed.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-16-c">
+        <h4 id="f-16-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Buying budgets</bdi></li></ol></div>
+        <p>Procurement › Buying budgets holds a limit for each store and month. Quick PO and draft orders show left this month for that store and warn before an order goes over the budget; the owner can choose to stop such orders instead. Warning is the default.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/buying-budgets" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Monthly buying budget per store (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f16.webp" data-num="16" data-title="Monthly buying budget per store" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="872" aria-label="Enlarge screenshot: Monthly buying budget per store"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/buying-budgets</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f16.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="Screenshot of Monthly buying budget per store at octabiz.ai/procurement/buying-budgets" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-17" aria-labelledby="f-17-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">17</span>
+    <div class="head-main">
+      <h3 id="f-17-t"><span class="sr">Feature 17: </span>EDI ordering with UNFI and KeHE</h3>
+      <p class="live"><span class="live-k">Live</span> 12 Nov 2026 (mailbox checked every 15 minutes from 14 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-17-a">
+        <h4 id="f-17-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Send purchase orders to UNFI and KeHE by EDI and take their answers back in: order confirmations (855), ship notices (856), invoices (810) and acknowledgements (997).</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-17-b">
+        <h4 id="f-17-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Large distributors expect EDI. Without it, orders go by email or portal, confirmations and short shipments are read by eye, and every invoice is typed in and checked against the delivery by hand.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-17-c">
+        <h4 id="f-17-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Vendors</bdi></li><li><bdi>a vendor</bdi></li><li><bdi>EDI messages</bdi></li></ol><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Purchase Orders</bdi></li><li><bdi>Send PO</bdi></li></ol></div>
+        <p>A vendor set up for EDI (the vendor&#x27;s Settings › Electronic ordering (EDI)) gets Send by EDI in the Send PO dialog, which drops an X12 850 order into the distributor&#x27;s SFTP mailbox. OctaBiz checks that mailbox every 15 minutes, and the vendor&#x27;s EDI messages tab also has Check for messages and Add a file you received. An 855 confirms the order with their delivery date and holds any cut lines for the buyer to accept. An 856 becomes a delivery batch on its way, with lots and expiry dates. An 810 becomes a draft bill that has been through the 3-way match of ordered, received and billed. Everything can run in Testing mode first.</p>
+        <p class="store"><b>Store step:</b> EDI IDs and trading partner agreements with UNFI and KeHE.</p>
+        <a class="open" href="https://octabiz.ai/resources/vendors" target="_blank" rel="noopener" aria-label="Open in OctaBiz: EDI ordering with UNFI and KeHE (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f17.webp" data-num="17" data-title="EDI ordering with UNFI and KeHE" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: EDI ordering with UNFI and KeHE"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/resources/vendors</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f17.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of EDI ordering with UNFI and KeHE at octabiz.ai/resources/vendors" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-18" aria-labelledby="f-18-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">18</span>
+    <div class="head-main">
+      <h3 id="f-18-t"><span class="sr">Feature 18: </span>Distributor catalogs and price files</h3>
+      <p class="live"><span class="live-k">Live</span> 9 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-18-a">
+        <h4 id="f-18-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Load UNFI and KeHE price files on a schedule straight from their SFTP servers, warn when a new cost squeezes the margin, and use the distributor&#x27;s promo cost on orders while it runs.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-18-b">
+        <h4 id="f-18-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Distributors change costs every few weeks. When someone downloads and imports the price file by hand, costs go stale, and nobody notices that a product now sells under its target margin until the month&#x27;s numbers come in.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-18-c">
+        <h4 id="f-18-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Vendors</bdi></li><li><bdi>a vendor</bdi></li><li><bdi>Products</bdi></li><li><bdi>Scheduled and Margins</bdi></li></ol></div>
+        <p>On a vendor&#x27;s Products tab, the Scheduled sub-tab takes SFTP server as a source: server, port, user name and a folder or file name pattern such as /outgoing/prices_*.csv, with a password or a private key. The newest matching CSV, Excel or zipped file is imported on schedule. The Margins sub-tab then lists products whose new cost leaves them under the owner&#x27;s margin (30% unless changed) or below zero, at each store&#x27;s selling price. Promo cost, start and end columns are read from the file, and Quick PO uses the promo cost while it runs (Promo until 30 Nov). The import changes only the supplier&#x27;s cost; stock values and selling prices stay as they are.</p>
+        
+        <a class="open" href="https://octabiz.ai/resources/vendors" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Distributor catalogs and price files (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f18.webp" data-num="18" data-title="Distributor catalogs and price files" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Distributor catalogs and price files"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/resources/vendors</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f18.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Distributor catalogs and price files at octabiz.ai/resources/vendors" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-19" aria-labelledby="f-19-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">19</span>
+    <div class="head-main">
+      <h3 id="f-19-t"><span class="sr">Feature 19: </span>AI order forecasting</h3>
+      <p class="live"><span class="live-k">Live</span> 9 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-19-a">
+        <h4 id="f-19-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Suggest each store&#x27;s order from that store&#x27;s own sales, with the effect of seasons, holidays and planned promotions, on a review screen where the buyer accepts or changes each line before it becomes a purchase order.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-19-b">
+        <h4 id="f-19-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Ordering from last week&#x27;s sales misses the busy weeks: a holiday or a promotion empties the shelf, and the order placed afterwards arrives too late. A buyer can&#x27;t do that arithmetic for thousands of items across six stores.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-19-c">
+        <h4 id="f-19-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Reorder</bdi></li><li><bdi>Forecast review</bdi></li></ol></div>
+        <p>Inventory › Reorder › Forecast review works on one store at a time. For every item sold there it shows on hand, on order, what it should sell until the next order arrives, a suggested order capped at the store&#x27;s max stock and rounded to full cases, and a short reason such as Thanksgiving week +30%. The buyer accepts, changes or skips each line, and Add to draft PO fills one draft per supplier for that store. How we got this shows every step of the arithmetic. Explain this suggestion asks AI to put the same numbers into a few sentences; the numbers themselves never depend on AI. Days when the item was out of stock are left out, so a stock-out doesn&#x27;t drag the forecast down.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/reorder/forecast" target="_blank" rel="noopener" aria-label="Open in OctaBiz: AI order forecasting (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f19.webp" data-num="19" data-title="AI order forecasting" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: AI order forecasting"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/reorder/forecast</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f19.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of AI order forecasting at octabiz.ai/inventory/reorder/forecast" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-20" aria-labelledby="f-20-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">20</span>
+    <div class="head-main">
+      <h3 id="f-20-t"><span class="sr">Feature 20: </span>Phone app for the shop floor</h3>
+      <p class="live"><span class="live-k">Live</span> 10 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-20-a">
+        <h4 id="f-20-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Give staff one phone page for the aisles: scan to count, check a price, record damaged or missing stock, and put an item on the next order.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-20-b">
+        <h4 id="f-20-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Floor staff carry a phone but have to walk back to the office computer to count, record a broken jar or note what to reorder. Notes on paper get typed in later, or never.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-20-c">
+        <h4 id="f-20-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Shop floor</bdi></li></ol></div>
+        <p>Inventory › Shop floor works on a phone for the store picked in the header and has four big buttons. Count opens the stock count with a camera scanner, and a scan jumps to that item&#x27;s row. Price check opens the store&#x27;s price and label printing. Damaged or missing opens the same Remove stock form as the desktop, so the books and the shrink report stay the same. Order shows the item&#x27;s usual supplier, the open draft, what is on hand and on the way, and a suggested amount; Put on the order adds it to the draft, and the manager checks and sends it from Purchase Orders.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/shop-floor" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Phone app for the shop floor (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f20.webp" data-num="20" data-title="Phone app for the shop floor" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Phone app for the shop floor"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/shop-floor</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f20.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Phone app for the shop floor at octabiz.ai/inventory/shop-floor" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-21" aria-labelledby="f-21-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">21</span>
+    <div class="head-main">
+      <h3 id="f-21-t"><span class="sr">Feature 21: </span>Returns and credits from suppliers</h3>
+      <p class="live"><span class="live-k">Live</span> 9 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-21-a">
+        <h4 id="f-21-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Send damaged, short-dated or wrong items back to a vendor with a return document, take them out of stock at their book value, and track the vendor&#x27;s credit until it arrives.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-21-b">
+        <h4 id="f-21-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Without a return document, the stock is written off as a loss, the box goes back with the driver, and whether the vendor ever issues the credit depends on someone remembering to check the statements.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-21-c">
+        <h4 id="f-21-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Vendor returns</bdi></li></ol></div>
+        <p>Procurement › Vendor returns, and the Returns tab on each vendor, start a return for a vendor and a store, filled from the purchase order or the bill. Each line has a quantity, the price to ask for and a reason. Print return slip gives the driver a sheet with the vendor&#x27;s RMA number, the items, the total and two signature lines. Ship takes the stock out of that store, and the books show what the vendor owes. When the credit memo arrives, the manager ticks the items it covers, and it becomes a vendor credit that Pay bills uses like any other. The list has Waiting for credit, Drafts, Credit received and Closed, and marks a return Overdue in red after 30 days. An expired return takes expired batches first.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/vendor-returns" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Returns and credits from suppliers (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f21.webp" data-num="21" data-title="Returns and credits from suppliers" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Returns and credits from suppliers"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/vendor-returns</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f21.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Returns and credits from suppliers at octabiz.ai/procurement/vendor-returns" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-4" style="--hue:var(--h4)" aria-labelledby="area-4-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">4</span>
+    <div><p class="area-k">Area 4 of 8</p><h2 id="area-4-t">Stock across six stores</h2></div>
+    <p class="area-ct">4 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-22" aria-labelledby="f-22-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">22</span>
+    <div class="head-main">
+      <h3 id="f-22-t"><span class="sr">Feature 22: </span>Live stock and transfers between stores</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; large catalogs from 14 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-22-a">
+        <h4 id="f-22-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>See every product&#x27;s stock at each of the six stores as it changes, and move stock between stores with a transfer that both stores and the books follow.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-22-b">
+        <h4 id="f-22-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>When a customer asks for something this store has run out of, staff need to know which store has it. Without one view they phone around, and a transfer done by hand leaves one store&#x27;s count wrong.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-22-c">
+        <h4 id="f-22-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Transfers</bdi></li></ol></div>
+        <p>Inventory › Locations › Stock overview totals stock and its value across the stores, and Stocks by location lists every product with its stock at each store, with search and paging however large the catalog is. Inventory › Transfers moves stock from one store to another, and the Transfer Log keeps each movement. Every sale, receipt and transfer updates the store&#x27;s stock as it happens. In a live check, one store&#x27;s stock page showed every movement of the year, the same count as the database.</p>
+        
+        <a class="open" href="https://octabiz.ai/locations/stocks" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Live stock and transfers between stores (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f22.webp" data-num="22" data-title="Live stock and transfers between stores" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Live stock and transfers between stores"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/locations/stocks</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f22.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Live stock and transfers between stores at octabiz.ai/locations/stocks" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-23" aria-labelledby="f-23-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">23</span>
+    <div class="head-main">
+      <h3 id="f-23-t"><span class="sr">Feature 23: </span>Expiry date alerts</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; warning days per product from 4 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-23-a">
+        <h4 id="f-23-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Track expiry dates by batch and warn each store&#x27;s manager a set number of days before a product expires, with a different warning time for each product or category.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-23-b">
+        <h4 id="f-23-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Dairy, fresh juice and supplements expire on very different schedules. One warning window for everything comes too late for milk or months too early for vitamins, and expired stock found on the shelf goes straight to loss.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-23-c">
+        <h4 id="f-23-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Near expiry &amp; expired</bdi></li><li><bdi>Warning days</bdi></li></ol></div>
+        <p>Received stock keeps its batch with manufacturing and expiry dates, and an EDI ship notice fills them in on receiving. Inventory › Near expiry &amp; expired lists what is close to its date at each store, and Warning days sets how early each product or category shows up, for example 5 days for dairy and 90 for supplements. Each store&#x27;s manager gets the notice for their own store, and the morning brief lists items near expiry.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/expiring" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Expiry date alerts (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f23.webp" data-num="23" data-title="Expiry date alerts" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Expiry date alerts"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/expiring</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f23.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Expiry date alerts at octabiz.ai/inventory/expiring" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-24" aria-labelledby="f-24-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">24</span>
+    <div class="head-main">
+      <h3 id="f-24-t"><span class="sr">Feature 24: </span>Stock counts and their history</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; Past counts from 4 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-24-a">
+        <h4 id="f-24-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Count each store&#x27;s stock with a guided count, and keep every finished count with what was over or short, in units and in value.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-24-b">
+        <h4 id="f-24-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A count done on paper is typed in later, and once the stock is adjusted nobody can say what the last count found or who did it. Repeated losses on the same items go unnoticed.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-24-c">
+        <h4 id="f-24-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li><li><bdi>Count</bdi></li><li><bdi>Past counts</bdi></li></ol></div>
+        <p>The guided count (Inventory › Locations › Count) picks a store, counts and finishes; on a phone, Scan an item jumps to that item&#x27;s row. Past counts lists every finished count with its date, store, who counted, and what was over or short in units and in value at cost, and opening a count shows each item. A scheduled stock accuracy email reports what is really off.</p>
+        
+        <a class="open" href="https://octabiz.ai/locations/stock/count/history" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Stock counts and their history (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f24.webp" data-num="24" data-title="Stock counts and their history" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Stock counts and their history"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/locations/stock/count/history</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f24.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Stock counts and their history at octabiz.ai/locations/stock/count/history" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-25" aria-labelledby="f-25-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">25</span>
+    <div class="head-main">
+      <h3 id="f-25-t"><span class="sr">Feature 25: </span>Shrink tracking</h3>
+      <p class="live"><span class="live-k">Live</span> 5 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-25-a">
+        <h4 id="f-25-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Record stock that leaves the store without a sale, with its reason, and report it by store, department and month at the value the books recorded.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-25-b">
+        <h4 id="f-25-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Damaged, expired and stolen goods are a real cost in a grocery, but if they only show up as count differences, the owner can&#x27;t tell breakage from theft or spoilage, and can&#x27;t act on any of them.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-25-c">
+        <h4 id="f-25-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Shrink report</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li><li><bdi>a store</bdi></li><li><bdi>Remove stock</bdi></li></ol></div>
+        <p>Staff record a loss with Remove stock on the store&#x27;s page, or Damaged or missing on the phone: the item, the reason (damaged, expired, lost or stolen, used in the store, other) and the quantity. Stock goes down and the loss is booked at cost. Reports › Shrink report shows it by reason, store, department and month at the value the books recorded, with count differences beside it and never added in. Department margin shows shrink as a share of sales.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/shrink-report" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Shrink tracking (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f25.webp" data-num="25" data-title="Shrink tracking" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Shrink tracking"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/shrink-report</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f25.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Shrink tracking at octabiz.ai/reports/shrink-report" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-5" style="--hue:var(--h5)" aria-labelledby="area-5-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">5</span>
+    <div><p class="area-k">Area 5 of 8</p><h2 id="area-5-t">Customers and Rainbow Rewards</h2></div>
+    <p class="area-ct">5 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-26" aria-labelledby="f-26-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">26</span>
+    <div class="head-main">
+      <h3 id="f-26-t"><span class="sr">Feature 26: </span>One customer record for every store</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal; till and online sales counted from 4 Nov; Financial tab 14 and 17 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-26-a">
+        <h4 id="f-26-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Keep one record per customer across all six stores, with their till purchases, invoices, special orders, online orders and Rewards points together.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-26-b">
+        <h4 id="f-26-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A regular who shops at two stores looks like two half-customers, and someone who mostly buys at the till looks inactive in reports that count only invoices. Staff can&#x27;t see what the customer has on order or owes.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-26-c">
+        <h4 id="f-26-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Customers</bdi></li><li><bdi>a customer</bdi></li></ol></div>
+        <p>The customer page (Accounting › Sales › Customers) has a Financial tab listing till sales, invoices, special orders and online orders together, with what the customer owes; a cancelled special order shows no debt. The Details tab holds the Rewards card and the automatic messages sent. The customer health score, Best customers and Top customers all count till and online sales, so a frequent grocery shopper is no longer marked inactive. Customers brought in from Catapult keep their loyalty card number.</p>
+        
+        <a class="open" href="https://octabiz.ai/accounting/customers" target="_blank" rel="noopener" aria-label="Open in OctaBiz: One customer record for every store (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f26.webp" data-num="26" data-title="One customer record for every store" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: One customer record for every store"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/accounting/customers</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f26.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of One customer record for every store at octabiz.ai/accounting/customers" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-27" aria-labelledby="f-27-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">27</span>
+    <div class="head-main">
+      <h3 id="f-27-t"><span class="sr">Feature 27: </span>Email campaigns</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-27-a">
+        <h4 id="f-27-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Send email campaigns to customers from the same customer list the stores sell to.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-27-b">
+        <h4 id="f-27-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Exporting customers to a separate email tool every time leaves stale lists and sends mail again to people who unsubscribed.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-27-c">
+        <h4 id="f-27-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Marketing</bdi></li><li><bdi>Campaigns</bdi></li></ol></div>
+        <p>Marketing › Campaigns builds a campaign in four steps (Who should get this?, How should we reach them?, What do you want to say? and When should it go out?) with Send test to me before it goes out. Lists and the Email builder sit under Marketing, and Email results shows how each campaign did.</p>
+        <p class="store"><b>Store step:</b> collect customers&#x27; marketing consent, which the automatic thank-yous and check-ins also need.</p>
+        <a class="open" href="https://octabiz.ai/marketing/campaigns" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Email campaigns (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f27.webp" data-num="27" data-title="Email campaigns" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Email campaigns"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/marketing/campaigns</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f27.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Email campaigns at octabiz.ai/marketing/campaigns" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-28" aria-labelledby="f-28-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">28</span>
+    <div class="head-main">
+      <h3 id="f-28-t"><span class="sr">Feature 28: </span>Rainbow Rewards points</h3>
+      <p class="live"><span class="live-k">Live</span> 12 Nov 2026 (points at online checkout from 14 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-28-a">
+        <h4 id="f-28-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Run Rainbow Rewards: one points balance per customer across all stores, earned and spent at the till and online, with kept-out categories, expiry, and the points liability in the books.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-28-b">
+        <h4 id="f-28-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A loyalty program kept outside the register means a separate card, a separate balance and staff looking it up by hand. Unspent points are a promise the store owes its customers, and if that promise isn&#x27;t in the books the owner can&#x27;t see what it is worth.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-28-c">
+        <h4 id="f-28-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Rewards</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Pay</bdi></li></ol></div>
+        <p>POS › Rewards shows the rules in plain words. Owners and admins set the program name (Rainbow Rewards), points per $1 spent, kept-out categories such as Beer &amp; Wine or Tobacco, the value of a point, the most of a sale points can pay for, and the months until points expire. At Pay, the cashier finds the member by phone number or joins them on the spot, and Use points takes off the most this sale allows, or a smaller amount. The receipt shows points before, used, earned and now. Members also earn on paid online orders and can see and use their points at online checkout with a code sent by email; both online switches stay off until the owner turns them on. Unspent points sit in the Loyalty points liability account (2450), and points from Catapult come in as opening balances split by store. In the live test, that account equalled unspent points times their value after every earn, use and void.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/rewards" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Rainbow Rewards points (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f28.webp" data-num="28" data-title="Rainbow Rewards points" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Rainbow Rewards points"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/rewards</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f28.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Rainbow Rewards points at octabiz.ai/pos/rewards" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-29" aria-labelledby="f-29-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">29</span>
+    <div class="head-main">
+      <h3 id="f-29-t"><span class="sr">Feature 29: </span>Automatic thank-yous and check-ins</h3>
+      <p class="live"><span class="live-k">Live</span> 11 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-29-a">
+        <h4 id="f-29-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Thank the best customers and check in with regulars who have stopped coming, automatically, only through channels each customer agreed to, with limits so nobody is flooded.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-29-b">
+        <h4 id="f-29-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Store staff don&#x27;t have time to notice that a weekly shopper hasn&#x27;t been in for a month, or to thank the biggest spenders. By the time someone reads a report, the customer has moved to another store.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-29-c">
+        <h4 id="f-29-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Marketing</bdi></li><li><bdi>Keep customers</bdi></li><li><bdi>Thank-yous and check-ins</bdi></li></ol></div>
+        <p>Marketing › Keep customers › Best customers lists who spent most in the last 30 days, 90 days or 12 months, for all stores or one, with visits, average basket, lifetime value, last visit and favorite store. Thank-yous and check-ins holds two automatic messages that stay off until someone turns them on: a thank-you after a number of visits or an amount spent, and a check-in when a regular is a set number of days later than their usual gap. Before a rule goes on, the owner sees who would get it today and the exact message. Messages go by email, text or WhatsApp, only on a channel the customer agreed to, at most 1 every 14 days by default and only between 9 AM and 8 PM. They start once the stores record customers&#x27; marketing consent.</p>
+        
+        <a class="open" href="https://octabiz.ai/marketing/thank-yous" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Automatic thank-yous and check-ins (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f29.webp" data-num="29" data-title="Automatic thank-yous and check-ins" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Automatic thank-yous and check-ins"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/marketing/thank-yous</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f29.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Automatic thank-yous and check-ins at octabiz.ai/marketing/thank-yous" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-30" aria-labelledby="f-30-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">30</span>
+    <div class="head-main">
+      <h3 id="f-30-t"><span class="sr">Feature 30: </span>Online store on the same stock</h3>
+      <p class="live"><span class="live-k">Live</span> 6 Nov 2026 (one-store cap 8 Nov; store sort and last-unit hold 9 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-30-a">
+        <h4 id="f-30-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Sell online from the stock of all six stores: the shopper picks the store to collect from, sees that store&#x27;s stock, and the order is reserved and packed there.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-30-b">
+        <h4 id="f-30-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>An online shop tied to one store&#x27;s stock shows items as sold out while another store has plenty, and the shopper can&#x27;t choose where to collect.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-30-c">
+        <h4 id="f-30-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>OctaShop</bdi></li><li><bdi>Settings</bdi></li><li><bdi>Stock</bdi></li></ol></div>
+        <p>OctaShop › Settings › Stock has Sell from your other stores too, with the stores to include. Shoppers choose their pickup store, and the product page, search and cart show that store&#x27;s stock, with In stock first sorted by it. A second switch, Add up the stock of these stores, shows one total; a delivery order then goes to one store that holds all of it, and the quantity stops at what one store has. An order is never split, and the last unit goes to one shopper only. The sale, its cost and any refund land in that store&#x27;s books. Both switches stay off until the owner turns them on.</p>
+        <p class="store"><b>Store step:</b> tick the stores and turn on pickup.</p>
+        <a class="open" href="https://octabiz.ai/octashop/settings/stock" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Online store on the same stock (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f30.webp" data-num="30" data-title="Online store on the same stock" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Online store on the same stock"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/octashop/settings/stock</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f30.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Online store on the same stock at octabiz.ai/octashop/settings/stock" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-6" style="--hue:var(--h6)" aria-labelledby="area-6-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">6</span>
+    <div><p class="area-k">Area 6 of 8</p><h2 id="area-6-t">Running the stores</h2></div>
+    <p class="area-ct">6 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-31" aria-labelledby="f-31-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">31</span>
+    <div class="head-main">
+      <h3 id="f-31-t"><span class="sr">Feature 31: </span>Morning brief and today&#x27;s tasks</h3>
+      <p class="live"><span class="live-k">Live</span> 7 Nov 2026 (Customize brief from 12 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-31-a">
+        <h4 id="f-31-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Give each store manager one page every morning with yesterday&#x27;s sales, tills, late orders, items near expiry, low stock and today&#x27;s to-dos, and send the same by email.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-31-b">
+        <h4 id="f-31-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A manager opening the store checks five screens before the doors open, or none. Yesterday&#x27;s problems (a short till, a late truck, milk about to expire) come to light only when a customer or the owner points them out.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-31-c">
+        <h4 id="f-31-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Morning brief</bdi></li></ol></div>
+        <p>POS › Morning brief shows one page per store: yesterday&#x27;s sales (the same figure as Profit &amp; loss), tills open and closed, late orders, stock about to expire, low stock and today&#x27;s to-dos. Customize brief turns sections on or off and moves them, has Restore default, and offers four more sections to add. A switch at the bottom emails the brief every morning at the chosen time for the chosen stores, to the person&#x27;s own address or to another address once it is confirmed by link or code. Store managers see their own stores.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/morning-brief" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Morning brief and today&#x27;s tasks (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f31.webp" data-num="31" data-title="Morning brief and today&#x27;s tasks" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Morning brief and today&#x27;s tasks"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/morning-brief</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f31.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Morning brief and today&#x27;s tasks at octabiz.ai/pos/morning-brief" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-32" aria-labelledby="f-32-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">32</span>
+    <div class="head-main">
+      <h3 id="f-32-t"><span class="sr">Feature 32: </span>Email summaries turned into tasks</h3>
+      <p class="live"><span class="live-k">Live</span> 8 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-32-a">
+        <h4 id="f-32-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Summarize each manager&#x27;s email every day and turn any email into a task with one button.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-32-b">
+        <h4 id="f-32-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Vendor confirmations, customer questions and staff requests all land in one inbox. The important ones get buried, and an email that needs action gets done only as long as someone remembers it.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-32-c">
+        <h4 id="f-32-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Email</bdi></li><li><bdi>Inbox</bdi></li></ol></div>
+        <p>Email › Inbox has a Today&#x27;s summary card at the top, which can switch to yesterday: what came in, what needs a reply and what is assigned to you, with a few sentences written by AI. Each row opens its email. On every email, Make a task uses AI to suggest a title, due date and person; everything can be changed before saving, and the task goes to Follow-ups linked to the email. Each person&#x27;s summary covers only the emails they can already see.</p>
+        
+        <a class="open" href="https://octabiz.ai/email" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Email summaries turned into tasks (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f32.webp" data-num="32" data-title="Email summaries turned into tasks" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Email summaries turned into tasks"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/email</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f32.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Email summaries turned into tasks at octabiz.ai/email" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-33" aria-labelledby="f-33-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">33</span>
+    <div class="head-main">
+      <h3 id="f-33-t"><span class="sr">Feature 33: </span>Books for each store, without Excel</h3>
+      <p class="live"><span class="live-k">Live</span> 4 Nov 2026 (balance sheet by store 6 Nov; split payments 9 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-33-a">
+        <h4 id="f-33-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Keep profit and loss and the balance sheet for each store from the same books, with every till sale, refund, payment, deposit and bill under the store it belongs to.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-33-b">
+        <h4 id="f-33-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Splitting one set of books into six stores by hand in Excel every month is slow and never quite agrees with the bank. Till sales, refunds and till over/short have to land in the right store before a store&#x27;s profit means anything.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-33-c">
+        <h4 id="f-33-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Profit &amp; loss</bdi></li><li><bdi>Columns: By branch</bdi></li></ol><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Balance sheet</bdi></li></ol></div>
+        <p>Reports › Profit &amp; loss and Reports › Balance sheet, with Columns set to By branch, have one column per store. Every till sale, refund, void, stock movement and till over/short is booked under its store, and past entries were filled in too, so earlier months split by store as well. Customer payments, bank deposits, bills and bill payments carry their store, and a payment that settles invoices of two stores is split between them. Invoices have a Store field, and their stock leaves from that store.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/profit-loss" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Books for each store, without Excel (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f33.webp" data-num="33" data-title="Books for each store, without Excel" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Books for each store, without Excel"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/profit-loss</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f33.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Books for each store, without Excel at octabiz.ai/reports/profit-loss" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-34" aria-labelledby="f-34-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">34</span>
+    <div class="head-main">
+      <h3 id="f-34-t"><span class="sr">Feature 34: </span>Store reports and dashboard</h3>
+      <p class="live"><span class="live-k">Live</span> 9 Nov 2026 (Department margin from 5 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-34-a">
+        <h4 id="f-34-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Read sales, margin, shrink and labor by store and by department straight from the books, on a dashboard and in reports that agree with Profit &amp; loss.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-34-b">
+        <h4 id="f-34-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>When the dashboard counts orders and the accountant counts the books, the owner sees two different sales figures and trusts neither. Department margin and sales per labor hour are the numbers a grocer runs the business on, and a spreadsheet built once a quarter can&#x27;t supply them.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-34-c">
+        <h4 id="f-34-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Store overview</bdi></li></ol><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Department margin</bdi></li></ol><ol class="crumbs"><li><bdi>Sales</bdi></li><li><bdi>Insights</bdi></li></ol></div>
+        <p>Reports › Store overview shows sales and the payment mix for all stores or one, read from the books: Invoiced is the accrual basis and Paid is the cash basis. Reports › Department margin gives sales, cost, gross margin and shrink for each department in each store, and its Store by store table adds sales per labor hour and labor cost as a share of sales. Sales › Insights and the Sales over time chart read the same books, with a store filter. In a live check, the October sales shown in Department margin equalled the income in the books.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/overview" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Store reports and dashboard (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f34.webp" data-num="34" data-title="Store reports and dashboard" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Store reports and dashboard"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/overview</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f34.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Store reports and dashboard at octabiz.ai/reports/overview" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-35" aria-labelledby="f-35-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">35</span>
+    <div class="head-main">
+      <h3 id="f-35-t"><span class="sr">Feature 35: </span>Meetings with suppliers and managers</h3>
+      <p class="live"><span class="live-k">Live</span> 9 Nov 2026 (Outlook 8 Nov, iCloud 9 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-35-a">
+        <h4 id="f-35-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Bring meetings from Google, Outlook and iCloud calendars into OctaBiz Meetings, with AI notes, decisions and action items that become tasks.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-35-b">
+        <h4 id="f-35-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Managers keep their calendars in different places, and what was agreed with a supplier&#x27;s rep stays in someone&#x27;s notebook. Action items from the weekly managers&#x27; meeting are forgotten by Monday.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-35-c">
+        <h4 id="f-35-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Meetings</bdi></li><li><bdi>Settings</bdi></li><li><bdi>Calendar &amp; joining</bdi></li></ol></div>
+        <p>Meetings › Settings › Calendar &amp; joining has rows for Google, Outlook and iCloud calendars; iCloud connects with an Apple ID email and an app-specific password. Calls with a Teams, Zoom, Meet or Webex link appear under Coming up, and a call that sits on two calendars shows once. The notetaker joins the calls you send it to and writes the summary, key points, decisions and action items, which become tasks. Outlook connects once the Microsoft sign-in setup is finished on the OctaBiz side.</p>
+        
+        <a class="open" href="https://octabiz.ai/meetings/settings" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Meetings with suppliers and managers (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f35.webp" data-num="35" data-title="Meetings with suppliers and managers" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="872" aria-label="Enlarge screenshot: Meetings with suppliers and managers"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/meetings/settings</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f35.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="Screenshot of Meetings with suppliers and managers at octabiz.ai/meetings/settings" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-36" aria-labelledby="f-36-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">36</span>
+    <div class="head-main">
+      <h3 id="f-36-t"><span class="sr">Feature 36: </span>Room rental to therapists</h3>
+      <p class="live"><span class="live-k">Live</span> In OctaBiz before the 24 Oct 2026 proposal</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-36-a">
+        <h4 id="f-36-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Bill the therapists who rent rooms in the store every month, remind them before payment is due, and charge their card automatically.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-36-b">
+        <h4 id="f-36-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Rent tracked in a notebook or a spreadsheet is easy to forget, and nobody chases a late payment.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-36-c">
+        <h4 id="f-36-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Recurring payments</bdi></li></ol></div>
+        <p>Rent is a recurring payment: Accounting › Sales › Recurring payments › Create recurring payment takes the therapist as a customer, the amount, a monthly schedule and the start date. Each schedule shows its Auto-charge status, and Send reminder sends the customer a payment reminder. Rent needs no page of its own. Automatic card charges start once the store&#x27;s Stripe account is connected.</p>
+        
+        <a class="open" href="https://octabiz.ai/accounting/sales/recurring-payments" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Room rental to therapists (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f36.webp" data-num="36" data-title="Room rental to therapists" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Room rental to therapists"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/accounting/sales/recurring-payments</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f36.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Room rental to therapists at octabiz.ai/accounting/sales/recurring-payments" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-7" style="--hue:var(--h7)" aria-labelledby="area-7-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">7</span>
+    <div><p class="area-k">Area 7 of 8</p><h2 id="area-7-t">Team and shifts</h2></div>
+    <p class="area-ct">4 features</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-37" aria-labelledby="f-37-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">37</span>
+    <div class="head-main">
+      <h3 id="f-37-t"><span class="sr">Feature 37: </span>Clock in and out, timesheets and leave</h3>
+      <p class="live"><span class="live-k">Live</span> Timesheets and leave in OctaBiz before the 24 Oct 2026 proposal; clock-in at the till from 6 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-37-a">
+        <h4 id="f-37-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Staff clock in, take breaks and clock out at the till, every clock record carries its store, and timesheets and leave show hours and labor cost per store.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-37-b">
+        <h4 id="f-37-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>When staff work at more than one store, or clock in on a separate device, nobody can say what each store spends on labor. Payroll gets the hours but not where they were worked.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-37-c">
+        <h4 id="f-37-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal (top bar)</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Timesheets</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Leave</bdi></li></ol></div>
+        <p>The Cashier Terminal top bar has Clock in next to the person&#x27;s name; while they work it shows On the clock with the time worked, and its menu has Start break, End break and Clock out. The store is saved on every clock record, and My attendance has a Branch picker. HR › Timesheets › By branch shows hours, overtime and labor cost for each store; overtime is costed at time and a half, and a night shift counts on the day it starts. Leave requests and Who&#x27;s Away sit under HR.</p>
+        <p class="store"><b>Store step:</b> give each cashier an employee record with their sign-in email and hourly rate.</p>
+        <a class="open" href="https://octabiz.ai/hr/timesheets" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Clock in and out, timesheets and leave (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f37.webp" data-num="37" data-title="Clock in and out, timesheets and leave" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="900" aria-label="Enlarge screenshot: Clock in and out, timesheets and leave"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/timesheets</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f37.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="Screenshot of Clock in and out, timesheets and leave at octabiz.ai/hr/timesheets" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-38" aria-labelledby="f-38-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">38</span>
+    <div class="head-main">
+      <h3 id="f-38-t"><span class="sr">Feature 38: </span>Weekly shift schedule</h3>
+      <p class="live"><span class="live-k">Live</span> 8 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-38-a">
+        <h4 id="f-38-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Build each store&#x27;s weekly shift schedule, publish it to staff, let staff swap shifts with a manager&#x27;s approval, and compare planned shifts with real clock-ins.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-38-b">
+        <h4 id="f-38-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>A schedule on a whiteboard or in a group chat is out of date by Tuesday. Swaps happen by word of mouth, the manager learns about a no-show when a till is unstaffed, and nobody compares the plan with the hours that get paid.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-38-c">
+        <h4 id="f-38-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Shift Schedule</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>My Shifts</bdi></li></ol></div>
+        <p>HR › Shift Schedule builds each store&#x27;s week, copies last week and publishes it to staff with a notice. Staff see their own shifts in My shifts on their phone and can hand a shift to a co-worker, which the manager approves before the shift starts. The schedule compares planned shifts with actual clock-ins, flags anyone more than 5 minutes late and keeps a 40-hour overtime warning. Owners and admins build the schedule, and every store runs on the business clock.</p>
+        
+        <a class="open" href="https://octabiz.ai/hr/shifts" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Weekly shift schedule (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f38.webp" data-num="38" data-title="Weekly shift schedule" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="872" aria-label="Enlarge screenshot: Weekly shift schedule"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/shifts</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f38.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="Screenshot of Weekly shift schedule at octabiz.ai/hr/shifts" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-39" aria-labelledby="f-39-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">39</span>
+    <div class="head-main">
+      <h3 id="f-39-t"><span class="sr">Feature 39: </span>Scheduling against sales and labor cost</h3>
+      <p class="live"><span class="live-k">Live</span> 8 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-39-a">
+        <h4 id="f-39-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Plan staff against expected sales: a labor cost limit as a percent of sales for each store, suggested staff for each hour from recent sales, and warnings for days that are short, overstaffed or over the limit.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-39-b">
+        <h4 id="f-39-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Labor is the biggest cost a grocery can control. A schedule built from habit puts three people on a quiet Tuesday morning and one on a busy Saturday afternoon, and the overspend shows up only in payroll.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-39-c">
+        <h4 id="f-39-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Shift Schedule</bdi></li><li><bdi>Labor goals</bdi></li></ol></div>
+        <p>On HR › Shift Schedule, Labor goals sets a labor cost limit as a share of sales for each store. The schedule shows each day&#x27;s planned cost and its share of sales, suggests how many people each hour needs based on the last 4 weeks of sales, and warns about short or extra staff and days above the limit. Its sales match Profit &amp; loss and its cost matches the labor report to the cent.</p>
+        
+        <a class="open" href="https://octabiz.ai/hr/shifts" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Scheduling against sales and labor cost (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f39.webp" data-num="39" data-title="Scheduling against sales and labor cost" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="1972" aria-label="Enlarge screenshot: Scheduling against sales and labor cost"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/shifts</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f39.webp" width="1440" height="1972" style="aspect-ratio:1440/1972" alt="Screenshot of Scheduling against sales and labor cost at octabiz.ai/hr/shifts" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-40" aria-labelledby="f-40-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">40</span>
+    <div class="head-main">
+      <h3 id="f-40-t"><span class="sr">Feature 40: </span>Timesheet export to isolved</h3>
+      <p class="live"><span class="live-k">Live</span> 8 Nov 2026</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-40-a">
+        <h4 id="f-40-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Export approved hours to isolved, the payroll system the stores use, with each person&#x27;s isolved employee number, earning codes and store code.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-40-b">
+        <h4 id="f-40-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Retyping hours from timesheets into payroll every pay period takes hours and invites mistakes, and a timesheet sent twice pays someone twice.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-40-c">
+        <h4 id="f-40-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Clock-in Timesheets</bdi></li><li><bdi>Export for isolved</bdi></li></ol></div>
+        <p>HR › Timesheets › Periods (Clock-in Timesheets in the menu) has Export for isolved next to Payroll CSV and Send to QuickBooks. It makes one file per pay period from approved time: one line per person, earning code and store, covering regular, overtime and paid leave hours. Codes and columns are set once per business. The export stops and names anyone without an isolved employee number, warns about unapproved timesheets and clock-ins with no store, and marks the period Already exported for isolved so a second export is deliberate.</p>
+        <p class="store"><b>Store step:</b> send a sample isolved file so the columns can be matched.</p>
+        <a class="open" href="https://octabiz.ai/hr/timesheets/periods" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Timesheet export to isolved (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f40.webp" data-num="40" data-title="Timesheet export to isolved" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="872" aria-label="Enlarge screenshot: Timesheet export to isolved"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/timesheets/periods</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f40.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="Screenshot of Timesheet export to isolved at octabiz.ai/hr/timesheets/periods" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+<section class="area" id="area-8" style="--hue:var(--h8)" aria-labelledby="area-8-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">8</span>
+    <div><p class="area-k">Area 8 of 8</p><h2 id="area-8-t">Moving from the old system</h2></div>
+    <p class="area-ct">1 feature</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-41" aria-labelledby="f-41-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">41</span>
+    <div class="head-main">
+      <h3 id="f-41-t"><span class="sr">Feature 41: </span>Moving data from Catapult</h3>
+      <p class="live"><span class="live-k">Live</span> 12 Nov 2026 (Rewards points from 13 Nov)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-41-a">
+        <h4 id="f-41-a"><span class="k" aria-hidden="true">1</span>The request</h4>
+        <p>Bring products with each store&#x27;s price, departments, vendors, customers with their card numbers, past sales and Rewards points over from ECRS Catapult, checked with a dry run before anything is saved.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-41-b">
+        <h4 id="f-41-b"><span class="k" aria-hidden="true">2</span>The problem it solves</h4>
+        <p>Leaving a POS system is where stores lose data: prices per store, loyalty balances, and the sales history that ordering depends on. A wrong import into a system the stores already trade on is hard to undo.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-41-c">
+        <h4 id="f-41-c"><span class="k" aria-hidden="true">3</span>In OctaBiz: where and how</h4>
+        <div class="paths" role="group" aria-label="Where it is in OctaBiz"><ol class="crumbs"><li><bdi>Settings</bdi></li><li><bdi>Move from Catapult</bdi></li></ol></div>
+        <p>Settings › Move from Catapult takes the Catapult exports in order, each with a ready column mapping that can be changed. A dry run shows what will be added, updated or skipped before anything is saved. Items are matched by UPC, then PLU, then the vendor&#x27;s item ID, and bring each store&#x27;s price, PLU, tare, SNAP flag, tax code, department and vendor. Customers keep their card number, and phone numbers are matched by country. Past sales come in as imported history for reports and forecasting and never post to the books. Step 6 brings Rewards points in as opening balances, split by store in the books.</p>
+        <p class="store"><b>Store step:</b> send the six Catapult exports.</p>
+        <a class="open" href="https://octabiz.ai/settings/move-from-catapult" target="_blank" rel="noopener" aria-label="Open in OctaBiz: Moving data from Catapult (new tab)">Open in OctaBiz ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f41.webp" data-num="41" data-title="Moving data from Catapult" data-cap="Screenshot from OctaBiz. Names, prices and amounts are blurred." data-w="1440" data-h="1700" aria-label="Enlarge screenshot: Moving data from Catapult"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/settings/move-from-catapult</span><span class="zoom" aria-hidden="true">Enlarge</span></span><img src="img/f41.webp" width="1440" height="1700" style="aspect-ratio:1440/1700" alt="Screenshot of Moving data from Catapult at octabiz.ai/settings/move-from-catapult" loading="lazy" decoding="async"><span class="missing" hidden><span>Screenshot coming</span></span></button><figcaption>Screenshot from OctaBiz. Names, prices and amounts are blurred.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">Back to the list of 41</a>
+</section>
+  <footer class="foot">
+    <p>How this was checked: each change passed its tests and a separate review before it shipped, then was checked on octabiz.ai. The screenshots use sample data, with business names, prices and amounts blurred. 20 Nov 2026</p>
+    <span class="stripe" aria-hidden="true"><i style="--hue:var(--h1)"></i><i style="--hue:var(--h2)"></i><i style="--hue:var(--h3)"></i><i style="--hue:var(--h4)"></i><i style="--hue:var(--h5)"></i><i style="--hue:var(--h6)"></i><i style="--hue:var(--h7)"></i><i style="--hue:var(--h8)"></i></span>
+  </footer>
+</main>
+<dialog class="lb" id="lb" aria-label="Screenshot viewer">
+  <div class="lb-in">
+    <div class="lb-top">
+      <p class="lb-title"><span class="lb-num"></span><span class="lb-t"></span></p>
+      <span class="lb-count" aria-live="polite"></span>
+      <button type="button" class="lb-btn" data-step="-1"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">Previous</span></button>
+      <button type="button" class="lb-btn" data-step="1"><span class="t">Next</span><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button type="button" class="lb-btn lb-close" autofocus><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="t">Close</span></button>
+    </div>
+    <div class="lb-stage"><img alt=""></div>
+    <p class="lb-cap"></p>
+  </div>
+</dialog>
+</div>
+<script>
+(function(){
+  var page = document.querySelector('.page');
+  var dlg = document.getElementById('lb');
+  if (!page || !dlg || typeof dlg.showModal !== 'function') return;
+  var rtl = page.getAttribute('dir') === 'rtl';
+  var of = page.getAttribute('data-of') || ' / ';
+  var frames = Array.prototype.slice.call(document.querySelectorAll('button.frame[data-full]'));
+  frames.slice().forEach(function(b){
+    var im = b.querySelector('img');
+    function broken(){
+      b.classList.add('is-broken'); b.disabled = true;
+      var k = frames.indexOf(b); if (k > -1) frames.splice(k, 1);
+    }
+    if (im.complete && im.naturalWidth === 0 && im.getAttribute('src')) { if (im.currentSrc) broken(); }
+    im.addEventListener('error', broken);
+  });
+  var img = dlg.querySelector('.lb-stage img');
+  var title = dlg.querySelector('.lb-t');
+  var numEl = dlg.querySelector('.lb-num');
+  var count = dlg.querySelector('.lb-count');
+  var cap = dlg.querySelector('.lb-cap');
+  var i = 0, opener = null;
+  function digits(n){ var s = String(n); return rtl ? s.replace(/[0-9]/g, function(d){ return '۰۱۲۳۴۵۶۷۸۹'[d]; }) : s; }
+  function show(k){
+    if (!frames.length) return;
+    i = (k + frames.length) % frames.length;
+    var b = frames[i], small = b.querySelector('img');
+    img.src = b.getAttribute('data-full');
+    img.width = +b.getAttribute('data-w'); img.height = +b.getAttribute('data-h');
+    img.alt = small ? small.alt : '';
+    numEl.textContent = b.getAttribute('data-num');
+    title.textContent = b.getAttribute('data-title');
+    cap.textContent = b.getAttribute('data-cap') || '';
+    count.textContent = digits(i + 1) + of + digits(frames.length);
+  }
+  frames.forEach(function(b, k){
+    b.addEventListener('click', function(){ opener = b; show(k); if (!dlg.open) dlg.showModal(); });
+  });
+  dlg.querySelector('[data-step="-1"]').addEventListener('click', function(){ show(i - 1); });
+  dlg.querySelector('[data-step="1"]').addEventListener('click', function(){ show(i + 1); });
+  dlg.querySelector('.lb-close').addEventListener('click', function(){ dlg.close(); });
+  dlg.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ e.preventDefault(); show(i + (rtl ? -1 : 1)); }
+    else if (e.key === 'ArrowLeft'){ e.preventDefault(); show(i + (rtl ? 1 : -1)); }
+  });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', function(){ img.removeAttribute('src'); if (opener) opener.focus(); });
+})();
+</script>
+
+</body>
+</html>

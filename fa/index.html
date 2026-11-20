@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="۴۱ قابلیتی که در اکتابیز برای یک فروشگاه مواد غذایی طبیعی ساخته شد: درخواست، مشکلی که حل می‌کند و جای آن در برنامه، با تصویر.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rainbow Blossom در اکتابیز">
+<meta property="og:description" content="۴۱ قابلیتی که در اکتابیز برای یک فروشگاه مواد غذایی طبیعی ساخته شد: درخواست، مشکلی که حل می‌کند و جای آن در برنامه، با تصویر.">
+<meta name="color-scheme" content="light dark">
+<title>Rainbow Blossom در اکتابیز</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+:root{
+  --bg:#F3F6F1; --surface:#FCFDFB; --surface-2:#EAF0E7; --chrome:#E1E9DE;
+  --ink:#142019; --ink-2:#3B4A41; --ink-3:#55655B;
+  --line:#D3DDD2; --line-2:#AEBDB0; --on-hue:#FFFFFF; --focus:#142019;
+  --shadow:0 1px 2px rgb(20 32 25 / .06), 0 14px 32px -18px rgb(20 32 25 / .35);
+  --backdrop:rgb(9 16 12 / .74);
+  --h1:#C0282E; --h2:#B2470C; --h3:#8C6100; --h4:#2A7A3B; --h5:#0C7471; --h6:#1F5EC4; --h7:#4C45C4; --h8:#8A3BB5;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B130F; --surface:#111C16; --surface-2:#172720; --chrome:#1A2B22;
+    --ink:#E4ECE6; --ink-2:#B6C4BB; --ink-3:#97A99E;
+    --line:#26382D; --line-2:#3E5547; --on-hue:#0B130F; --focus:#E4ECE6;
+    --shadow:0 1px 2px rgb(0 0 0 / .45), 0 16px 36px -18px rgb(0 0 0 / .8);
+    --backdrop:rgb(2 6 4 / .84);
+    --h1:#F48A82; --h2:#F5A15F; --h3:#E6C04F; --h4:#72CF86; --h5:#55CBC2; --h6:#82AEF7; --h7:#A6A1F7; --h8:#CE94EE;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B130F; --surface:#111C16; --surface-2:#172720; --chrome:#1A2B22;
+  --ink:#E4ECE6; --ink-2:#B6C4BB; --ink-3:#97A99E;
+  --line:#26382D; --line-2:#3E5547; --on-hue:#0B130F; --focus:#E4ECE6;
+  --shadow:0 1px 2px rgb(0 0 0 / .45), 0 16px 36px -18px rgb(0 0 0 / .8);
+  --backdrop:rgb(2 6 4 / .84);
+  --h1:#F48A82; --h2:#F5A15F; --h3:#E6C04F; --h4:#72CF86; --h5:#55CBC2; --h6:#82AEF7; --h7:#A6A1F7; --h8:#CE94EE;
+  color-scheme:dark;
+}
+@media (prefers-reduced-motion: no-preference){ :root{ scroll-behavior:smooth; } }
+body{ background:var(--bg); color:var(--ink); margin:0; }
+
+.page{
+  --font-head:'Vazirmatn', Tahoma, 'Segoe UI', system-ui, sans-serif; --font-body:'Vazirmatn', Tahoma, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0 56px;
+  background:var(--bg); color:var(--ink);
+  font:400 16px/1.95 var(--font-body);
+  -webkit-text-size-adjust:100%; text-size-adjust:100%;
+  overflow-wrap:break-word;
+}
+.page *, .page *::before, .page *::after{ box-sizing:border-box; }
+.wrap{ max-width:1240px; margin-inline:auto; padding-inline:clamp(0px, 3vw - 10px, 28px); }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.page :focus-visible{ outline:3px solid var(--focus); outline-offset:3px; border-radius:6px; }
+
+/* Sticky area bar: the 8 hues as jump links, so any area is one tap away from deep in the page. */
+.bar{ position:sticky; top:0; z-index:20; background:var(--bg);
+  box-shadow:0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line);
+  clip-path:inset(0 -100vmax -1px -100vmax); }
+.bar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:56px; }
+.bar-name{ font:600 14px/1.2 var(--font-head); text-decoration:none; color:var(--ink-2); padding-block:10px; }
+.bar-name:hover{ color:var(--ink); }
+.bar ol{ list-style:none; margin:0; padding:0; display:flex; }
+.bar li a{ display:grid; place-items:center; width:44px; height:44px; text-decoration:none; border-radius:10px; }
+.bar li a span{ display:grid; place-items:center; width:28px; height:28px; border-radius:7px; background:var(--hue);
+  color:var(--on-hue); font:700 13px/1 var(--font-head); }
+.bar li a:hover span{ box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--hue); }
+@media (max-width: 600px){ .bar-name{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); } .bar .wrap{ justify-content:center; } }
+
+/* Hero: sized to its content. */
+.hero{ padding-block:clamp(36px, 6vw, 72px) 8px; }
+.kicker{ margin:0 0 18px; font:500 14px/1.4 var(--font-body); color:var(--ink-3); }
+.hero h1{ margin:0; font:800 clamp(40px, 7.2vw, 92px)/.98 var(--font-head); letter-spacing:-.025em; font-variation-settings:'opsz' 96; }
+.hero h1 .b{ display:block; color:var(--ink-3); font-weight:600; }
+.lead{ margin:22px 0 0; max-width:40ch; font:500 clamp(18px, 2vw, 22px)/1.5 var(--font-body); color:var(--ink-2); }
+.lead a{ color:var(--ink); text-decoration-thickness:1px; text-underline-offset:3px; }
+.facts div{ padding-inline:0 28px; margin-inline-end:28px; border-inline-end:1px solid var(--line); }
+.facts div:last-child{ border:0; margin:0; padding:0; }
+.facts dd{ margin:0; font:800 clamp(36px, 5vw, 52px)/1 var(--font-head); letter-spacing:-.02em; }
+.facts dt{ margin-top:6px; font:500 14px/1.3 var(--font-body); color:var(--ink-3); }
+.facts{ display:grid; grid-template-columns:repeat(3, auto); justify-content:start; margin:32px 0 0; padding:0; }
+.facts div{ display:flex; flex-direction:column-reverse; }
+.hero-grid{ display:grid; gap:0 48px; }
+@media (min-width: 1024px){
+  .hero-grid{ grid-template-columns:minmax(0, 1fr) auto; align-items:end; }
+  .hero-grid .facts{ grid-template-columns:1fr; margin:0 0 6px; min-width:250px; }
+  .hero-grid .facts div{ flex-direction:row-reverse; justify-content:flex-end; align-items:baseline; gap:14px; padding:14px 0; margin:0; border:0; border-top:1px solid var(--line); }
+  .hero-grid .facts div:first-child{ border-top:0; padding-top:0; }
+  .hero-grid .facts dd{ min-width:2.2ch; }
+  .hero-grid .facts dt{ margin:0; font-size:15px; }
+}
+
+.toc{ margin-top:clamp(36px, 5vw, 56px); padding:22px; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
+.toc-h{ margin:0 0 14px; font:600 14px/1.3 var(--font-body); color:var(--ink-2); }
+.cells{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(41, minmax(0, 1fr)); gap:3px; }
+.cells a{ display:grid; place-items:center; aspect-ratio:2/3; border-radius:5px; background:var(--hue); color:var(--on-hue);
+  font:600 11px/1 var(--font-mono); text-decoration:none; }
+.cells a:hover{ box-shadow:0 0 0 2px var(--surface), 0 0 0 4px var(--ink); }
+.legend{ list-style:none; margin:18px 0 0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:6px 16px; }
+.legend a{ color:var(--ink); display:flex; align-items:center; gap:10px; min-height:44px; text-decoration:none; border-radius:10px; padding-inline:4px; }
+.legend a:hover .nm{ text-decoration:underline; text-underline-offset:3px; }
+.legend .sw{ flex:none; display:grid; place-items:center; width:26px; height:26px; border-radius:7px; background:var(--hue); color:var(--on-hue); font:700 13px/1 var(--font-head); }
+.legend .nm{ flex:1; min-width:0; font:500 14.5px/1.3 var(--font-body); }
+.legend .ct{ font:500 13px/1 var(--font-mono); color:var(--ink-3); }
+@media (max-width: 1060px){
+  .cells{ grid-template-columns:repeat(auto-fill, minmax(44px, 1fr)); gap:4px; }
+  .cells a{ aspect-ratio:auto; min-height:44px; font-size:13px; }
+  .legend{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .toc{ padding:16px; }
+  .legend{ grid-template-columns:1fr; gap:0; }
+  .facts div{ padding-inline:0 18px; margin-inline-end:18px; }
+}
+
+/* Areas */
+.area{ margin-top:clamp(56px, 8vw, 96px); scroll-margin-top:72px; }
+.area-head{ display:grid; grid-template-columns:auto 1fr auto; align-items:end; gap:6px 18px; padding-bottom:20px; margin-bottom:28px; border-bottom:2px solid var(--line); }
+.area-sw{ display:grid; place-items:center; width:60px; height:60px; border-radius:15px; background:var(--hue); color:var(--on-hue); font:800 30px/1 var(--font-head); }
+.area-k{ margin:0 0 4px; font:600 14px/1.2 var(--font-body); color:var(--hue); }
+.area h2{ margin:0; font:700 clamp(26px, 3.4vw, 38px)/1.1 var(--font-head); letter-spacing:-.015em; }
+.area-ct{ margin:0; font:500 14px/1.2 var(--font-body); color:var(--ink-3); padding-bottom:6px; white-space:nowrap; }
+.area-top{ margin-top:18px; display:inline-flex; align-items:center; min-height:44px; font:500 14px/1.2 var(--font-body); color:var(--ink-3); text-underline-offset:3px; }
+.area-top:hover{ color:var(--ink); }
+@media (max-width: 560px){
+  .area-head{ grid-template-columns:auto 1fr; }
+  .area-ct{ grid-column:2; padding:0; }
+  .area-sw{ width:48px; height:48px; font-size:24px; border-radius:12px; grid-row:span 2; align-self:center; }
+}
+.cards{ display:flex; flex-direction:column; gap:28px; }
+
+/* Feature card */
+.card{ position:relative; background:var(--surface); border:1px solid var(--line); border-radius:18px;
+  box-shadow:inset 0 4px 0 var(--hue); padding:30px clamp(18px, 3vw, 34px) 22px; scroll-margin-top:72px; }
+.card:target{ border-color:var(--hue); box-shadow:inset 0 4px 0 var(--hue), 0 0 0 1px var(--hue); }
+.card-head{ display:grid; grid-template-columns:auto 1fr auto; gap:6px 18px; align-items:start; }
+.num{ display:grid; place-items:center; width:56px; height:56px; border-radius:14px; background:var(--hue); color:var(--on-hue);
+  font:800 24px/1 var(--font-head); letter-spacing:-.02em; }
+.head-main{ min-width:0; padding-top:2px; }
+.card h3{ margin:0; font:700 clamp(22px, 2.4vw, 28px)/1.2 var(--font-head); letter-spacing:-.01em; }
+.live{ margin:8px 0 0; font:400 14px/1.5 var(--font-body); color:var(--ink-2); }
+.live-k{ display:inline-block; margin-inline-end:6px; padding:1px 8px; border:1px solid var(--line-2); border-radius:6px;
+  font:600 12px/1.5 var(--font-body); color:var(--ink); }
+.code{ margin-top:4px; padding:4px 9px; border:1px solid var(--line-2); border-radius:7px; font:500 13px/1.2 var(--font-mono); color:var(--ink-2); white-space:nowrap; }
+@media (max-width: 560px){
+  .card-head{ grid-template-columns:auto 1fr; }
+  .num{ width:46px; height:46px; font-size:20px; border-radius:12px; }
+  .code{ grid-column:2; justify-self:start; margin-top:2px; }
+}
+
+.card-body{ display:grid; grid-template-columns:minmax(0, 1fr); gap:28px; margin-top:26px; }
+@media (min-width: 1024px){
+  .card-body{ grid-template-columns:minmax(0, 1fr) minmax(0, 1.12fr); gap:44px; align-items:start; }
+  .shot{ position:sticky; top:76px; }
+}
+
+.blk h4{ display:flex; align-items:center; gap:10px; margin:0 0 10px; font:600 14px/1.3 var(--font-body); color:var(--ink-2); }
+.blk h4 .k{ flex:none; display:grid; place-items:center; width:24px; height:24px; border-radius:7px; border:1.5px solid var(--line-2);
+  font:600 12px/1 var(--font-mono); color:var(--ink); }
+.blk p{ margin:0; }
+.blk-req p{ font:500 17px/1.9 var(--font-head); color:var(--ink); }
+.blk-prob{ margin-top:24px; padding-top:22px; border-top:1px solid var(--line); }
+.blk-prob p{ color:var(--ink-2); }
+.blk-sol{ margin-top:24px; padding:20px clamp(16px, 2vw, 22px) 22px; border-radius:14px; background:var(--surface-2); }
+.blk-sol h4 .k{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+.paths{ display:flex; flex-direction:column; gap:8px; margin:2px 0 14px; }
+.crumbs{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; row-gap:6px; }
+.crumbs li{ display:inline-flex; align-items:center; }
+.crumbs li + li::before{ content:""; flex:none; width:7px; height:7px; margin-inline:7px 9px;
+  border-top:1.6px solid var(--ink-3); border-inline-end:1.6px solid var(--ink-3); transform:rotate(45deg); }
+[dir="rtl"] .crumbs li + li::before{ transform:rotate(-45deg); }
+.crumbs bdi{ display:inline-block; padding:4px 9px; border:1px solid var(--line-2); border-radius:7px; background:var(--surface);
+  font:500 13.5px/1.35 var(--font-body); color:var(--ink); }
+.crumbs li:last-child bdi{ font-weight:700; }
+.blk .store{ margin-top:14px; padding:10px 12px; border:1px dashed var(--line-2); border-radius:10px; font-size:15px; color:var(--ink); }
+.open{ display:inline-flex; align-items:center; justify-content:center; min-height:46px; margin-top:18px; padding:0 20px; border-radius:11px;
+  background:var(--ink); color:var(--bg); font:600 15px/1.2 var(--font-body); text-decoration:none; }
+.open:hover{ background:var(--ink-2); }
+
+/* Screenshot in a browser frame */
+.shot{ margin:0; min-width:0; }
+.frame{ display:block; width:100%; margin:0; padding:0; border:1px solid var(--line-2); border-radius:12px; overflow:hidden;
+  background:var(--surface); color:inherit; font:inherit; text-align:start; cursor:zoom-in; box-shadow:var(--shadow); }
+.frame.is-tall{ max-width:300px; margin-inline:auto; border-radius:18px; }
+.frame:hover{ border-color:var(--ink-3); }
+.frame:hover .zoom{ color:var(--ink); border-color:var(--ink-3); }
+.chrome{ display:flex; width:100%; align-items:center; gap:10px; min-height:38px; padding:7px 10px; background:var(--chrome); border-bottom:1px solid var(--line); }
+.dots{ display:flex; gap:6px; flex:none; }
+.dots i{ width:9px; height:9px; border-radius:50%; background:var(--line-2); }
+.addr{ flex:1; min-width:0; padding:3px 10px; border-radius:6px; background:var(--surface); font:400 12px/1.4 var(--font-mono); color:var(--ink-2);
+  overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left; }
+.zoom{ flex:none; padding:2px 8px; border:1px solid var(--line-2); border-radius:6px; font:600 12px/1.4 var(--font-body); color:var(--ink-2); }
+.is-tall .zoom{ display:none; }
+.frame img{ display:block; width:100%; height:auto; object-fit:cover; object-position:top; background:var(--surface-2); }
+.is-missing{ cursor:default; box-shadow:none; }
+.frame.is-broken{ cursor:default; }
+.frame.is-broken img, .frame.is-broken .zoom{ display:none; }
+.frame.is-broken .missing{ display:grid; }
+.missing[hidden]{ display:none; }
+.missing{ display:grid; place-items:center; aspect-ratio:16/10; margin:12px; border:1.5px dashed var(--line-2); border-radius:8px;
+  font:500 15px/1.4 var(--font-body); color:var(--ink-2); }
+.shot figcaption{ margin-top:10px; font:400 13.5px/1.5 var(--font-body); color:var(--ink-3); text-align:start; }
+.is-tall + figcaption{ text-align:center; }
+
+.prs{ display:flex; flex-wrap:wrap; align-items:center; gap:0 14px; margin:22px 0 0; padding-top:12px; border-top:1px dashed var(--line);
+  font:400 12.5px/1.4 var(--font-mono); color:var(--ink-3); }
+.prs span{ font-family:var(--font-body); }
+.prs a{ display:inline-block; padding-block:6px; color:var(--ink-3); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:3px; }
+.prs a:hover{ color:var(--ink); }
+
+.foot{ margin-top:72px; padding-top:22px; border-top:2px solid var(--line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px;
+  font:400 14px/1.6 var(--font-body); color:var(--ink-2); }
+.foot p{ margin:0; max-width:80ch; }
+.foot .stripe{ display:flex; gap:3px; align-self:center; }
+.foot .stripe i{ width:18px; height:6px; border-radius:2px; background:var(--hue); }
+
+/* Viewer */
+dialog.lb{ width:min(1320px, calc(100vw - 24px)); max-width:none; max-height:calc(100dvh - 24px); margin:auto; padding:0;
+  border:1px solid var(--line-2); border-radius:16px; background:var(--surface); color:var(--ink); overflow:hidden; }
+dialog.lb::backdrop{ background:rgb(9 16 12 / .78); background:var(--backdrop, rgb(9 16 12 / .78)); }
+.lb-in{ display:flex; flex-direction:column; max-height:calc(100dvh - 26px); }
+.lb-top{ display:flex; align-items:center; gap:8px; padding-block:8px; padding-inline:16px 8px; border-bottom:1px solid var(--line); }
+.lb-title{ flex:1; min-width:0; margin:0; font:600 15px/1.3 var(--font-head); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.lb-num{ display:inline-grid; place-items:center; min-width:30px; height:26px; margin-inline-end:10px; padding-inline:6px; border-radius:7px;
+  background:var(--ink); color:var(--bg); font:700 13px/1 var(--font-head); }
+.lb-count{ font:500 13px/1 var(--font-mono); color:var(--ink-3); padding-inline:6px; white-space:nowrap; }
+.lb-btn{ display:inline-flex; align-items:center; justify-content:center; gap:6px; min-width:44px; height:44px; padding:0 12px; border-radius:10px;
+  border:1px solid var(--line-2); background:var(--surface); color:var(--ink); font:600 14px/1 var(--font-body); cursor:pointer; }
+.lb-btn:hover{ border-color:var(--ink-3); background:var(--surface-2); }
+.lb-btn svg{ width:16px; height:16px; }
+[dir="rtl"] .lb-btn .chev{ transform:scaleX(-1); }
+.lb-stage{ flex:1; min-height:0; overflow:auto; display:grid; place-items:center; padding:12px; background:var(--surface-2); }
+.lb-stage img{ display:block; max-width:100%; max-height:calc(100dvh - 160px); width:auto; height:auto; border-radius:6px; }
+.lb-cap:empty{ display:none; }
+.lb-cap{ margin:0; padding:10px 16px 12px; font:400 13.5px/1.5 var(--font-body); color:var(--ink-2); }
+@media (max-width: 640px){
+  .lb-btn .t{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+  .lb-count{ display:none; }
+  dialog.lb{ width:calc(100vw - 12px); }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .cells a, .bar li a span, .frame, .open, .lb-btn{ transition:box-shadow .15s ease, background-color .15s ease, border-color .15s ease; }
+}
+</style>
+</head>
+<body>
+<div class="page" dir="rtl" lang="fa" data-of=" از ">
+<div class="bar">
+  <div class="wrap">
+    <a class="bar-name" href="#top"><bdi>Rainbow Blossom</bdi> در اکتابیز</a>
+    <nav aria-label="بخش‌ها"><ol><li style="--hue:var(--h1)"><a href="#area-1" title="بخش ۱: صندوق و پرداخت، ۱۰ قابلیت" aria-label="بخش ۱: صندوق و پرداخت، ۱۰ قابلیت"><span>۱</span></a></li><li style="--hue:var(--h2)"><a href="#area-2" title="بخش ۲: قیمت، لیبل و پروموشن، ۲ قابلیت" aria-label="بخش ۲: قیمت، لیبل و پروموشن، ۲ قابلیت"><span>۲</span></a></li><li style="--hue:var(--h3)"><a href="#area-3" title="بخش ۳: سفارش خرید و تأمین‌کننده، ۹ قابلیت" aria-label="بخش ۳: سفارش خرید و تأمین‌کننده، ۹ قابلیت"><span>۳</span></a></li><li style="--hue:var(--h4)"><a href="#area-4" title="بخش ۴: موجودی در شش فروشگاه، ۴ قابلیت" aria-label="بخش ۴: موجودی در شش فروشگاه، ۴ قابلیت"><span>۴</span></a></li><li style="--hue:var(--h5)"><a href="#area-5" title="بخش ۵: مشتری و Rainbow Rewards، ۵ قابلیت" aria-label="بخش ۵: مشتری و Rainbow Rewards، ۵ قابلیت"><span>۵</span></a></li><li style="--hue:var(--h6)"><a href="#area-6" title="بخش ۶: اداره فروشگاه، ۶ قابلیت" aria-label="بخش ۶: اداره فروشگاه، ۶ قابلیت"><span>۶</span></a></li><li style="--hue:var(--h7)"><a href="#area-7" title="بخش ۷: تیم و شیفت، ۴ قابلیت" aria-label="بخش ۷: تیم و شیفت، ۴ قابلیت"><span>۷</span></a></li><li style="--hue:var(--h8)"><a href="#area-8" title="بخش ۸: انتقال از سیستم قبلی، ۱ قابلیت" aria-label="بخش ۸: انتقال از سیستم قبلی، ۱ قابلیت"><span>۸</span></a></li></ol></nav>
+  </div>
+</div>
+<main class="wrap">
+  <header class="hero" id="top">
+    <div class="hero-grid">
+    <div>
+    <p class="kicker">گزارش تحویل برای <bdi>Rainbow Blossom</bdi>، ۲۹ آبان ۱۴۰۵</p>
+    <h1><bdi>Rainbow Blossom</bdi> <span class="b">در اکتابیز</span></h1>
+    <p class="lead">۴۱ از ۴۱ قابلیت پیشنهاد ۲ آبان ۱۴۰۵ روی <a href="https://octabiz.ai" target="_blank" rel="noopener" dir="ltr">octabiz.ai</a> فعال است.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>قابلیت</dt><dd>۴۱</dd></div>
+      <div><dt>بخش</dt><dd>۸</dd></div>
+      <div><dt>تصویر از octabiz.ai</dt><dd>۳۳</dd></div>
+    </dl>
+    </div>
+    <nav class="toc" id="contents" aria-labelledby="toc-h">
+      <h2 class="toc-h" id="toc-h">هر ۴۱ قابلیت، به ترتیب پیشنهاد</h2>
+      <ol class="cells" aria-label="فهرست ۴۱ قابلیت"><li style="--hue:var(--h1)"><a href="#f-01" title="قابلیت ۱: فروش سریع با بارکد" aria-label="قابلیت ۱: فروش سریع با بارکد">۰۱</a></li><li style="--hue:var(--h1)"><a href="#f-02" title="قابلیت ۲: شمارش صندوق و گزارش شیفت" aria-label="قابلیت ۲: شمارش صندوق و گزارش شیفت">۰۲</a></li><li style="--hue:var(--h1)"><a href="#f-03" title="قابلیت ۳: سفارش ویژه و نگه‌داشتن کالا" aria-label="قابلیت ۳: سفارش ویژه و نگه‌داشتن کالا">۰۳</a></li><li style="--hue:var(--h1)"><a href="#f-04" title="قابلیت ۴: مالیات هر کالا" aria-label="قابلیت ۴: مالیات هر کالا">۰۴</a></li><li style="--hue:var(--h1)"><a href="#f-05" title="قابلیت ۵: گیفت کارت" aria-label="قابلیت ۵: گیفت کارت">۰۵</a></li><li style="--hue:var(--h1)"><a href="#f-06" title="قابلیت ۶: ترازو و کالای وزنی" aria-label="قابلیت ۶: ترازو و کالای وزنی">۰۶</a></li><li style="--hue:var(--h1)"><a href="#f-07" title="قابلیت ۷: پرداخت EBT/SNAP" aria-label="قابلیت ۷: پرداخت EBT/SNAP">۰۷</a></li><li style="--hue:var(--h1)"><a href="#f-08" title="قابلیت ۸: پردازش کارت برای خواربار" aria-label="قابلیت ۸: پردازش کارت برای خواربار">۰۸</a></li><li style="--hue:var(--h1)"><a href="#f-09" title="قابلیت ۹: فروش وقتی اینترنت قطع است" aria-label="قابلیت ۹: فروش وقتی اینترنت قطع است">۰۹</a></li><li style="--hue:var(--h1)"><a href="#f-10" title="قابلیت ۱۰: سخت‌افزار صندوق و نصب" aria-label="قابلیت ۱۰: سخت‌افزار صندوق و نصب">۱۰</a></li><li style="--hue:var(--h2)"><a href="#f-11" title="قابلیت ۱۱: لیبل قفسه" aria-label="قابلیت ۱۱: لیبل قفسه">۱۱</a></li><li style="--hue:var(--h2)"><a href="#f-12" title="قابلیت ۱۲: تخفیف و پروموشن" aria-label="قابلیت ۱۲: تخفیف و پروموشن">۱۲</a></li><li style="--hue:var(--h3)"><a href="#f-13" title="قابلیت ۱۳: هشدار کمبود و سفارش پیشنهادی" aria-label="قابلیت ۱۳: هشدار کمبود و سفارش پیشنهادی">۱۳</a></li><li style="--hue:var(--h3)"><a href="#f-14" title="قابلیت ۱۴: سفارش خرید به هر تأمین‌کننده" aria-label="قابلیت ۱۴: سفارش خرید به هر تأمین‌کننده">۱۴</a></li><li style="--hue:var(--h3)"><a href="#f-15" title="قابلیت ۱۵: هشدار سفارش دیرکرد" aria-label="قابلیت ۱۵: هشدار سفارش دیرکرد">۱۵</a></li><li style="--hue:var(--h3)"><a href="#f-16" title="قابلیت ۱۶: بودجه خرید ماهانه هر شعبه" aria-label="قابلیت ۱۶: بودجه خرید ماهانه هر شعبه">۱۶</a></li><li style="--hue:var(--h3)"><a href="#f-17" title="قابلیت ۱۷: سفارش الکترونیکی EDI با UNFI و KeHE" aria-label="قابلیت ۱۷: سفارش الکترونیکی EDI با UNFI و KeHE">۱۷</a></li><li style="--hue:var(--h3)"><a href="#f-18" title="قابلیت ۱۸: کاتالوگ و فایل قیمت توزیع‌کننده" aria-label="قابلیت ۱۸: کاتالوگ و فایل قیمت توزیع‌کننده">۱۸</a></li><li style="--hue:var(--h3)"><a href="#f-19" title="قابلیت ۱۹: پیش‌بینی سفارش با AI" aria-label="قابلیت ۱۹: پیش‌بینی سفارش با AI">۱۹</a></li><li style="--hue:var(--h3)"><a href="#f-20" title="قابلیت ۲۰: اپ گوشی برای کف فروشگاه" aria-label="قابلیت ۲۰: اپ گوشی برای کف فروشگاه">۲۰</a></li><li style="--hue:var(--h3)"><a href="#f-21" title="قابلیت ۲۱: مرجوعی و اعتبار تأمین‌کننده" aria-label="قابلیت ۲۱: مرجوعی و اعتبار تأمین‌کننده">۲۱</a></li><li style="--hue:var(--h4)"><a href="#f-22" title="قابلیت ۲۲: موجودی زنده و انتقال بین شعبه‌ها" aria-label="قابلیت ۲۲: موجودی زنده و انتقال بین شعبه‌ها">۲۲</a></li><li style="--hue:var(--h4)"><a href="#f-23" title="قابلیت ۲۳: هشدار تاریخ انقضا" aria-label="قابلیت ۲۳: هشدار تاریخ انقضا">۲۳</a></li><li style="--hue:var(--h4)"><a href="#f-24" title="قابلیت ۲۴: شمارش موجودی و سابقه آن" aria-label="قابلیت ۲۴: شمارش موجودی و سابقه آن">۲۴</a></li><li style="--hue:var(--h4)"><a href="#f-25" title="قابلیت ۲۵: پیگیری ضایعات" aria-label="قابلیت ۲۵: پیگیری ضایعات">۲۵</a></li><li style="--hue:var(--h5)"><a href="#f-26" title="قابلیت ۲۶: یک پرونده مشتری برای همه شعبه‌ها" aria-label="قابلیت ۲۶: یک پرونده مشتری برای همه شعبه‌ها">۲۶</a></li><li style="--hue:var(--h5)"><a href="#f-27" title="قابلیت ۲۷: کمپین ایمیل" aria-label="قابلیت ۲۷: کمپین ایمیل">۲۷</a></li><li style="--hue:var(--h5)"><a href="#f-28" title="قابلیت ۲۸: امتیاز Rainbow Rewards" aria-label="قابلیت ۲۸: امتیاز Rainbow Rewards">۲۸</a></li><li style="--hue:var(--h5)"><a href="#f-29" title="قابلیت ۲۹: تشکر خودکار و پیگیری مشتری" aria-label="قابلیت ۲۹: تشکر خودکار و پیگیری مشتری">۲۹</a></li><li style="--hue:var(--h5)"><a href="#f-30" title="قابلیت ۳۰: فروشگاه آنلاین روی همان موجودی" aria-label="قابلیت ۳۰: فروشگاه آنلاین روی همان موجودی">۳۰</a></li><li style="--hue:var(--h6)"><a href="#f-31" title="قابلیت ۳۱: خلاصه صبح و کارهای امروز" aria-label="قابلیت ۳۱: خلاصه صبح و کارهای امروز">۳۱</a></li><li style="--hue:var(--h6)"><a href="#f-32" title="قابلیت ۳۲: خلاصه ایمیل‌ها و تبدیل به تسک" aria-label="قابلیت ۳۲: خلاصه ایمیل‌ها و تبدیل به تسک">۳۲</a></li><li style="--hue:var(--h6)"><a href="#f-33" title="قابلیت ۳۳: دفاتر هر شعبه بدون Excel" aria-label="قابلیت ۳۳: دفاتر هر شعبه بدون Excel">۳۳</a></li><li style="--hue:var(--h6)"><a href="#f-34" title="قابلیت ۳۴: گزارش‌های فروشگاه و داشبورد" aria-label="قابلیت ۳۴: گزارش‌های فروشگاه و داشبورد">۳۴</a></li><li style="--hue:var(--h6)"><a href="#f-35" title="قابلیت ۳۵: جلسه با تأمین‌کننده و مدیران" aria-label="قابلیت ۳۵: جلسه با تأمین‌کننده و مدیران">۳۵</a></li><li style="--hue:var(--h6)"><a href="#f-36" title="قابلیت ۳۶: اجاره به درمانگرها" aria-label="قابلیت ۳۶: اجاره به درمانگرها">۳۶</a></li><li style="--hue:var(--h7)"><a href="#f-37" title="قابلیت ۳۷: ورود و خروج، تایم‌شیت و مرخصی" aria-label="قابلیت ۳۷: ورود و خروج، تایم‌شیت و مرخصی">۳۷</a></li><li style="--hue:var(--h7)"><a href="#f-38" title="قابلیت ۳۸: برنامه شیفت هفتگی" aria-label="قابلیت ۳۸: برنامه شیفت هفتگی">۳۸</a></li><li style="--hue:var(--h7)"><a href="#f-39" title="قابلیت ۳۹: شیفت‌بندی بر اساس فروش و هزینه نیرو" aria-label="قابلیت ۳۹: شیفت‌بندی بر اساس فروش و هزینه نیرو">۳۹</a></li><li style="--hue:var(--h7)"><a href="#f-40" title="قابلیت ۴۰: خروجی تایم‌شیت به isolved" aria-label="قابلیت ۴۰: خروجی تایم‌شیت به isolved">۴۰</a></li><li style="--hue:var(--h8)"><a href="#f-41" title="قابلیت ۴۱: انتقال داده از Catapult" aria-label="قابلیت ۴۱: انتقال داده از Catapult">۴۱</a></li></ol>
+      <ol class="legend" aria-label="بخش‌ها"><li style="--hue:var(--h1)"><a href="#area-1"><span class="sw" aria-hidden="true">۱</span><span class="nm">صندوق و پرداخت</span><span class="ct" aria-label="۱۰ قابلیت">۱۰</span></a></li><li style="--hue:var(--h2)"><a href="#area-2"><span class="sw" aria-hidden="true">۲</span><span class="nm">قیمت، لیبل و پروموشن</span><span class="ct" aria-label="۲ قابلیت">۲</span></a></li><li style="--hue:var(--h3)"><a href="#area-3"><span class="sw" aria-hidden="true">۳</span><span class="nm">سفارش خرید و تأمین‌کننده</span><span class="ct" aria-label="۹ قابلیت">۹</span></a></li><li style="--hue:var(--h4)"><a href="#area-4"><span class="sw" aria-hidden="true">۴</span><span class="nm">موجودی در شش فروشگاه</span><span class="ct" aria-label="۴ قابلیت">۴</span></a></li><li style="--hue:var(--h5)"><a href="#area-5"><span class="sw" aria-hidden="true">۵</span><span class="nm">مشتری و Rainbow Rewards</span><span class="ct" aria-label="۵ قابلیت">۵</span></a></li><li style="--hue:var(--h6)"><a href="#area-6"><span class="sw" aria-hidden="true">۶</span><span class="nm">اداره فروشگاه</span><span class="ct" aria-label="۶ قابلیت">۶</span></a></li><li style="--hue:var(--h7)"><a href="#area-7"><span class="sw" aria-hidden="true">۷</span><span class="nm">تیم و شیفت</span><span class="ct" aria-label="۴ قابلیت">۴</span></a></li><li style="--hue:var(--h8)"><a href="#area-8"><span class="sw" aria-hidden="true">۸</span><span class="nm">انتقال از سیستم قبلی</span><span class="ct" aria-label="۱ قابلیت">۱</span></a></li></ol>
+    </nav>
+  </header>
+
+<section class="area" id="area-1" style="--hue:var(--h1)" aria-labelledby="area-1-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۱</span>
+    <div><p class="area-k">بخش ۱ از ۸</p><h2 id="area-1-t">صندوق و پرداخت</h2></div>
+    <p class="area-ct">۱۰ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-01" aria-labelledby="f-01-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۱</span>
+    <div class="head-main">
+      <h3 id="f-01-t"><span class="sr">قابلیت ۱: </span>فروش سریع با بارکد</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ لیبل UPC-A از ۱۰ آبان و افزودن با Enter از ۲۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-01-a">
+        <h4 id="f-01-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>صندوق باید سبد خرید را با اسکن ثبت کند: بارکد هر کالا، لیبل قیمت و وزن ۱۲ رقمی UPC-A که ترازو چاپ می‌کند، و کدی که صندوق‌دار وقتی لیبل اسکن نمی‌شود با دست می‌زند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-01-b">
+        <h4 id="f-01-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>سر صندوق شلوغ، هر کالایی که اسکن نشود صندوق‌دار را مجبور می‌کند اسمش را جستجو کند و از فهرست پیدایش کند، و صف می‌ایستد. لیبل قیمت و وزنی که ترازوی بخش میوه یا اغذیه چاپ می‌کند ساختار بارکد دیگری دارد و صندوق باید هر دو را بشناسد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-01-c">
+        <h4 id="f-01-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol></div>
+        <p>در POS › Cashier Terminal صندوق‌دار کالا را در نوار جستجو و اسکن می‌خواند. بارکد کالا آن را به سبد اضافه می‌کند و لیبل UPC-A قیمت یا وزن، مقدار وزن‌شده را با واحد خود کالا ثبت می‌کند. اگر لیبل پاره باشد، SKU یا بارکد را تایپ می‌کند و Enter می‌زند؛ کالا به سبد می‌رود و کادر برای کالای بعدی خالی می‌شود. تایپ PLU و Enter هم پنجره Weigh &amp; Sell را باز می‌کند.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: فروش سریع با بارکد (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f01.webp" data-num="۰۱" data-title="فروش سریع با بارکد" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: فروش سریع با بارکد"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f01.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه فروش سریع با بارکد در octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-02" aria-labelledby="f-02-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۲</span>
+    <div class="head-main">
+      <h3 id="f-02-t"><span class="sr">قابلیت ۲: </span>شمارش صندوق و گزارش شیفت</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ سطرهای EBT از ۱۱ آبان و همه فروش‌ها در Session details از ۲۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-02-a">
+        <h4 id="f-02-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>هر صندوق‌دار صندوق خودش را باز و بسته کند، آخر شیفت کشوی پول را بشمارد، و در طول روز گزارش X و موقع بستن گزارش Z بگیرد که هر روش پرداخت را جدا نشان دهد.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-02-b">
+        <h4 id="f-02-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>شش فروشگاه و در هر کدام چند صندوق: اگر شمارش کشو با مبلغی که صندوق انتظار دارد مقایسه نشود، کسری چند روز بعد در واریز بانک پیدا می‌شود و معلوم نیست مال کدام شیفت بوده. پول EBT و کارت هم هیچ‌وقت در کشو نیست و نباید نقد حساب شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-02-c">
+        <h4 id="f-02-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Sessions</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Close till</bdi></li></ol></div>
+        <p>صندوق قبل از خروج از صندوق‌دار می‌خواهد کشو را بشمارد (Close till). در بستن صندوق Expected cash، Counted cash و Over / short دیده می‌شود، و گزارش‌های X و Z هر روش پرداخت را در سطر خودش دارند؛ EBT Food و EBT Cash به‌صورت طلب از پردازشگر EBT می‌آیند و در شمارش کشو حساب نمی‌شوند. کسری یا اضافه در دفاتر زیر همان شعبه ثبت می‌شود. POS › Sessions همه شیفت‌ها را به تفکیک شعبه و صندوق نشان می‌دهد و Session details همه فروش‌های آن شیفت را دارد و رسید را دوباره چاپ یا ارسال می‌کند.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/sessions" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: شمارش صندوق و گزارش شیفت (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f02.webp" data-num="۰۲" data-title="شمارش صندوق و گزارش شیفت" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: شمارش صندوق و گزارش شیفت"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/sessions</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f02.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه شمارش صندوق و گزارش شیفت در octabiz.ai/pos/sessions" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-03" aria-labelledby="f-03-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۳</span>
+    <div class="head-main">
+      <h3 id="f-03-t"><span class="sr">قابلیت ۳: </span>سفارش ویژه و نگه‌داشتن کالا</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-03-a">
+        <h4 id="f-03-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>سفارش ویژه برای کالایی که فروشگاه موجود ندارد، وصل به پرونده مشتری، با بیعانه، مالیات درست و پیام هنگام رسیدن جنس؛ و نگه‌داشتن یک فروش روی یک صندوق تا صندوق دیگری در همان شعبه تمامش کند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-03-b">
+        <h4 id="f-03-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>مشتری یک کارتن مکمل می‌خواهد که فروشگاه ندارد. روی کاغذ، شماره تلفنش گم می‌شود، وقتی جنس می‌رسد کسی یادش نیست خبر بدهد و موقع تحویل بیعانه پیدا نمی‌شود. فروشی هم که روی یک صندوق نگه داشته می‌شد فقط روی همان صندوق تمام می‌شد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-03-c">
+        <h4 id="f-03-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Layaways</bdi></li><li><bdi>New</bdi></li><li><bdi>Special order</bdi></li></ol></div>
+        <p>در POS › Layaways (با جستجوی Special orders هم پیدا می‌شود) دکمه New را می‌زنند و Type را Special order می‌گذارند. صندوق‌دار مشتری را انتخاب یا تعریف می‌کند، کالا را از کاتالوگ برمی‌دارد که با کد مالیاتی خودش مالیات می‌خورد، و بیعانه می‌گیرد. وقتی جنس رسید، Mark arrived and tell the customer پیام آماده تحویل را با ایمیل، یا واتس‌اپ اگر وصل باشد، می‌فرستد. فروش نگه‌داشته ۷ روز روی سرور می‌ماند، نام کسی که نگهش داشته کنارش هست و هر صندوق همان شعبه می‌تواند بازش کند، ولی دو صندوق نمی‌توانند یک فروش را دو بار ثبت کنند.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/layaways" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: سفارش ویژه و نگه‌داشتن کالا (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f03.webp" data-num="۰۳" data-title="سفارش ویژه و نگه‌داشتن کالا" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: سفارش ویژه و نگه‌داشتن کالا"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/layaways</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f03.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه سفارش ویژه و نگه‌داشتن کالا در octabiz.ai/pos/layaways" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-04" aria-labelledby="f-04-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۴</span>
+    <div class="head-main">
+      <h3 id="f-04-t"><span class="sr">قابلیت ۴: </span>مالیات هر کالا</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵ (مالیات هر سطر از ۱۰ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-04-a">
+        <h4 id="f-04-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>هر کالا سر صندوق کد و نرخ مالیات خودش را داشته باشد تا خواربار، مکمل و بقیه اجناس مالیات متفاوت بگیرند، و گزارش مالیات فروش، فروش و مرجوعی را به تفکیک نرخ و اداره مالیاتی بدهد.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-04-b">
+        <h4 id="f-04-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>فروشگاه خواربار با چند نرخ مالیات نمی‌تواند از گزارشی اظهارنامه بدهد که همه فروش صندوق را زیر یک نرخ پیش‌فرض می‌گذارد. هر دوره کسی باید تفکیک را از روی رسیدها در Excel دوباره بسازد، و کالایی که بدون کد مالیاتی تعریف شده راحت از چشم می‌افتد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-04-c">
+        <h4 id="f-04-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Sales tax</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Books check</bdi></li></ol></div>
+        <p>هر سطر فروش صندوق کد و نرخ مالیات کالای خودش را نگه می‌دارد و مرجوعی هم همان تفکیک را دنبال می‌کند. Reports › Sales tax برای هر نرخ و اداره مالیاتی یک سطر دارد، یک سطر برای فروش معاف یا نرخ صفر، و خرید SNAP در سطر معاف خودش. کالای بدون کد مالیاتی با مالیات پیش‌فرض کسب‌وکار فروخته می‌شود و POS › Books check این کالاها را زیر Products with no tax code با دکمه Set tax code نشان می‌دهد.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/sales-tax" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: مالیات هر کالا (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f04.webp" data-num="۰۴" data-title="مالیات هر کالا" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: مالیات هر کالا"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/sales-tax</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f04.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه مالیات هر کالا در octabiz.ai/reports/sales-tax" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-05" aria-labelledby="f-05-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۵</span>
+    <div class="head-main">
+      <h3 id="f-05-t"><span class="sr">قابلیت ۵: </span>گیفت کارت</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-05-a">
+        <h4 id="f-05-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>فروش گیفت کارت تازه و شارژ کارت موجود سر صندوق، ثبت آن به‌عنوان بدهی در دفاتر، و چاپ مانده کارت روی رسید.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-05-b">
+        <h4 id="f-05-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>گیفت کارتی که سر صندوق فروخته شود ولی جای دیگری پیگیری شود با دفاتر جور نمی‌ماند: کارت فروخته‌شده تا خرج نشده درآمد نیست، و ابطال فروش باید ارزش کارت را پس بگیرد. مشتری هم هر بار می‌پرسد چقدر روی کارتش مانده.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-05-c">
+        <h4 id="f-05-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Gift card</bdi></li></ol><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Gift cards</bdi></li></ol></div>
+        <p>در POS › Cashier Terminal دکمه Gift card در سبد یک کارت تازه می‌فروشد یا به کارت مشتری پول اضافه می‌کند؛ شماره کارت را اسکن یا تایپ می‌کنند و کارت خام تازه شماره می‌گیرد. سطر کارت هیچ‌وقت مالیات یا تخفیف نمی‌خورد. سند فروش پول نقد یا کارت را بدهکار و بدهی گیفت کارت را بستانکار می‌کند، رسید مانده کارت را چاپ می‌کند و ابطال فروش ارزش کارت را برمی‌گرداند. پول گیفت کارت هیچ‌وقت نقد پس داده نمی‌شود. کارت به اینترنت نیاز دارد، پس وقتی صندوق آفلاین است دکمه خاموش است. همه کارت‌ها در Accounting › Sales › Gift cards هستند. در تست روی سایت یک کارت فروخته، شارژ و باطل شد و همه حساب‌ها به صفر برگشت.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: گیفت کارت (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f05.webp" data-num="۰۵" data-title="گیفت کارت" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: گیفت کارت"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f05.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه گیفت کارت در octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-06" aria-labelledby="f-06-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۶</span>
+    <div class="head-main">
+      <h3 id="f-06-t"><span class="sr">قابلیت ۶: </span>ترازو و کالای وزنی</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-06-a">
+        <h4 id="f-06-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>فروش میوه، فله و اغذیه بر اساس وزن: خواندن وزن از ترازوی داخل اسکنر صندوق، خواندن لیبل قیمت و وزنی که ترازوهای لیبل‌زن چاپ می‌کنند، و فرستادن قیمت واقعی هر کالا به آن ترازوها.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-06-b">
+        <h4 id="f-06-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>قفسه‌های فله و میوه سهم بزرگی از فروش یک فروشگاه ارگانیک‌اند. وارد کردن دستی وزن کند است و هر اشتباهش پول است، و ترازوی لیبل‌زنی که هنوز قیمت ماه پیش را دارد لیبلی چاپ می‌کند که با صندوق نمی‌خواند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-06-c">
+        <h4 id="f-06-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Weigh &amp; Sell</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>PLU Catalog</bdi></li></ol></div>
+        <p>صندوق وزن ثابت را از اسکنر-ترازوی صندوق (USB یا RS-232، مثل مدل‌های Datalogic Magellan) می‌خواند و به واحد خود کالا تبدیل می‌کند؛ وزنی که هنوز تکان می‌خورد وارد سبد نمی‌شود. لیبل‌های قیمت و وزن با ساختار UPC-A آمریکایی، از جمله لیبل پوندی، سر صندوق ثبت می‌شوند. POS › PLU Catalog فایل PLU را برای ترازوهای Hobart، Mettler Toledo، DIGI و Bizerba با قیمت واقعی، PLU، وزن ظرف و ماندگاری هر کالا می‌سازد. رسید وزن را با واحدش و قیمت هر کیلو یا پوند نشان می‌دهد.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: ترازو و کالای وزنی (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f06.webp" data-num="۰۶" data-title="ترازو و کالای وزنی" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: ترازو و کالای وزنی"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f06.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه ترازو و کالای وزنی در octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-07" aria-labelledby="f-07-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۷</span>
+    <div class="head-main">
+      <h3 id="f-07-t"><span class="sr">قابلیت ۷: </span>پرداخت EBT/SNAP</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-07-a">
+        <h4 id="f-07-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>گرفتن EBT Food (SNAP) و EBT Cash سر صندوق: علامت‌گذاری کالاهای مشمول SNAP، حذف مالیات فروش از سهمی که SNAP می‌پردازد، برگرداندن مرجوعی به همان روش پرداخت، و سطر جدا برای فروش SNAP در گزارش مالیات.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-07-b">
+        <h4 id="f-07-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>در خواربار آمریکا SNAP فقط کالای مشمول را می‌پردازد و سهمی که می‌پردازد مالیات فروش ندارد. حساب کردن دستی این روی یک سبد مختلط کند است و خطا دارد، و اگر مرجوعی SNAP نقد پس داده شود قانون برنامه شکسته می‌شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-07-c">
+        <h4 id="f-07-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Pay</bdi></li><li><bdi>EBT</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Settings</bdi></li></ol></div>
+        <p>کالاها در ویرایشگر کالا و ویرایش گروهی کلید SNAP eligible دارند. در Pay › EBT صندوق می‌نویسد SNAP can pay up to و فقط کالای مشمول را بعد از تخفیف حساب می‌کند. صندوق‌دار کارت را روی دستگاه جداگانه EBT فروشگاه می‌کشد، مبلغ تأییدشده و شماره تأیید را وارد می‌کند و مالیات سهم SNAP حذف می‌شود. مرجوعی به تفکیک روش پرداخت برمی‌گردد و خرید SNAP هیچ‌وقت نقد پس داده نمی‌شود. گزارش‌های X و Z سطر جدا برای EBT Food و EBT Cash دارند و گزارش مالیات سطر SNAP purchases (exempt) را. آفلاین هم کار می‌کند. در یک فروش تست روی سایت، EBT Food کل سبد را پرداخت، مالیات صفر شد و دفاتر مبلغ را طلب از پردازشگر EBT ثبت کردند.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: پرداخت EBT/SNAP (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f07.webp" data-num="۰۷" data-title="پرداخت EBT/SNAP" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: پرداخت EBT/SNAP"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f07.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه پرداخت EBT/SNAP در octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-08" aria-labelledby="f-08-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۸</span>
+    <div class="head-main">
+      <h3 id="f-08-t"><span class="sr">قابلیت ۸: </span>پردازش کارت برای خواربار</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-08-a">
+        <h4 id="f-08-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>گرفتن کارت از طریق پردازشگری که حسابش مال خود کسب‌وکار است، با کارت‌خوان‌هایی که فقط به همان کسب‌وکار تعلق دارند و پول را به حساب خودش می‌ریزند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-08-b">
+        <h4 id="f-08-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>با شش فروشگاه، پول کارتی که به یک حساب مشترک برود باید دستی تقسیم شود تا واریزهای بانک با دفاتر هر شعبه جور شود. مالک هم باید مطمئن باشد کارت‌خوان پیشخوان فقط به حساب خود کسب‌وکار شارژ می‌کند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-08-c">
+        <h4 id="f-08-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Devices</bdi></li><li><bdi>Card readers (Stripe)</bdi></li></ol></div>
+        <p>کارت‌ها از Stripe و روی حساب متصل خود کسب‌وکار رد می‌شوند. در POS › Devices بخش Card readers (Stripe)، که فقط مالک و ادمین می‌بینند، دکمه Connect Stripe دارد. بعد از اتصال، هر شعبه با آدرسش تنظیم می‌شود و کارت‌خوان با کد جفت‌سازی روی صفحه‌اش و یک نام مثل Front counter اضافه می‌شود. فهرست، کارت‌خوان‌های هر شعبه را آنلاین یا آفلاین با دکمه Remove نشان می‌دهد. EBT روی دستگاه جداگانه خودش اجرا و سر صندوق ثبت می‌شود.</p>
+        <p class="store"><b>قدم فروشگاه:</b> وصل کردن حساب Stripe.</p>
+        <a class="open" href="https://octabiz.ai/pos/devices" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: پردازش کارت برای خواربار (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f08.webp" data-num="۰۸" data-title="پردازش کارت برای خواربار" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: پردازش کارت برای خواربار"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/devices</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f08.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه پردازش کارت برای خواربار در octabiz.ai/pos/devices" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-09" aria-labelledby="f-09-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۰۹</span>
+    <div class="head-main">
+      <h3 id="f-09-t"><span class="sr">قابلیت ۹: </span>فروش وقتی اینترنت قطع است</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵ (تست آفلاین روی سایت)؛ محافظت‌های بیشتر از ۲۵ آبان</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-09-a">
+        <h4 id="f-09-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>وقتی اینترنت فروشگاه قطع می‌شود فروش ادامه پیدا کند و با برگشتن اتصال همه فروش‌ها بدون کم و کسر به دفاتر برسند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-09-b">
+        <h4 id="f-09-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>قطع شدن اینترنت در یک صبح شلوغ نباید صندوق‌ها را متوقف کند. صندوق‌دار باید بتواند فروش نقدی را ادامه دهد، صندوق را بدون اینترنت باز کند و مطمئن باشد هر فروش تا رسیدن به دفاتر روی خود دستگاه محفوظ است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-09-c">
+        <h4 id="f-09-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Download apps</bdi></li></ol></div>
+        <p>Cashier Terminal آفلاین هم می‌فروشد: فروش نقدی و EBT اول روی دستگاه ذخیره می‌شود و بعد پرداخت‌شده نشان داده می‌شود، و وقتی اتصال برگشت در دفاتر ثبت می‌شود. صندوق را می‌شود آفلاین از نوار بالا باز کرد. اگر دستگاه نتواند فروش را ذخیره کند، نوار قرمز Sales aren&#x27;t being saved on this till به صندوق‌دار می‌گوید صفحه را نبندد. گیفت کارت و امتیاز Rewards به اینترنت نیاز دارند و در حالت آفلاین همین را می‌گویند. برای صندوقی که باید بدون هیچ اتصالی روشن شود، اپ دسکتاپ صندوق برای Mac و Windows در POS › Download apps است. روی سایت یک فروش نقدی آفلاین ثبت شد و با برگشتن اتصال به دفاتر رفت.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/terminal" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: فروش وقتی اینترنت قطع است (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f09.webp" data-num="۰۹" data-title="فروش وقتی اینترنت قطع است" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: فروش وقتی اینترنت قطع است"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/terminal</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f09.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه فروش وقتی اینترنت قطع است در octabiz.ai/pos/terminal" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-10" aria-labelledby="f-10-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۰</span>
+    <div class="head-main">
+      <h3 id="f-10-t"><span class="sr">قابلیت ۱۰: </span>سخت‌افزار صندوق و نصب</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۱ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-10-a">
+        <h4 id="f-10-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>راه‌اندازی صندوق‌های هر شعبه با سخت‌افزاری که خواربار آمریکایی لازم دارد: اسکنر-ترازو، پرینتر رسید، کشوی پول، کارت‌خوان و ترازوی لیبل‌زن، و مدیریت آن‌ها برای هر شعبه از یک جا.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-10-b">
+        <h4 id="f-10-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>شش فروشگاه یعنی ده‌ها دستگاه. وقتی پرینتر یا ترازو روی هر کامپیوتر جدا تنظیم می‌شود، کسی نمی‌داند کدام صندوق چه دارد و هر صندوق تازه یک بار آمدن تکنسین است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-10-c">
+        <h4 id="f-10-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Devices</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Device Bridge</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Download apps</bdi></li></ol></div>
+        <p>POS › Devices دستگاه‌های هر شعبه را با دکمه Add a device نشان می‌دهد، و بخش‌های Location settings (لیبل ترازو و قالب رسید) و Card readers (Stripe) را دارد. POS › PLU Catalog تنظیم اسکنر-ترازوی صندوق (مدل، واحد، نوع اتصال و خواندن زنده وزن) و فایل PLU ترازوهای لیبل‌زن را دارد. POS › Device Bridge وضعیت OctaBiz Connector را نشان می‌دهد که پرینتر، کشو و ترازو را به صندوق وصل می‌کند، و POS › Download apps اپ دسکتاپ و Connector را برای Mac و Windows دارد.</p>
+        <p class="store"><b>قدم فروشگاه:</b> اسکنر-ترازو یک بار روی دستگاه خود فروشگاه امتحان شود و بعد برای کار روزانه روشن شود.</p>
+        <a class="open" href="https://octabiz.ai/pos/devices" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: سخت‌افزار صندوق و نصب (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f10.webp" data-num="۱۰" data-title="سخت‌افزار صندوق و نصب" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: سخت‌افزار صندوق و نصب"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/devices</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f10.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه سخت‌افزار صندوق و نصب در octabiz.ai/pos/devices" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-2" style="--hue:var(--h2)" aria-labelledby="area-2-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۲</span>
+    <div><p class="area-k">بخش ۲ از ۸</p><h2 id="area-2-t">قیمت، لیبل و پروموشن</h2></div>
+    <p class="area-ct">۲ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-11" aria-labelledby="f-11-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۱</span>
+    <div class="head-main">
+      <h3 id="f-11-t"><span class="sr">قابلیت ۱۱: </span>لیبل قفسه</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۲ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-11-a">
+        <h4 id="f-11-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>وقتی قیمتی عوض می‌شود یا تخفیفی شروع یا تمام می‌شود، کالا با قیمت خود هر شعبه در فهرست چاپ دوباره همه شعبه‌هایی که آن را دارند بیاید، و کارمند بتواند در راهرو با گوشی قیمت را ببیند و لیبل چاپ کند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-11-b">
+        <h4 id="f-11-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>وقتی هر شعبه قیمت خودش را دارد، با هر تغییر قیمت در دفتر مرکزی شش فروشگاه باید دستی دنبال لیبل درست بگردند و دوباره چاپش کنند. لیبلی که با صندوق نخواند یعنی مشتری ناراضی سر صندوق.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-11-c">
+        <h4 id="f-11-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Labels to print</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Price check</bdi></li></ol></div>
+        <p>POS › Labels to print برای شعبه‌ای که در بالای صفحه انتخاب شده هر کالایی را که قیمتش عوض شده یا تخفیفش شروع یا تمام شده با قیمت همان شعبه فهرست می‌کند. چاپ، Dismiss یا برگشتن قیمت، هر درخواست را می‌بندد. POS › Price check روی گوشی کار می‌کند: کالا یا لیبل ترازو را اسکن می‌کنید، قیمت همین شعبه را می‌بینید و لیبل را همان‌جا چاپ می‌کنید یا به Labels to print اضافه می‌کنید. چاپ گروهی به هر لیبل کالا و قیمت روز خودش را می‌دهد و لیبل تخفیف، قیمت تخفیف را با was و until نشان می‌دهد هر جا اندازه لیبل جا داشته باشد. در تست روی سایت، تغییر قیمت یک کالا فقط به شعبه‌ای رفت که آن را دارد و پنجره چاپ قیمت همان شعبه را نشان داد.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/labels-to-print" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: لیبل قفسه (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f11.webp" data-num="۱۱" data-title="لیبل قفسه" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: لیبل قفسه"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/labels-to-print</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f11.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه لیبل قفسه در octabiz.ai/pos/labels-to-print" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-12" aria-labelledby="f-12-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۲</span>
+    <div class="head-main">
+      <h3 id="f-12-t"><span class="sr">قابلیت ۱۲: </span>تخفیف و پروموشن</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۳ آبان ۱۴۰۵ (کد تخفیف و پروموشن‌ها ۱۲ آبان؛ حراج دپارتمان و قیمت اعضا ۱۳ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-12-a">
+        <h4 id="f-12-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>اجرای پروموشن‌های خواربار سر صندوق: «۳ تا به ۵ دلار»، ترکیب آزاد از چند کالا یا یک دسته، یکی بخر یکی ببر، سقف تعداد در هر فروش، حراج تاریخ‌دار یک دپارتمان، قیمت اعضا، و کد تخفیفی که تاریخ و سقف خودش را رعایت کند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-12-b">
+        <h4 id="f-12-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>بدون پروموشن روی صندوق، صندوق‌دار تخفیف را دستی می‌زند و هر بار ممکن است بیش از حد تخفیف بدهد، و صندوق‌داری که اجازه تخفیف ندارد نمی‌تواند پروموشن خود فروشگاه را بفروشد. کدی که تمام شده یا سقفش پر شده نباید رد شود، حتی وقتی دو نفر در یک لحظه از آن استفاده می‌کنند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-12-c">
+        <h4 id="f-12-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Sales</bdi></li><li><bdi>Promotions</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li></ol></div>
+        <p>Sales › Promotions نوع‌های Buy N for a price، Any N of these for a price (بر اساس کالا یا دسته)، Buy X get Y و Department sale را دارد، هر کدام با تاریخ، شعبه‌ها و سقف اختیاری در هر فروش؛ جدول What the customer pays قیمت ۱ تا ۷ عدد را نشان می‌دهد. سر صندوق تخفیف خودش کم می‌شود، سطر نام پروموشن را دارد، Why this price? توضیحش می‌دهد و رسید صرفه‌جویی را چاپ می‌کند. مشتری عضو قیمت لیست قیمت خودش را می‌گیرد و صندوق همیشه ارزان‌ترین قیمت هر کالا را حساب می‌کند، بدون روی هم گذاشتن تخفیف‌ها. حراج دپارتمان هیچ‌وقت از قیمت لیبل قفسه گران‌تر حساب نمی‌کند. کدی که تمام شده، هنوز شروع نشده، سقفش پر شده یا خرید بیشتری لازم دارد کم‌رنگ و با دلیلش دیده می‌شود، مثلاً Ended Nov 2.</p>
+        
+        <a class="open" href="https://octabiz.ai/sales/promotions" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: تخفیف و پروموشن (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f12.webp" data-num="۱۲" data-title="تخفیف و پروموشن" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: تخفیف و پروموشن"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/sales/promotions</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f12.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه تخفیف و پروموشن در octabiz.ai/sales/promotions" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-3" style="--hue:var(--h3)" aria-labelledby="area-3-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۳</span>
+    <div><p class="area-k">بخش ۳ از ۸</p><h2 id="area-3-t">سفارش خرید و تأمین‌کننده</h2></div>
+    <p class="area-ct">۹ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-13" aria-labelledby="f-13-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۳</span>
+    <div class="head-main">
+      <h3 id="f-13-t"><span class="sr">قابلیت ۱۳: </span>هشدار کمبود و سفارش پیشنهادی</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ نقطه سفارش هر شعبه از ۱۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-13-a">
+        <h4 id="f-13-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>تعیین نقطه سفارش و حداکثر موجودی هر کالا برای هر شعبه، هشدار وقتی موجودی کم می‌شود، و پیشنهاد سفارشی که موجودی همان شعبه را به حداکثرش برگرداند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-13-b">
+        <h4 id="f-13-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>یک نقطه سفارش برای کل کسب‌وکار به شش فروشگاه با فروش متفاوت نمی‌خورد. شعبه شلوغ تمام می‌کند و شعبه خلوت اضافه نگه می‌دارد، و مدیرها برای تصمیم سفارش با کاغذ و قلم راهروها را می‌گردند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-13-c">
+        <h4 id="f-13-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Reorder</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Low stock</bdi></li></ol><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Master Products</bdi></li><li><bdi>یک کالا</bdi></li><li><bdi>Stock</bdi></li></ol></div>
+        <p>در صفحه هر کالا، تب Stock، بخش Reorder levels by branch برای هر شعبه نقطه سفارش و حداکثر موجودی دارد و از فهرست کالاها با دکمه Reorder levels می‌شود برای چند کالا با هم تنظیمش کرد. Inventory › Low stock کالاهای زیر حد هشدار هر شعبه را نشان می‌دهد. هر شب بررسی سفارش در Inventory › Reorder سفارشی پیشنهاد می‌دهد که با حساب کردن سفارش‌های در راه، شعبه را به حداکثر موجودی‌اش برساند، و پیشنهادها به سفارش خرید پیش‌نویس آماده ارسال تبدیل می‌شوند.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/reorder" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: هشدار کمبود و سفارش پیشنهادی (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f13.webp" data-num="۱۳" data-title="هشدار کمبود و سفارش پیشنهادی" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: هشدار کمبود و سفارش پیشنهادی"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/reorder</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f13.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه هشدار کمبود و سفارش پیشنهادی در octabiz.ai/inventory/reorder" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-14" aria-labelledby="f-14-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۴</span>
+    <div class="head-main">
+      <h3 id="f-14-t"><span class="sr">قابلیت ۱۴: </span>سفارش خرید به هر تأمین‌کننده</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ کارتن و قیمت پروموشن در ۲۱ و ۲۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-14-a">
+        <h4 id="f-14-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>سفارش به هر تأمین‌کننده، از پخش‌کننده بزرگ تا مزرعه محلی، با سفارش خریدی که شعبه مقصد را دارد، قیمت هر واحد را از اندازه کارتن حساب می‌کند و با ایمیل، PDF یا EDI فرستاده می‌شود.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-14-b">
+        <h4 id="f-14-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>Rainbow Blossom از UNFI و KeHE و تعداد زیادی تأمین‌کننده کوچک محلی خرید می‌کند. وقتی سفارش‌ها در ایمیل و تلفن می‌مانند، فروشگاه نمی‌داند چه چیزی در راه است، قیمت هر واحد از قیمت کارتن دستی حساب می‌شود و موقع تحویل چیزی برای مقایسه نیست.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-14-c">
+        <h4 id="f-14-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Purchase Orders</bdi></li></ol></div>
+        <p>Procurement › Purchase Orders (و Quick PO برای سفارش سریع) برای هر تأمین‌کننده سفارشی با مقصد یک شعبه می‌سازد. سطرها را می‌شود کارتن کامل سفارش داد و قیمت هر واحد از اندازه کارتن و قیمت تأمین‌کننده می‌آید، همراه با قیمت پروموشن پخش‌کننده تا وقتی که برقرار است. صفحه سفارش آنچه را هنوز جلوی ارسال را گرفته (تاریخ تحویل، شرایط پرداخت، طرف صورت‌حساب) فهرست می‌کند تا به No blockers برسد. پنجره Send PO سفارش را ایمیل می‌کند، PDF آن را دانلود و ارسال‌شده علامت می‌زند، یا برای تأمین‌کننده‌ای که EDI دارد با EDI می‌فرستد.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/po" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: سفارش خرید به هر تأمین‌کننده (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f14.webp" data-num="۱۴" data-title="سفارش خرید به هر تأمین‌کننده" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: سفارش خرید به هر تأمین‌کننده"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/po</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f14.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه سفارش خرید به هر تأمین‌کننده در octabiz.ai/procurement/po" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-15" aria-labelledby="f-15-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۵</span>
+    <div class="head-main">
+      <h3 id="f-15-t"><span class="sr">قابلیت ۱۵: </span>هشدار سفارش دیرکرد</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۴ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-15-a">
+        <h4 id="f-15-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>خبر دادن به مدیر شعبه درباره سفارش‌هایی که دیر شده‌اند یا هنوز تأیید نشده‌اند، با یک ایمیل پیگیری آماده برای پخش‌کننده.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-15-b">
+        <h4 id="f-15-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>تحویل دیرکرد معمولاً وقتی دیده می‌شود که قفسه خالی شده. پیگیری‌اش یعنی پیدا کردن سفارش، تماس تأمین‌کننده و تاریخ قول‌داده‌شده، و نوشتن ایمیل از صفر.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-15-c">
+        <h4 id="f-15-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Deliveries to come</bdi></li></ol></div>
+        <p>Procurement › Deliveries to come سفارش‌های دیرکرد را اول فهرست، با تعداد روز تأخیر، نشان می‌دهد. هر صبح Reminders به مدیر همان شعبه می‌گوید کدام سفارش‌ها دیر شده یا تأیید نشده‌اند، و روی سفارش یک ایمیل پیگیری به پخش‌کننده نوشته و آماده ارسال است.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/deliveries" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: هشدار سفارش دیرکرد (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f15.webp" data-num="۱۵" data-title="هشدار سفارش دیرکرد" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: هشدار سفارش دیرکرد"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/deliveries</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f15.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه هشدار سفارش دیرکرد در octabiz.ai/procurement/deliveries" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-16" aria-labelledby="f-16-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۶</span>
+    <div class="head-main">
+      <h3 id="f-16-t"><span class="sr">قابلیت ۱۶: </span>بودجه خرید ماهانه هر شعبه</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۴ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-16-a">
+        <h4 id="f-16-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>تعیین بودجه خرید برای هر شعبه و هر ماه، نشان دادن مانده بودجه هنگام سفارش، و هشدار یا توقف سفارشی که از بودجه بگذرد.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-16-b">
+        <h4 id="f-16-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>هر مدیر شعبه خودش سفارش می‌دهد و زیاده‌روی فقط آخر ماه، وقتی صورت‌حساب‌ها می‌رسند، معلوم می‌شود. تا آن موقع پول نقد تعهد شده است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-16-c">
+        <h4 id="f-16-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Buying budgets</bdi></li></ol></div>
+        <p>Procurement › Buying budgets برای هر شعبه و هر ماه یک سقف دارد. Quick PO و سفارش‌های پیش‌نویس left this month همان شعبه را نشان می‌دهند و قبل از اینکه سفارش از بودجه بگذرد هشدار می‌دهند؛ مالک می‌تواند به جای هشدار جلوی این سفارش‌ها را بگیرد. پیش‌فرض هشدار است.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/buying-budgets" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: بودجه خرید ماهانه هر شعبه (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f16.webp" data-num="۱۶" data-title="بودجه خرید ماهانه هر شعبه" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="872" aria-label="بزرگ‌نمایی تصویر: بودجه خرید ماهانه هر شعبه"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/buying-budgets</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f16.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="تصویر صفحه بودجه خرید ماهانه هر شعبه در octabiz.ai/procurement/buying-budgets" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-17" aria-labelledby="f-17-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۷</span>
+    <div class="head-main">
+      <h3 id="f-17-t"><span class="sr">قابلیت ۱۷: </span>سفارش الکترونیکی EDI با UNFI و KeHE</h3>
+      <p class="live"><span class="live-k">فعال</span> ۲۱ آبان ۱۴۰۵ (بررسی خودکار هر ۱۵ دقیقه از ۲۳ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-17-a">
+        <h4 id="f-17-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>فرستادن سفارش خرید به UNFI و KeHE با EDI و گرفتن جواب‌هایشان: تأیید سفارش (855)، اعلام ارسال (856)، فاکتور (810) و رسید دریافت (997).</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-17-b">
+        <h4 id="f-17-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>پخش‌کننده‌های بزرگ EDI می‌خواهند. بدونش سفارش با ایمیل یا پورتال می‌رود، تأییدها و کسری‌های ارسال با چشم خوانده می‌شوند و هر فاکتور دستی وارد و با تحویل مقایسه می‌شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-17-c">
+        <h4 id="f-17-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Vendors</bdi></li><li><bdi>یک تأمین‌کننده</bdi></li><li><bdi>EDI messages</bdi></li></ol><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Purchase Orders</bdi></li><li><bdi>Send PO</bdi></li></ol></div>
+        <p>تأمین‌کننده‌ای که EDI برایش تنظیم شده (صفحه تأمین‌کننده › Settings › Electronic ordering (EDI)) در پنجره Send PO دکمه Send by EDI می‌گیرد که سفارش X12 850 را در صندوق SFTP پخش‌کننده می‌گذارد. این صندوق هر ۱۵ دقیقه خودکار بررسی می‌شود، و تب EDI messages هم دکمه‌های Check for messages و Add a file you received را دارد. 855 سفارش را با تاریخ تحویل آن‌ها تأیید می‌کند و سطرهای کم‌شده را برای تصمیم خریدار نگه می‌دارد؛ 856 یک بار در راه با شماره بچ و تاریخ انقضا می‌سازد؛ 810 صورت‌حساب پیش‌نویسی می‌شود که تطبیق سه‌طرفه سفارش، دریافت و صورت‌حساب رویش اجرا شده. همه چیز اول در حالت Testing امتحان می‌شود.</p>
+        <p class="store"><b>قدم فروشگاه:</b> شناسه و قرارداد EDI با UNFI و KeHE.</p>
+        <a class="open" href="https://octabiz.ai/resources/vendors" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: سفارش الکترونیکی EDI با UNFI و KeHE (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f17.webp" data-num="۱۷" data-title="سفارش الکترونیکی EDI با UNFI و KeHE" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: سفارش الکترونیکی EDI با UNFI و KeHE"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/resources/vendors</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f17.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه سفارش الکترونیکی EDI با UNFI و KeHE در octabiz.ai/resources/vendors" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-18" aria-labelledby="f-18-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۸</span>
+    <div class="head-main">
+      <h3 id="f-18-t"><span class="sr">قابلیت ۱۸: </span>کاتالوگ و فایل قیمت توزیع‌کننده</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۸ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-18-a">
+        <h4 id="f-18-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>بارگذاری زمان‌بندی‌شده فایل قیمت UNFI و KeHE مستقیم از سرور SFTP آن‌ها، هشدار وقتی قیمت خرید تازه حاشیه سود را پایین می‌آورد، و استفاده از قیمت پروموشن پخش‌کننده در سفارش‌ها تا وقتی برقرار است.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-18-b">
+        <h4 id="f-18-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>پخش‌کننده‌ها هر چند هفته قیمت را عوض می‌کنند. وقتی فایل قیمت دستی دانلود و وارد می‌شود، قیمت‌ها کهنه می‌مانند و کسی نمی‌فهمد کالایی زیر حاشیه سود هدف فروخته می‌شود تا وقتی عددهای ماه برسد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-18-c">
+        <h4 id="f-18-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Resources</bdi></li><li><bdi>Vendors</bdi></li><li><bdi>یک تأمین‌کننده</bdi></li><li><bdi>Products</bdi></li><li><bdi>Scheduled و Margins</bdi></li></ol></div>
+        <p>در تب Products تأمین‌کننده، زیرتب Scheduled گزینه SFTP server را دارد: سرور، پورت، نام کاربری و یک پوشه یا الگوی نام فایل مثل /outgoing/prices_*.csv، با رمز یا کلید خصوصی؛ جدیدترین فایل CSV، Excel یا zip طبق زمان‌بندی وارد می‌شود. زیرتب Margins بعد از آن کالاهایی را نشان می‌دهد که با قیمت خرید تازه، با قیمت فروش هر شعبه، زیر حاشیه سود مالک (۳۰٪ مگر اینکه عوضش کند) یا زیر صفر رفته‌اند. ستون‌های قیمت، شروع و پایان پروموشن از فایل خوانده می‌شوند و Quick PO تا وقتی پروموشن برقرار است از آن قیمت استفاده می‌کند (Promo until 30 Nov). این بارگذاری فقط قیمت خرید تأمین‌کننده را عوض می‌کند و به ارزش موجودی و قیمت فروش دست نمی‌زند.</p>
+        
+        <a class="open" href="https://octabiz.ai/resources/vendors" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: کاتالوگ و فایل قیمت توزیع‌کننده (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f18.webp" data-num="۱۸" data-title="کاتالوگ و فایل قیمت توزیع‌کننده" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: کاتالوگ و فایل قیمت توزیع‌کننده"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/resources/vendors</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f18.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه کاتالوگ و فایل قیمت توزیع‌کننده در octabiz.ai/resources/vendors" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-19" aria-labelledby="f-19-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۱۹</span>
+    <div class="head-main">
+      <h3 id="f-19-t"><span class="sr">قابلیت ۱۹: </span>پیش‌بینی سفارش با AI</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۸ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-19-a">
+        <h4 id="f-19-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>پیشنهاد سفارش هر شعبه از فروش خود آن شعبه، با اثر فصل، تعطیلات و پروموشن‌های برنامه‌ریزی‌شده، در صفحه‌ای که خریدار هر سطر را قبل از تبدیل به سفارش خرید تأیید یا اصلاح می‌کند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-19-b">
+        <h4 id="f-19-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>سفارش از روی فروش هفته پیش، هفته‌های شلوغ را جا می‌اندازد: تعطیلات یا پروموشن قفسه را خالی می‌کند و سفارش بعدی دیر می‌رسد. یک خریدار نمی‌تواند این حساب را برای هزاران کالا در شش شعبه انجام دهد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-19-c">
+        <h4 id="f-19-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Reorder</bdi></li><li><bdi>Forecast review</bdi></li></ol></div>
+        <p>Inventory › Reorder › Forecast review هر بار یک شعبه را نشان می‌دهد. برای هر کالایی که آنجا فروش داشته: موجودی، سفارش در راه، فروش مورد انتظار تا رسیدن سفارش بعدی، سفارش پیشنهادی که از حداکثر موجودی شعبه بیشتر نمی‌شود و به کارتن کامل گرد می‌شود، و یک دلیل کوتاه مثل Thanksgiving week +30%. خریدار هر سطر را قبول، عوض یا رد می‌کند و Add to draft PO برای هر تأمین‌کننده یک سفارش پیش‌نویس برای همان شعبه پر می‌کند. How we got this همه مراحل حساب را نشان می‌دهد و Explain this suggestion از AI می‌خواهد همان عددها را در چند جمله توضیح دهد؛ خود عددها به AI وابسته نیستند. روزهایی که کالا موجود نبوده کنار گذاشته می‌شوند تا تمام شدن موجودی پیش‌بینی را پایین نیاورد.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/reorder/forecast" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: پیش‌بینی سفارش با AI (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f19.webp" data-num="۱۹" data-title="پیش‌بینی سفارش با AI" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: پیش‌بینی سفارش با AI"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/reorder/forecast</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f19.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه پیش‌بینی سفارش با AI در octabiz.ai/inventory/reorder/forecast" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-20" aria-labelledby="f-20-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۰</span>
+    <div class="head-main">
+      <h3 id="f-20-t"><span class="sr">قابلیت ۲۰: </span>اپ گوشی برای کف فروشگاه</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۹ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-20-a">
+        <h4 id="f-20-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>یک صفحه گوشی برای کارمند در راهروها: اسکن برای شمارش، دیدن قیمت، ثبت کالای خراب یا گم‌شده، و گذاشتن کالا در سفارش بعدی.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-20-b">
+        <h4 id="f-20-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>کارمند کف فروشگاه گوشی در جیب دارد ولی برای شمارش، ثبت یک شیشه شکسته یا یادداشت سفارش باید به کامپیوتر دفتر برگردد. یادداشت‌های کاغذی دیرتر وارد می‌شوند، یا هیچ‌وقت.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-20-c">
+        <h4 id="f-20-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Shop floor</bdi></li></ol></div>
+        <p>Inventory › Shop floor روی گوشی برای شعبه‌ای که بالای صفحه انتخاب شده کار می‌کند و چهار دکمه بزرگ دارد. Count شمارش را با اسکنر دوربین باز می‌کند و اسکن مستقیم به سطر همان کالا می‌رود. Price check قیمت شعبه و چاپ لیبل را باز می‌کند. Damaged or missing همان فرم Remove stock دسکتاپ را باز می‌کند، پس دفاتر و گزارش ضایعات یکی می‌مانند. Order تأمین‌کننده همیشگی کالا، سفارش پیش‌نویس باز، موجودی و در راه، و مقدار پیشنهادی را نشان می‌دهد و Put on the order کالا را به پیش‌نویس اضافه می‌کند؛ ارسال سفارش با مدیر است که از Purchase Orders بررسی و ارسالش می‌کند.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/shop-floor" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: اپ گوشی برای کف فروشگاه (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f20.webp" data-num="۲۰" data-title="اپ گوشی برای کف فروشگاه" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: اپ گوشی برای کف فروشگاه"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/shop-floor</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f20.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه اپ گوشی برای کف فروشگاه در octabiz.ai/inventory/shop-floor" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-21" aria-labelledby="f-21-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۱</span>
+    <div class="head-main">
+      <h3 id="f-21-t"><span class="sr">قابلیت ۲۱: </span>مرجوعی و اعتبار تأمین‌کننده</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۸ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-21-a">
+        <h4 id="f-21-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>برگرداندن کالای خراب، نزدیک انقضا یا اشتباه به تأمین‌کننده با سند مرجوعی، خارج کردن آن از موجودی به ارزش دفاتر، و پیگیری اعتبار تأمین‌کننده تا وقتی برسد.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-21-b">
+        <h4 id="f-21-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>بدون سند مرجوعی کالا به‌عنوان زیان از موجودی حذف می‌شود، کارتن با راننده برمی‌گردد، و اینکه تأمین‌کننده بالاخره اعتبار داد یا نه بستگی دارد به اینکه کسی یادش بماند صورت‌حساب‌ها را چک کند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-21-c">
+        <h4 id="f-21-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Procurement</bdi></li><li><bdi>Vendor returns</bdi></li></ol></div>
+        <p>Procurement › Vendor returns (و تب Returns در صفحه هر تأمین‌کننده) مرجوعی را برای یک تأمین‌کننده و یک شعبه شروع می‌کند و می‌شود آن را از سفارش خرید یا صورت‌حساب پر کرد. هر سطر مقدار، قیمت درخواستی و دلیل دارد. Print return slip برگه‌ای برای راننده می‌دهد با شماره RMA تأمین‌کننده، اقلام، جمع و دو جای امضا. Ship کالا را از موجودی همان شعبه بیرون می‌برد و دفاتر طلب از تأمین‌کننده را نشان می‌دهند. وقتی برگه اعتبار رسید، مدیر اقلامی را که پوشش می‌دهد تیک می‌زند و یک اعتبار تأمین‌کننده ساخته می‌شود که Pay bills مثل هر اعتبار دیگری از آن استفاده می‌کند. فهرست تب‌های Waiting for credit، Drafts، Credit received و Closed را دارد و بعد از ۳۰ روز Overdue را قرمز نشان می‌دهد. مرجوعی تاریخ‌گذشته اول از بچ تاریخ‌گذشته برداشته می‌شود.</p>
+        
+        <a class="open" href="https://octabiz.ai/procurement/vendor-returns" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: مرجوعی و اعتبار تأمین‌کننده (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f21.webp" data-num="۲۱" data-title="مرجوعی و اعتبار تأمین‌کننده" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: مرجوعی و اعتبار تأمین‌کننده"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/procurement/vendor-returns</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f21.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه مرجوعی و اعتبار تأمین‌کننده در octabiz.ai/procurement/vendor-returns" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-4" style="--hue:var(--h4)" aria-labelledby="area-4-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۴</span>
+    <div><p class="area-k">بخش ۴ از ۸</p><h2 id="area-4-t">موجودی در شش فروشگاه</h2></div>
+    <p class="area-ct">۴ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-22" aria-labelledby="f-22-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۲</span>
+    <div class="head-main">
+      <h3 id="f-22-t"><span class="sr">قابلیت ۲۲: </span>موجودی زنده و انتقال بین شعبه‌ها</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ کاتالوگ بزرگ از ۲۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-22-a">
+        <h4 id="f-22-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>دیدن موجودی هر کالا در هر شش شعبه به‌صورت زنده، و جابه‌جا کردن کالا بین شعبه‌ها با انتقالی که هر دو شعبه و دفاتر دنبالش می‌کنند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-22-b">
+        <h4 id="f-22-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>وقتی مشتری چیزی می‌خواهد که این شعبه ندارد، کارمند باید بداند کدام شعبه دارد. بدون یک نمای واحد، به شعبه‌ها زنگ می‌زنند، و انتقال دستی موجودی یک شعبه را خراب می‌کند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-22-c">
+        <h4 id="f-22-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Transfers</bdi></li></ol></div>
+        <p>Inventory › Locations › Stock overview جمع موجودی و ارزش آن را در همه شعبه‌ها نشان می‌دهد و Stocks by location هر کالا را با موجودی هر شعبه، با جستجو و صفحه‌بندی، هر قدر هم کاتالوگ بزرگ باشد، فهرست می‌کند. Inventory › Transfers کالا را از یک شعبه به شعبه دیگر می‌برد و Transfer Log هر جابه‌جایی را نگه می‌دارد. هر فروش، دریافت و انتقال همان لحظه موجودی شعبه را عوض می‌کند. در بررسی روی سایت، صفحه موجودی یکی از شعبه‌ها همه جابه‌جایی‌های امسال را نشان داد، همان تعدادی که پایگاه داده داشت.</p>
+        
+        <a class="open" href="https://octabiz.ai/locations/stocks" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: موجودی زنده و انتقال بین شعبه‌ها (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f22.webp" data-num="۲۲" data-title="موجودی زنده و انتقال بین شعبه‌ها" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: موجودی زنده و انتقال بین شعبه‌ها"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/locations/stocks</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f22.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه موجودی زنده و انتقال بین شعبه‌ها در octabiz.ai/locations/stocks" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-23" aria-labelledby="f-23-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۳</span>
+    <div class="head-main">
+      <h3 id="f-23-t"><span class="sr">قابلیت ۲۳: </span>هشدار تاریخ انقضا</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ روزهای هشدار هر کالا از ۱۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-23-a">
+        <h4 id="f-23-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>پیگیری تاریخ انقضا به تفکیک بچ و هشدار به مدیر هر شعبه چند روز قبل از انقضا، با مدت هشدار متفاوت برای هر کالا یا دسته.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-23-b">
+        <h4 id="f-23-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>لبنیات، آب‌میوه تازه و مکمل‌ها با فاصله‌های خیلی متفاوت تاریخ می‌گذرند. یک بازه هشدار برای همه، یا برای شیر دیر است یا برای ویتامین ماه‌ها زود، و کالای تاریخ‌گذشته‌ای که روی قفسه پیدا شود مستقیم زیان است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-23-c">
+        <h4 id="f-23-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Near expiry &amp; expired</bdi></li><li><bdi>Warning days</bdi></li></ol></div>
+        <p>کالای دریافتی بچ خودش را با تاریخ تولید و انقضا نگه می‌دارد و اعلام ارسال EDI این تاریخ‌ها را موقع دریافت پر می‌کند. Inventory › Near expiry &amp; expired کالاهای نزدیک تاریخ را در هر شعبه نشان می‌دهد و Warning days تعیین می‌کند هر کالا یا دسته چند روز زودتر دیده شود، مثلاً ۵ روز برای لبنیات و ۹۰ روز برای مکمل‌ها. مدیر هر شعبه اعلان شعبه خودش را می‌گیرد و خلاصه صبح هم کالاهای نزدیک انقضا را دارد.</p>
+        
+        <a class="open" href="https://octabiz.ai/inventory/expiring" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: هشدار تاریخ انقضا (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f23.webp" data-num="۲۳" data-title="هشدار تاریخ انقضا" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: هشدار تاریخ انقضا"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/inventory/expiring</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f23.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه هشدار تاریخ انقضا در octabiz.ai/inventory/expiring" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-24" aria-labelledby="f-24-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۴</span>
+    <div class="head-main">
+      <h3 id="f-24-t"><span class="sr">قابلیت ۲۴: </span>شمارش موجودی و سابقه آن</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ Past counts از ۱۳ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-24-a">
+        <h4 id="f-24-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>شمارش موجودی هر شعبه با یک شمارش راهنمادار، و نگه‌داشتن هر شمارش تمام‌شده با کسری و اضافه به تعداد و به ارزش.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-24-b">
+        <h4 id="f-24-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>شمارش روی کاغذ دیرتر وارد می‌شود و بعد از اصلاح موجودی کسی نمی‌تواند بگوید شمارش قبلی چه پیدا کرد یا چه کسی انجامش داد. کسری تکراری روی همان کالاها دیده نمی‌شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-24-c">
+        <h4 id="f-24-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li><li><bdi>Count</bdi></li><li><bdi>Past counts</bdi></li></ol></div>
+        <p>شمارش راهنمادار (Inventory › Locations › Count) شعبه را انتخاب می‌کند، می‌شمارد و تمام می‌کند؛ روی گوشی Scan an item مستقیم به سطر همان کالا می‌رود. Past counts هر شمارش تمام‌شده را با تاریخ، شعبه، شمارنده و کسری یا اضافه به تعداد و به ارزش بهای تمام‌شده فهرست می‌کند و با باز کردن هر شمارش اقلامش دیده می‌شود. ایمیل زمان‌بندی‌شده دقت موجودی هم آنچه واقعاً اختلاف دارد را گزارش می‌کند.</p>
+        
+        <a class="open" href="https://octabiz.ai/locations/stock/count/history" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: شمارش موجودی و سابقه آن (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f24.webp" data-num="۲۴" data-title="شمارش موجودی و سابقه آن" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: شمارش موجودی و سابقه آن"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/locations/stock/count/history</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f24.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه شمارش موجودی و سابقه آن در octabiz.ai/locations/stock/count/history" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-25" aria-labelledby="f-25-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۵</span>
+    <div class="head-main">
+      <h3 id="f-25-t"><span class="sr">قابلیت ۲۵: </span>پیگیری ضایعات</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۴ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-25-a">
+        <h4 id="f-25-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>ثبت کالایی که بدون فروش از فروشگاه بیرون می‌رود با دلیلش، و گزارش آن به تفکیک شعبه، دپارتمان و ماه به همان ارزشی که در دفاتر ثبت شده.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-25-b">
+        <h4 id="f-25-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>کالای خراب، تاریخ‌گذشته و دزدیده‌شده هزینه واقعی خواربار است، ولی اگر فقط به‌صورت اختلاف شمارش دیده شود، مالک نمی‌تواند شکستگی را از دزدی یا فساد جدا کند و برای هیچ‌کدام کاری بکند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-25-c">
+        <h4 id="f-25-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Shrink report</bdi></li></ol><ol class="crumbs"><li><bdi>Inventory</bdi></li><li><bdi>Locations</bdi></li><li><bdi>یک شعبه</bdi></li><li><bdi>Remove stock</bdi></li></ol></div>
+        <p>کارمند زیان را با Remove stock در صفحه شعبه یا Damaged or missing روی گوشی ثبت می‌کند: کالا، دلیل (خراب، تاریخ‌گذشته، گم یا دزدیده، مصرف در فروشگاه، دلیل دیگر) و تعداد. موجودی کم می‌شود و زیان به بهای تمام‌شده در دفاتر ثبت می‌شود. Reports › Shrink report آن را به تفکیک دلیل، شعبه، دپارتمان و ماه به ارزش دفاتر نشان می‌دهد؛ اختلاف شمارش کنارش هست و هیچ‌وقت با آن جمع نمی‌شود. Department margin هم سهم ضایعات از فروش را نشان می‌دهد.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/shrink-report" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: پیگیری ضایعات (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f25.webp" data-num="۲۵" data-title="پیگیری ضایعات" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: پیگیری ضایعات"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/shrink-report</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f25.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه پیگیری ضایعات در octabiz.ai/reports/shrink-report" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-5" style="--hue:var(--h5)" aria-labelledby="area-5-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۵</span>
+    <div><p class="area-k">بخش ۵ از ۸</p><h2 id="area-5-t">مشتری و Rainbow Rewards</h2></div>
+    <p class="area-ct">۵ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-26" aria-labelledby="f-26-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۶</span>
+    <div class="head-main">
+      <h3 id="f-26-t"><span class="sr">قابلیت ۲۶: </span>یک پرونده مشتری برای همه شعبه‌ها</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ فروش صندوق و آنلاین از ۱۳ آبان، تب Financial در ۲۳ و ۲۶ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-26-a">
+        <h4 id="f-26-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>یک پرونده برای هر مشتری در هر شش شعبه، با خریدهای صندوق، فاکتورها، سفارش‌های ویژه، سفارش‌های آنلاین و امتیاز Rewards کنار هم.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-26-b">
+        <h4 id="f-26-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>مشتری ثابتی که از دو شعبه خرید می‌کند مثل دو نیمه‌مشتری دیده می‌شود، و کسی که بیشتر سر صندوق خرید می‌کند در گزارش‌هایی که فقط فاکتور را می‌شمارند غیرفعال به نظر می‌رسد. کارمند هم نمی‌بیند مشتری چه سفارشی دارد یا چقدر بدهکار است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-26-c">
+        <h4 id="f-26-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Customers</bdi></li><li><bdi>یک مشتری</bdi></li></ol></div>
+        <p>صفحه مشتری (Accounting › Sales › Customers) تب Financial دارد که فروش صندوق، فاکتور، سفارش ویژه و سفارش آنلاین را با هم و با بدهی مشتری فهرست می‌کند؛ سفارش ویژه لغوشده بدهی نشان نمی‌دهد. تب Details کارت Rewards و پیام‌های خودکار فرستاده‌شده را دارد. امتیاز سلامت مشتری، Best customers و Top customers فروش صندوق و آنلاین را می‌شمارند، پس مشتری همیشگی خواربار دیگر غیرفعال علامت نمی‌خورد. مشتری‌هایی که از Catapult می‌آیند شماره کارت وفاداری‌شان را نگه می‌دارند.</p>
+        
+        <a class="open" href="https://octabiz.ai/accounting/customers" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: یک پرونده مشتری برای همه شعبه‌ها (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f26.webp" data-num="۲۶" data-title="یک پرونده مشتری برای همه شعبه‌ها" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: یک پرونده مشتری برای همه شعبه‌ها"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/accounting/customers</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f26.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه یک پرونده مشتری برای همه شعبه‌ها در octabiz.ai/accounting/customers" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-27" aria-labelledby="f-27-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۷</span>
+    <div class="head-main">
+      <h3 id="f-27-t"><span class="sr">قابلیت ۲۷: </span>کمپین ایمیل</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان ۱۴۰۵ در OctaBiz بود</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-27-a">
+        <h4 id="f-27-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>فرستادن کمپین ایمیل به مشتری‌ها از همان فهرست مشتری که فروشگاه‌ها به آن می‌فروشند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-27-b">
+        <h4 id="f-27-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>خروجی گرفتن از مشتری‌ها برای یک ابزار ایمیل جدا یعنی فهرست کهنه و ایمیل دوباره به کسانی که لغو اشتراک کرده‌اند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-27-c">
+        <h4 id="f-27-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Marketing</bdi></li><li><bdi>Campaigns</bdi></li></ol></div>
+        <p>Marketing › Campaigns کمپین را در چهار قدم می‌سازد: Who should get this?، How should we reach them?، What do you want to say? و When should it go out?، و قبل از ارسال Send test to me دارد. Lists و Email builder هم زیر Marketing هستند و Email results نتیجه هر کمپین را نشان می‌دهد.</p>
+        <p class="store"><b>قدم فروشگاه:</b> گرفتن رضایت بازاریابی مشتری‌ها، که تشکر و پیگیری خودکار هم به آن نیاز دارد.</p>
+        <a class="open" href="https://octabiz.ai/marketing/campaigns" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: کمپین ایمیل (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f27.webp" data-num="۲۷" data-title="کمپین ایمیل" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: کمپین ایمیل"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/marketing/campaigns</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f27.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه کمپین ایمیل در octabiz.ai/marketing/campaigns" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-28" aria-labelledby="f-28-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۸</span>
+    <div class="head-main">
+      <h3 id="f-28-t"><span class="sr">قابلیت ۲۸: </span>امتیاز Rainbow Rewards</h3>
+      <p class="live"><span class="live-k">فعال</span> ۲۱ آبان ۱۴۰۵ (امتیاز در پرداخت آنلاین از ۲۳ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-28-a">
+        <h4 id="f-28-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>اجرای Rainbow Rewards: یک مانده امتیاز برای هر مشتری در همه شعبه‌ها، گرفتن و خرج امتیاز سر صندوق و آنلاین، دسته‌های مستثنا، انقضا، و بدهی امتیاز در دفاتر.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-28-b">
+        <h4 id="f-28-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>برنامه وفاداری بیرون از صندوق یعنی کارت جدا، مانده جدا و کارمندی که دستی دنبالش می‌گردد. امتیاز خرج‌نشده تعهدی است که فروشگاه به مشتری دارد، و اگر در دفاتر نباشد مالک نمی‌داند این تعهد چقدر می‌ارزد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-28-c">
+        <h4 id="f-28-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Rewards</bdi></li></ol><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal</bdi></li><li><bdi>Pay</bdi></li></ol></div>
+        <p>POS › Rewards قوانین را به زبان ساده نشان می‌دهد و مالک و ادمین نام برنامه (Rainbow Rewards)، امتیاز هر ۱ دلار خرید، دسته‌های مستثنا مثل Beer &amp; Wine یا Tobacco، ارزش هر امتیاز، حداکثر سهمی از فروش که امتیاز می‌پردازد و ماه‌های تا انقضا را تنظیم می‌کنند. در مرحله Pay صندوق‌دار عضو را با شماره تلفن پیدا می‌کند یا همان‌جا عضوش می‌کند، و Use points بیشترین مقداری را که این فروش اجازه می‌دهد، یا مقدار کمتر، کم می‌کند. رسید امتیاز قبل، خرج‌شده، گرفته‌شده و فعلی را نشان می‌دهد. اعضا روی سفارش آنلاین پرداخت‌شده هم امتیاز می‌گیرند و در پرداخت آنلاین با کدی که ایمیل می‌شود امتیازشان را می‌بینند و خرج می‌کنند؛ هر دو کلید آنلاین تا مالک روشن نکند خاموش‌اند. امتیاز خرج‌نشده در حساب بدهی امتیاز وفاداری (2450) است و امتیازهای Catapult به‌صورت مانده اول دوره به تفکیک شعبه وارد می‌شوند. در تست روی سایت، بعد از هر گرفتن، خرج و ابطال، این حساب دقیقاً برابر امتیاز خرج‌نشده ضرب در ارزش هر امتیاز بود.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/rewards" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: امتیاز Rainbow Rewards (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f28.webp" data-num="۲۸" data-title="امتیاز Rainbow Rewards" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: امتیاز Rainbow Rewards"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/rewards</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f28.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه امتیاز Rainbow Rewards در octabiz.ai/pos/rewards" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-29" aria-labelledby="f-29-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۲۹</span>
+    <div class="head-main">
+      <h3 id="f-29-t"><span class="sr">قابلیت ۲۹: </span>تشکر خودکار و پیگیری مشتری</h3>
+      <p class="live"><span class="live-k">فعال</span> ۲۰ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-29-a">
+        <h4 id="f-29-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>تشکر خودکار از بهترین مشتری‌ها و پیگیری مشتری‌های ثابتی که دیگر نمی‌آیند، فقط از راه‌هایی که خود مشتری قبول کرده و با سقفی که کسی زیر پیام غرق نشود.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-29-b">
+        <h4 id="f-29-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>کارمند فروشگاه وقت ندارد ببیند مشتری هفتگی یک ماه است نیامده، یا از پرخریدترها تشکر کند. تا کسی گزارش را نگاه کند، مشتری به فروشگاه دیگری رفته است.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-29-c">
+        <h4 id="f-29-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Marketing</bdi></li><li><bdi>Keep customers</bdi></li><li><bdi>Thank-yous and check-ins</bdi></li></ol></div>
+        <p>Marketing › Keep customers › Best customers کسانی را که در ۳۰ روز، ۹۰ روز یا ۱۲ ماه گذشته بیشترین خرید را داشته‌اند، برای همه شعبه‌ها یا یک شعبه، با تعداد مراجعه، میانگین سبد، ارزش کل، آخرین مراجعه و شعبه محبوب فهرست می‌کند. Thank-yous and check-ins دو پیام خودکار دارد که تا کسی روشنشان نکند خاموش‌اند: تشکر بعد از تعداد مشخصی مراجعه یا مبلغ مشخصی خرید، و پیگیری وقتی مشتری ثابت چند روز از فاصله همیشگی‌اش دیرتر شده. قبل از روشن شدن هر قانون، مالک می‌بیند امروز چه کسانی پیام می‌گیرند و متن دقیق پیام چیست. پیام با ایمیل، پیامک یا واتس‌اپ و فقط از راهی که مشتری قبول کرده می‌رود، پیش‌فرض حداکثر یکی در هر ۱۴ روز و فقط بین ۹ صبح تا ۸ شب. این پیام‌ها وقتی شروع می‌شوند که فروشگاه‌ها رضایت بازاریابی مشتری‌ها را ثبت کنند.</p>
+        
+        <a class="open" href="https://octabiz.ai/marketing/thank-yous" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: تشکر خودکار و پیگیری مشتری (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f29.webp" data-num="۲۹" data-title="تشکر خودکار و پیگیری مشتری" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: تشکر خودکار و پیگیری مشتری"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/marketing/thank-yous</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f29.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه تشکر خودکار و پیگیری مشتری در octabiz.ai/marketing/thank-yous" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-30" aria-labelledby="f-30-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۰</span>
+    <div class="head-main">
+      <h3 id="f-30-t"><span class="sr">قابلیت ۳۰: </span>فروشگاه آنلاین روی همان موجودی</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۵ آبان ۱۴۰۵ (سقف یک شعبه ۱۷ آبان؛ ترتیب بر اساس شعبه و قفل آخرین عدد ۱۸ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-30-a">
+        <h4 id="f-30-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>فروش آنلاین از موجودی هر شش شعبه: خریدار شعبه تحویل را انتخاب می‌کند، موجودی همان شعبه را می‌بیند و سفارش همان‌جا رزرو و بسته‌بندی می‌شود.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-30-b">
+        <h4 id="f-30-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>فروشگاه آنلاینی که به موجودی یک شعبه بسته است کالا را تمام‌شده نشان می‌دهد در حالی که شعبه دیگر کلی دارد، و خریدار نمی‌تواند انتخاب کند از کجا تحویل بگیرد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-30-c">
+        <h4 id="f-30-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>OctaShop</bdi></li><li><bdi>Settings</bdi></li><li><bdi>Stock</bdi></li></ol></div>
+        <p>OctaShop › Settings › Stock کلید Sell from your other stores too را با فهرست شعبه‌ها دارد. خریدار شعبه تحویلش را انتخاب می‌کند و صفحه کالا، جستجو و سبد موجودی همان شعبه را نشان می‌دهند و In stock first بر اساس همان شعبه مرتب می‌کند. کلید دوم، Add up the stock of these stores، یک جمع نشان می‌دهد؛ سفارش ارسالی به شعبه‌ای می‌رود که همه‌اش را دارد و تعداد از موجودی یک شعبه بیشتر نمی‌شود. سفارش هیچ‌وقت تقسیم نمی‌شود و آخرین عدد فقط به یک خریدار می‌رسد. فروش، بهای تمام‌شده و هر مرجوعی در دفاتر همان شعبه ثبت می‌شود. هر دو کلید تا مالک روشن نکند خاموش‌اند.</p>
+        <p class="store"><b>قدم فروشگاه:</b> تیک زدن شعبه‌ها و روشن کردن تحویل در شعبه.</p>
+        <a class="open" href="https://octabiz.ai/octashop/settings/stock" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: فروشگاه آنلاین روی همان موجودی (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f30.webp" data-num="۳۰" data-title="فروشگاه آنلاین روی همان موجودی" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: فروشگاه آنلاین روی همان موجودی"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/octashop/settings/stock</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f30.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه فروشگاه آنلاین روی همان موجودی در octabiz.ai/octashop/settings/stock" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-6" style="--hue:var(--h6)" aria-labelledby="area-6-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۶</span>
+    <div><p class="area-k">بخش ۶ از ۸</p><h2 id="area-6-t">اداره فروشگاه</h2></div>
+    <p class="area-ct">۶ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-31" aria-labelledby="f-31-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۱</span>
+    <div class="head-main">
+      <h3 id="f-31-t"><span class="sr">قابلیت ۳۱: </span>خلاصه صبح و کارهای امروز</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۶ آبان ۱۴۰۵ (Customize brief از ۲۱ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-31-a">
+        <h4 id="f-31-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>هر صبح یک صفحه برای مدیر هر شعبه: فروش دیروز، صندوق‌ها، سفارش‌های دیرکرد، کالای نزدیک انقضا، کمبود موجودی و کارهای امروز، و همین با ایمیل.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-31-b">
+        <h4 id="f-31-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>مدیری که فروشگاه را باز می‌کند قبل از باز شدن در یا پنج صفحه را نگاه می‌کند یا هیچ‌کدام را. مشکل‌های دیروز، مثل صندوق کسر، کامیون دیرکرد یا شیری که دارد تاریخ می‌گذرد، وقتی پیدا می‌شوند که مشتری یا مالک به آن‌ها اشاره کند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-31-c">
+        <h4 id="f-31-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Morning brief</bdi></li></ol></div>
+        <p>POS › Morning brief برای هر شعبه یک صفحه است: فروش دیروز (همان عدد Profit &amp; loss)، صندوق‌های باز و بسته، سفارش‌های دیرکرد، کالای نزدیک انقضا، کمبود موجودی و کارهای امروز. Customize brief بخش‌ها را روشن و خاموش و جابه‌جا می‌کند، Restore default دارد و چهار بخش دیگر هم برای اضافه کردن هست. کلید پایین صفحه خلاصه را هر صبح در ساعت انتخابی برای شعبه‌های انتخابی به ایمیل خود آن نفر می‌فرستد، یا به ایمیل دیگری که با لینک یا کد تأیید شده باشد. مدیر شعبه شعبه‌های خودش را می‌بیند.</p>
+        
+        <a class="open" href="https://octabiz.ai/pos/morning-brief" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: خلاصه صبح و کارهای امروز (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f31.webp" data-num="۳۱" data-title="خلاصه صبح و کارهای امروز" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: خلاصه صبح و کارهای امروز"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/pos/morning-brief</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f31.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه خلاصه صبح و کارهای امروز در octabiz.ai/pos/morning-brief" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-32" aria-labelledby="f-32-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۲</span>
+    <div class="head-main">
+      <h3 id="f-32-t"><span class="sr">قابلیت ۳۲: </span>خلاصه ایمیل‌ها و تبدیل به تسک</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۷ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-32-a">
+        <h4 id="f-32-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>خلاصه روزانه ایمیل‌های هر مدیر، و تبدیل هر ایمیل به تسک با یک دکمه.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-32-b">
+        <h4 id="f-32-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>تأیید تأمین‌کننده، سؤال مشتری و درخواست کارمند همه در یک صندوق ایمیل می‌آیند. ایمیل‌های مهم زیر بقیه گم می‌شوند و ایمیلی که کاری لازم دارد فقط تا وقتی یادشان هست انجام می‌شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-32-c">
+        <h4 id="f-32-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Email</bdi></li><li><bdi>Inbox</bdi></li></ol></div>
+        <p>بالای Email › Inbox کارت Today&#x27;s summary هست که می‌شود به دیروز عوضش کرد: چه آمده، چه چیزی جواب می‌خواهد و چه چیزی به شما سپرده شده، با چند جمله که AI نوشته. هر ردیف ایمیل خودش را باز می‌کند. روی هر ایمیل Make a task با AI عنوان، تاریخ و نفر پیشنهاد می‌دهد؛ همه قبل از ذخیره قابل تغییرند و تسک به Follow-ups می‌رود و به ایمیل وصل می‌ماند. خلاصه هر نفر فقط ایمیل‌هایی را می‌خواند که خود او می‌بیند.</p>
+        
+        <a class="open" href="https://octabiz.ai/email" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: خلاصه ایمیل‌ها و تبدیل به تسک (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f32.webp" data-num="۳۲" data-title="خلاصه ایمیل‌ها و تبدیل به تسک" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: خلاصه ایمیل‌ها و تبدیل به تسک"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/email</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f32.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه خلاصه ایمیل‌ها و تبدیل به تسک در octabiz.ai/email" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-33" aria-labelledby="f-33-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۳</span>
+    <div class="head-main">
+      <h3 id="f-33-t"><span class="sr">قابلیت ۳۳: </span>دفاتر هر شعبه بدون Excel</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۳ آبان ۱۴۰۵ (ترازنامه هر شعبه ۱۵ آبان؛ تقسیم پرداخت ۱۸ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-33-a">
+        <h4 id="f-33-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>سود و زیان و ترازنامه هر شعبه از همان دفاتر، با هر فروش صندوق، مرجوعی، دریافت، واریز و صورت‌حساب زیر شعبه‌ای که به آن تعلق دارد.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-33-b">
+        <h4 id="f-33-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>تقسیم دستی یک دفتر به شش شعبه در Excel هر ماه کند است و هیچ‌وقت کاملاً با بانک جور نمی‌شود. فروش صندوق، مرجوعی و کسری و اضافه صندوق باید در شعبه درست بنشینند تا سود هر شعبه معنی داشته باشد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-33-c">
+        <h4 id="f-33-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Profit &amp; loss</bdi></li><li><bdi>Columns: By branch</bdi></li></ol><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Balance sheet</bdi></li></ol></div>
+        <p>Reports › Profit &amp; loss و Reports › Balance sheet با Columns روی By branch برای هر شعبه یک ستون دارند. هر فروش صندوق، مرجوعی، ابطال، جابه‌جایی موجودی و کسری و اضافه صندوق زیر شعبه خودش ثبت می‌شود و سندهای قبلی هم پر شده‌اند، پس ماه‌های گذشته هم به تفکیک شعبه درمی‌آیند. دریافت از مشتری، واریز بانکی، صورت‌حساب خرید و پرداخت آن شعبه خودشان را دارند، و پرداختی که فاکتورهای دو شعبه را صاف می‌کند بین آن دو تقسیم می‌شود. فاکتور فیلد Store دارد و کالایش از همان شعبه خارج می‌شود.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/profit-loss" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: دفاتر هر شعبه بدون Excel (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f33.webp" data-num="۳۳" data-title="دفاتر هر شعبه بدون Excel" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: دفاتر هر شعبه بدون Excel"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/profit-loss</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f33.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه دفاتر هر شعبه بدون Excel در octabiz.ai/reports/profit-loss" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-34" aria-labelledby="f-34-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۴</span>
+    <div class="head-main">
+      <h3 id="f-34-t"><span class="sr">قابلیت ۳۴: </span>گزارش‌های فروشگاه و داشبورد</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۸ آبان ۱۴۰۵ (Department margin از ۱۴ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-34-a">
+        <h4 id="f-34-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>خواندن فروش، حاشیه سود، ضایعات و نیروی کار به تفکیک شعبه و دپارتمان مستقیم از دفاتر، در داشبورد و گزارش‌هایی که با Profit &amp; loss یکی باشند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-34-b">
+        <h4 id="f-34-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>وقتی داشبورد سفارش‌ها را می‌شمارد و حسابدار دفاتر را، مالک دو عدد فروش متفاوت می‌بیند و به هیچ‌کدام اعتماد نمی‌کند. حاشیه سود هر دپارتمان و فروش به ازای هر ساعت کار عددهایی‌اند که خواربار با آن‌ها اداره می‌شود و نمی‌شود فصلی یک بار در Excel ساختشان.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-34-c">
+        <h4 id="f-34-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Store overview</bdi></li></ol><ol class="crumbs"><li><bdi>Reports</bdi></li><li><bdi>Department margin</bdi></li></ol><ol class="crumbs"><li><bdi>Sales</bdi></li><li><bdi>Insights</bdi></li></ol></div>
+        <p>Reports › Store overview فروش و ترکیب روش‌های پرداخت را برای همه شعبه‌ها یا یک شعبه از دفاتر نشان می‌دهد: Invoiced یعنی پایه تعهدی و Paid یعنی پایه نقدی. Reports › Department margin فروش، بهای تمام‌شده، سود ناخالص و ضایعات هر دپارتمان در هر شعبه را می‌دهد و جدول Store by store آن فروش به ازای ساعت کار و سهم هزینه نیرو از فروش را دارد. Sales › Insights و نمودار Sales over time هم از همان دفاتر با فیلتر شعبه می‌خوانند. در بررسی روی سایت، فروش اکتبر در گزارش Department margin دقیقاً برابر درآمد دفاتر بود.</p>
+        
+        <a class="open" href="https://octabiz.ai/reports/overview" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: گزارش‌های فروشگاه و داشبورد (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f34.webp" data-num="۳۴" data-title="گزارش‌های فروشگاه و داشبورد" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: گزارش‌های فروشگاه و داشبورد"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/reports/overview</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f34.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه گزارش‌های فروشگاه و داشبورد در octabiz.ai/reports/overview" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-35" aria-labelledby="f-35-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۵</span>
+    <div class="head-main">
+      <h3 id="f-35-t"><span class="sr">قابلیت ۳۵: </span>جلسه با تأمین‌کننده و مدیران</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۸ آبان ۱۴۰۵ (Outlook‏ ۱۷ آبان، iCloud‏ ۱۸ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-35-a">
+        <h4 id="f-35-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>آوردن جلسه‌های تقویم Google، Outlook و iCloud به Meetings در OctaBiz، با یادداشت AI، تصمیم‌ها و کارهایی که به تسک تبدیل می‌شوند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-35-b">
+        <h4 id="f-35-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>مدیرها تقویمشان را در جاهای مختلف نگه می‌دارند و آنچه با نماینده تأمین‌کننده توافق شده در دفترچه یک نفر می‌ماند. کارهای جلسه هفتگی مدیران تا دوشنبه فراموش شده‌اند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-35-c">
+        <h4 id="f-35-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Meetings</bdi></li><li><bdi>Settings</bdi></li><li><bdi>Calendar &amp; joining</bdi></li></ol></div>
+        <p>Meetings › Settings › Calendar &amp; joining برای تقویم‌های Google، Outlook و iCloud ردیف دارد؛ iCloud با ایمیل Apple ID و یک app-specific password وصل می‌شود. تماس‌هایی که لینک Teams، Zoom، Meet یا Webex دارند زیر Coming up می‌آیند و تماسی که در دو تقویم هست یک بار نشان داده می‌شود. یادداشت‌بردار به تماس‌هایی می‌رود که شما می‌فرستیدش و خلاصه، نکته‌های اصلی، تصمیم‌ها و کارها را می‌نویسد که به تسک تبدیل می‌شوند. Outlook وقتی وصل می‌شود که تنظیم ورود Microsoft در سمت OctaBiz تمام شود.</p>
+        
+        <a class="open" href="https://octabiz.ai/meetings/settings" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: جلسه با تأمین‌کننده و مدیران (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f35.webp" data-num="۳۵" data-title="جلسه با تأمین‌کننده و مدیران" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="872" aria-label="بزرگ‌نمایی تصویر: جلسه با تأمین‌کننده و مدیران"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/meetings/settings</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f35.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="تصویر صفحه جلسه با تأمین‌کننده و مدیران در octabiz.ai/meetings/settings" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-36" aria-labelledby="f-36-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۶</span>
+    <div class="head-main">
+      <h3 id="f-36-t"><span class="sr">قابلیت ۳۶: </span>اجاره به درمانگرها</h3>
+      <p class="live"><span class="live-k">فعال</span> پیش از پیشنهاد ۲ آبان ۱۴۰۵ در OctaBiz بود</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-36-a">
+        <h4 id="f-36-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>صورت‌حساب ماهانه برای درمانگرهایی که در فروشگاه اتاق اجاره می‌کنند، یادآوری قبل از سررسید، و شارژ خودکار کارتشان.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-36-b">
+        <h4 id="f-36-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>اجاره‌ای که در دفترچه یا Excel پیگیری شود راحت فراموش می‌شود و کسی دنبال پرداخت دیرکرد نمی‌رود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-36-c">
+        <h4 id="f-36-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Accounting</bdi></li><li><bdi>Sales</bdi></li><li><bdi>Recurring payments</bdi></li></ol></div>
+        <p>اجاره یک پرداخت تکرارشونده است: Accounting › Sales › Recurring payments › Create recurring payment درمانگر را به‌عنوان مشتری، مبلغ، تکرار ماهانه و تاریخ شروع را می‌گیرد. هر برنامه وضعیت Auto-charge خودش را نشان می‌دهد و Send reminder یادآوری پرداخت را برای مشتری می‌فرستد. صفحه جداگانه‌ای برای اجاره لازم نیست. شارژ خودکار کارت وقتی شروع می‌شود که حساب Stripe فروشگاه وصل شده باشد.</p>
+        
+        <a class="open" href="https://octabiz.ai/accounting/sales/recurring-payments" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: اجاره به درمانگرها (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f36.webp" data-num="۳۶" data-title="اجاره به درمانگرها" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: اجاره به درمانگرها"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/accounting/sales/recurring-payments</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f36.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه اجاره به درمانگرها در octabiz.ai/accounting/sales/recurring-payments" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-7" style="--hue:var(--h7)" aria-labelledby="area-7-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۷</span>
+    <div><p class="area-k">بخش ۷ از ۸</p><h2 id="area-7-t">تیم و شیفت</h2></div>
+    <p class="area-ct">۴ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-37" aria-labelledby="f-37-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۷</span>
+    <div class="head-main">
+      <h3 id="f-37-t"><span class="sr">قابلیت ۳۷: </span>ورود و خروج، تایم‌شیت و مرخصی</h3>
+      <p class="live"><span class="live-k">فعال</span> تایم‌شیت و مرخصی پیش از پیشنهاد ۲ آبان در OctaBiz بود؛ ورود و خروج از صندوق از ۱۵ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-37-a">
+        <h4 id="f-37-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>کارمندها ورود، استراحت و خروجشان را از خود صندوق ثبت کنند، هر رکورد شعبه خودش را داشته باشد، و تایم‌شیت و مرخصی ساعت و هزینه نیرو را به تفکیک شعبه نشان دهند.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-37-b">
+        <h4 id="f-37-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>وقتی کارمند در بیش از یک شعبه کار می‌کند یا روی دستگاه جدایی ورود می‌زند، نمی‌شود گفت هر شعبه چقدر خرج نیرو می‌کند. حقوق ساعت‌ها را می‌گیرد ولی نه جایی که در آن کار شده.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-37-c">
+        <h4 id="f-37-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>POS</bdi></li><li><bdi>Cashier Terminal (نوار بالا)</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Timesheets</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Leave</bdi></li></ol></div>
+        <p>نوار بالای Cashier Terminal کنار نام هر نفر دکمه Clock in دارد؛ در طول کار On the clock با زمان کارکرد دیده می‌شود و منویش Start break، End break و Clock out را دارد. شعبه روی هر رکورد ثبت می‌شود و My attendance هم انتخاب Branch دارد. HR › Timesheets › By branch ساعت، اضافه‌کاری و هزینه نیروی هر شعبه را نشان می‌دهد؛ اضافه‌کاری با نرخ یک‌ونیم حساب می‌شود و شیفت شبانه روی روز شروعش می‌نشیند. درخواست مرخصی و Who&#x27;s Away زیر HR هستند.</p>
+        <p class="store"><b>قدم فروشگاه:</b> برای هر صندوق‌دار یک رکورد کارمند با ایمیل ورود و نرخ ساعتی.</p>
+        <a class="open" href="https://octabiz.ai/hr/timesheets" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: ورود و خروج، تایم‌شیت و مرخصی (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f37.webp" data-num="۳۷" data-title="ورود و خروج، تایم‌شیت و مرخصی" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="900" aria-label="بزرگ‌نمایی تصویر: ورود و خروج، تایم‌شیت و مرخصی"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/timesheets</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f37.webp" width="1440" height="900" style="aspect-ratio:1440/900" alt="تصویر صفحه ورود و خروج، تایم‌شیت و مرخصی در octabiz.ai/hr/timesheets" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-38" aria-labelledby="f-38-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۸</span>
+    <div class="head-main">
+      <h3 id="f-38-t"><span class="sr">قابلیت ۳۸: </span>برنامه شیفت هفتگی</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۷ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-38-a">
+        <h4 id="f-38-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>ساختن برنامه شیفت هفتگی هر شعبه، انتشار آن برای کارمندها، جابه‌جایی شیفت با تأیید مدیر، و مقایسه شیفت برنامه‌ریزی‌شده با ورود واقعی.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-38-b">
+        <h4 id="f-38-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>برنامه روی وایت‌برد یا گروه پیام‌رسان تا سه‌شنبه کهنه شده است. جابه‌جایی‌ها شفاهی انجام می‌شوند، مدیر وقتی از غیبت باخبر می‌شود که صندوق بی‌نفر مانده، و کسی برنامه را با ساعت‌هایی که حقوقش پرداخت شده مقایسه نمی‌کند.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-38-c">
+        <h4 id="f-38-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Shift Schedule</bdi></li></ol><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>My Shifts</bdi></li></ol></div>
+        <p>HR › Shift Schedule هفته هر شعبه را می‌سازد، هفته قبل را کپی می‌کند و با اعلان برای کارمندها منتشر می‌کند. هر کارمند شیفت‌های خودش را در My shifts روی گوشی می‌بیند و می‌تواند شیفتی را به همکارش بدهد؛ مدیر قبل از شروع شیفت تأییدش می‌کند. برنامه شیفت‌ها را با ورودهای واقعی مقایسه می‌کند، تأخیر بیش از ۵ دقیقه را علامت می‌زند و هشدار اضافه‌کاری ۴۰ ساعت را دارد. برنامه را مالک و ادمین می‌سازند و همه شعبه‌ها با ساعت کسب‌وکار کار می‌کنند.</p>
+        
+        <a class="open" href="https://octabiz.ai/hr/shifts" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: برنامه شیفت هفتگی (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f38.webp" data-num="۳۸" data-title="برنامه شیفت هفتگی" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="872" aria-label="بزرگ‌نمایی تصویر: برنامه شیفت هفتگی"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/shifts</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f38.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="تصویر صفحه برنامه شیفت هفتگی در octabiz.ai/hr/shifts" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-39" aria-labelledby="f-39-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۳۹</span>
+    <div class="head-main">
+      <h3 id="f-39-t"><span class="sr">قابلیت ۳۹: </span>شیفت‌بندی بر اساس فروش و هزینه نیرو</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۷ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-39-a">
+        <h4 id="f-39-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>برنامه‌ریزی نیرو بر اساس فروش مورد انتظار: سقف هزینه نیرو به درصد فروش برای هر شعبه، تعداد نیروی پیشنهادی برای هر ساعت از فروش اخیر، و هشدار برای روزهای کم‌نیرو، پرنیرو یا بالای سقف.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-39-b">
+        <h4 id="f-39-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>نیرو بزرگ‌ترین هزینه‌ای است که خواربار می‌تواند کنترلش کند. برنامه‌ای که از روی عادت ساخته شود سه نفر را برای صبح خلوت سه‌شنبه می‌گذارد و یک نفر را برای بعدازظهر شلوغ شنبه، و زیاده‌خرجی فقط در فیش حقوق دیده می‌شود.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-39-c">
+        <h4 id="f-39-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Shift Schedule</bdi></li><li><bdi>Labor goals</bdi></li></ol></div>
+        <p>در HR › Shift Schedule بخش Labor goals برای هر شعبه سقف هزینه نیرو به‌صورت سهمی از فروش تعیین می‌کند. برنامه هزینه برنامه‌ریزی‌شده هر روز و سهمش از فروش را نشان می‌دهد، از فروش ۴ هفته گذشته پیشنهاد می‌کند هر ساعت چند نفر لازم است، و برای کمبود یا اضافه نیرو و روزهای بالای سقف هشدار می‌دهد. فروش با Profit &amp; loss و هزینه با گزارش نیرو تا سنت برابر است.</p>
+        
+        <a class="open" href="https://octabiz.ai/hr/shifts" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: شیفت‌بندی بر اساس فروش و هزینه نیرو (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f39.webp" data-num="۳۹" data-title="شیفت‌بندی بر اساس فروش و هزینه نیرو" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="1972" aria-label="بزرگ‌نمایی تصویر: شیفت‌بندی بر اساس فروش و هزینه نیرو"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/shifts</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f39.webp" width="1440" height="1972" style="aspect-ratio:1440/1972" alt="تصویر صفحه شیفت‌بندی بر اساس فروش و هزینه نیرو در octabiz.ai/hr/shifts" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+<article class="card" id="f-40" aria-labelledby="f-40-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۴۰</span>
+    <div class="head-main">
+      <h3 id="f-40-t"><span class="sr">قابلیت ۴۰: </span>خروجی تایم‌شیت به isolved</h3>
+      <p class="live"><span class="live-k">فعال</span> ۱۷ آبان ۱۴۰۵</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-40-a">
+        <h4 id="f-40-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>خروجی ساعت‌های تأییدشده برای isolved، سیستم حقوقی که فروشگاه‌ها استفاده می‌کنند، با شماره کارمندی isolved هر نفر، کد درآمد و کد شعبه.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-40-b">
+        <h4 id="f-40-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>وارد کردن دوباره ساعت‌ها از تایم‌شیت در سیستم حقوق در هر دوره چند ساعت وقت می‌گیرد و خطا دارد، و تایم‌شیتی که دو بار فرستاده شود یعنی کسی دو بار حقوق می‌گیرد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-40-c">
+        <h4 id="f-40-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>HR</bdi></li><li><bdi>Clock-in Timesheets</bdi></li><li><bdi>Export for isolved</bdi></li></ol></div>
+        <p>HR › Timesheets › Periods (در منو Clock-in Timesheets) کنار Payroll CSV و Send to QuickBooks دکمه Export for isolved دارد. برای هر دوره حقوق یک فایل از ساعت‌های تأییدشده می‌سازد: یک سطر برای هر نفر، کد درآمد و شعبه، با ساعت عادی، اضافه‌کاری و مرخصی با حقوق. کدها و ستون‌ها یک بار برای کسب‌وکار تنظیم می‌شوند. اگر کسی شماره کارمندی isolved نداشته باشد خروجی متوقف می‌شود و اسمش را نشان می‌دهد؛ تایم‌شیت تأییدنشده و ورود بدون شعبه هم هشدار می‌گیرند، و دوره با Already exported for isolved علامت می‌خورد تا خروجی دوباره عمدی باشد.</p>
+        <p class="store"><b>قدم فروشگاه:</b> نمونه فایل isolved از Rainbow Blossom برای تنظیم ستون‌ها.</p>
+        <a class="open" href="https://octabiz.ai/hr/timesheets/periods" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: خروجی تایم‌شیت به isolved (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f40.webp" data-num="۴۰" data-title="خروجی تایم‌شیت به isolved" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="872" aria-label="بزرگ‌نمایی تصویر: خروجی تایم‌شیت به isolved"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/hr/timesheets/periods</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f40.webp" width="1440" height="872" style="aspect-ratio:1440/872" alt="تصویر صفحه خروجی تایم‌شیت به isolved در octabiz.ai/hr/timesheets/periods" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+<section class="area" id="area-8" style="--hue:var(--h8)" aria-labelledby="area-8-t">
+  <header class="area-head">
+    <span class="area-sw" aria-hidden="true">۸</span>
+    <div><p class="area-k">بخش ۸ از ۸</p><h2 id="area-8-t">انتقال از سیستم قبلی</h2></div>
+    <p class="area-ct">۱ قابلیت</p>
+  </header>
+  <div class="cards">
+<article class="card" id="f-41" aria-labelledby="f-41-t">
+  <header class="card-head">
+    <span class="num" aria-hidden="true">۴۱</span>
+    <div class="head-main">
+      <h3 id="f-41-t"><span class="sr">قابلیت ۴۱: </span>انتقال داده از Catapult</h3>
+      <p class="live"><span class="live-k">فعال</span> ۲۱ آبان ۱۴۰۵ (امتیاز Rewards از ۲۲ آبان)</p>
+    </div>
+    
+  </header>
+  <div class="card-body">
+    <div class="blocks">
+      <section class="blk blk-req" aria-labelledby="f-41-a">
+        <h4 id="f-41-a"><span class="k" aria-hidden="true">۱</span>درخواست فنی</h4>
+        <p>آوردن کالاها با قیمت هر شعبه، دپارتمان‌ها، تأمین‌کننده‌ها، مشتری‌ها با شماره کارتشان، سابقه فروش و امتیاز Rewards از ECRS Catapult، با اجرای آزمایشی قبل از ذخیره هر چیز.</p>
+      </section>
+      <section class="blk blk-prob" aria-labelledby="f-41-b">
+        <h4 id="f-41-b"><span class="k" aria-hidden="true">۲</span>مشکلی که حل می‌کند</h4>
+        <p>جابه‌جایی از یک سیستم صندوق جایی است که فروشگاه‌ها داده از دست می‌دهند: قیمت هر شعبه، مانده امتیاز مشتری و سابقه فروشی که سفارش‌دهی به آن نیاز دارد. ورود اشتباه داده به سیستمی که در حال کار است به‌سختی برمی‌گردد.</p>
+      </section>
+      <section class="blk blk-sol" aria-labelledby="f-41-c">
+        <h4 id="f-41-c"><span class="k" aria-hidden="true">۳</span>در اکتابیز: کجا و چطور</h4>
+        <div class="paths" role="group" aria-label="جای آن در اکتابیز"><ol class="crumbs"><li><bdi>Settings</bdi></li><li><bdi>Move from Catapult</bdi></li></ol></div>
+        <p>Settings › Move from Catapult فایل‌های خروجی Catapult را به ترتیب می‌گیرد و هر کدام یک نگاشت ستون آماده دارد که قابل تغییر است. اجرای آزمایشی قبل از ذخیره نشان می‌دهد چه چیزی اضافه، به‌روز یا رد می‌شود. کالاها با UPC، بعد PLU و بعد کد کالای تأمین‌کننده پیدا می‌شوند و قیمت هر شعبه، PLU، وزن ظرف، علامت SNAP، کد مالیات، دپارتمان و تأمین‌کننده را می‌آورند. مشتری‌ها شماره کارتشان را نگه می‌دارند و شماره تلفن بر اساس کشور تطبیق می‌شود. فروش‌های گذشته به‌صورت سابقه واردشده برای گزارش و پیش‌بینی می‌آیند و هیچ‌وقت در دفاتر ثبت نمی‌شوند. قدم ۶ امتیاز Rewards را به‌صورت مانده اول دوره و به تفکیک شعبه وارد دفاتر می‌کند.</p>
+        <p class="store"><b>قدم فروشگاه:</b> شش فایل خروجی Catapult.</p>
+        <a class="open" href="https://octabiz.ai/settings/move-from-catapult" target="_blank" rel="noopener" aria-label="باز کردن در اکتابیز: انتقال داده از Catapult (زبانه جدید)">باز کردن در اکتابیز ↗</a>
+      </section>
+    </div>
+    <figure class="shot"><button type="button" class="frame" data-full="img/f41.webp" data-num="۴۱" data-title="انتقال داده از Catapult" data-cap="عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند." data-w="1440" data-h="1700" aria-label="بزرگ‌نمایی تصویر: انتقال داده از Catapult"><span class="chrome"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="addr" dir="ltr">octabiz.ai/settings/move-from-catapult</span><span class="zoom" aria-hidden="true">بزرگ‌نمایی</span></span><img src="img/f41.webp" width="1440" height="1700" style="aspect-ratio:1440/1700" alt="تصویر صفحه انتقال داده از Catapult در octabiz.ai/settings/move-from-catapult" loading="lazy" decoding="async"><span class="missing" hidden><span>تصویر به‌زودی</span></span></button><figcaption>عکس از اکتابیز. نام‌ها، قیمت‌ها و مبلغ‌ها محو شده‌اند.</figcaption></figure>
+  </div>
+  
+</article>
+  </div>
+  <a class="area-top" href="#contents">بازگشت به فهرست ۴۱ قابلیت</a>
+</section>
+  <footer class="foot">
+    <p>چطور بررسی شد: هر تغییر پیش از انتشار تست‌هایش را گذراند و جداگانه بازبینی شد، و بعد روی octabiz.ai بررسی شد. تصویرها داده نمونه دارند و نام‌ها، قیمت‌ها و مبلغ‌های کسب‌وکار در آن‌ها محو شده است. ۲۹ آبان ۱۴۰۵</p>
+    <span class="stripe" aria-hidden="true"><i style="--hue:var(--h1)"></i><i style="--hue:var(--h2)"></i><i style="--hue:var(--h3)"></i><i style="--hue:var(--h4)"></i><i style="--hue:var(--h5)"></i><i style="--hue:var(--h6)"></i><i style="--hue:var(--h7)"></i><i style="--hue:var(--h8)"></i></span>
+  </footer>
+</main>
+<dialog class="lb" id="lb" aria-label="نمایش تصویر">
+  <div class="lb-in">
+    <div class="lb-top">
+      <p class="lb-title"><span class="lb-num"></span><span class="lb-t"></span></p>
+      <span class="lb-count" aria-live="polite"></span>
+      <button type="button" class="lb-btn" data-step="-1"><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">قبلی</span></button>
+      <button type="button" class="lb-btn" data-step="1"><span class="t">بعدی</span><svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button type="button" class="lb-btn lb-close" autofocus><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="t">بستن</span></button>
+    </div>
+    <div class="lb-stage"><img alt=""></div>
+    <p class="lb-cap"></p>
+  </div>
+</dialog>
+</div>
+<script>
+(function(){
+  var page = document.querySelector('.page');
+  var dlg = document.getElementById('lb');
+  if (!page || !dlg || typeof dlg.showModal !== 'function') return;
+  var rtl = page.getAttribute('dir') === 'rtl';
+  var of = page.getAttribute('data-of') || ' / ';
+  var frames = Array.prototype.slice.call(document.querySelectorAll('button.frame[data-full]'));
+  frames.slice().forEach(function(b){
+    var im = b.querySelector('img');
+    function broken(){
+      b.classList.add('is-broken'); b.disabled = true;
+      var k = frames.indexOf(b); if (k > -1) frames.splice(k, 1);
+    }
+    if (im.complete && im.naturalWidth === 0 && im.getAttribute('src')) { if (im.currentSrc) broken(); }
+    im.addEventListener('error', broken);
+  });
+  var img = dlg.querySelector('.lb-stage img');
+  var title = dlg.querySelector('.lb-t');
+  var numEl = dlg.querySelector('.lb-num');
+  var count = dlg.querySelector('.lb-count');
+  var cap = dlg.querySelector('.lb-cap');
+  var i = 0, opener = null;
+  function digits(n){ var s = String(n); return rtl ? s.replace(/[0-9]/g, function(d){ return '۰۱۲۳۴۵۶۷۸۹'[d]; }) : s; }
+  function show(k){
+    if (!frames.length) return;
+    i = (k + frames.length) % frames.length;
+    var b = frames[i], small = b.querySelector('img');
+    img.src = b.getAttribute('data-full');
+    img.width = +b.getAttribute('data-w'); img.height = +b.getAttribute('data-h');
+    img.alt = small ? small.alt : '';
+    numEl.textContent = b.getAttribute('data-num');
+    title.textContent = b.getAttribute('data-title');
+    cap.textContent = b.getAttribute('data-cap') || '';
+    count.textContent = digits(i + 1) + of + digits(frames.length);
+  }
+  frames.forEach(function(b, k){
+    b.addEventListener('click', function(){ opener = b; show(k); if (!dlg.open) dlg.showModal(); });
+  });
+  dlg.querySelector('[data-step="-1"]').addEventListener('click', function(){ show(i - 1); });
+  dlg.querySelector('[data-step="1"]').addEventListener('click', function(){ show(i + 1); });
+  dlg.querySelector('.lb-close').addEventListener('click', function(){ dlg.close(); });
+  dlg.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ e.preventDefault(); show(i + (rtl ? -1 : 1)); }
+    else if (e.key === 'ArrowLeft'){ e.preventDefault(); show(i + (rtl ? 1 : -1)); }
+  });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', function(){ img.removeAttribute('src'); if (opener) opener.focus(); });
+})();
+</script>
+
+</body>
+</html>
